@@ -1,0 +1,117 @@
+.content {
+    .content-title {
+        color: var(--highlight-color);
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 120%;
+    }
+    .content-parag {
+        color: var(--highlight-color);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 100%;
+    }
+}
+.takside-info {
+    .takside-info-icon {
+        width: 130px;
+        height: 130px;
+        border-radius: calc(infinity * 1px);
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.5);
+    }
+    .takside-info-title {
+        color: var(--highlight-color);
+        font-size: 22px;
+        font-weight: 500;
+    }
+    span {
+        color: var(--highlight-color);
+        font-size: 18px;
+    }
+}
+.all-payment-wrapper {
+    min-height: 684px;
+    background-color: var(--primary-color);
+    background-image: url('../images/all-payment-options.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    h1 {
+        font-size: 2rem;
+        color: var(--highlight-color);
+    }
+    .all-payment-list {
+        .all-payment-list-title {
+            color: var(--highlight-color);
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 120%;
+        }
+        .all-payment-list-desc {
+            font-size: 1.25rem;
+            line-height: 120%;
+            color: var(--highlight-color);
+        }
+    }
+}
+.create-account-title {
+    font-size: 2rem;
+    color: var(--highlight-color);
+    font-weight: 700;
+}
+.create-account-content {
+    color: var(--highlight-color);
+    .create-account-content-title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 120%;
+    }
+    .create-account-content-text {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 130%;
+    }
+}
+.page-header {
+    background: url('../images/page-header.png');
+    height: 313px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .page-title {
+        color: var(--highlight-color);
+        font-size: 3rem;
+        font-weight: 800;
+    }
+}
+.why-takside {
+    color: var(--highlight-color);
+    .why-takside-title {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+.why-takside-box {
+    background: var(--primary-color);
+    color: var(--highlight-color);
+    .why-takside-box-title {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+.page-content {
+    color: var(--highlight-color);
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}

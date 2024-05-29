@@ -1,0 +1,53 @@
+.back-to-top {
+    cursor: pointer;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: .5rem;
+    border-radius: .75rem;
+    bottom: 30px;
+    right: 25px;
+    z-index: 400;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    text-align: center;
+    opacity: 1;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); 
+    &.hidden-top {
+        bottom: -100px;
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    svg {
+        path {
+            -webkit-transition: all 0.25s ease-in-out 0s;
+            -moz-transition: all 0.25s ease-in-out 0s;
+            transition: all 0.25s ease-in-out 0s;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1); 
+        }
+    }
+    &:hover {
+        background: #fff;
+        border-color: var(--primary-color);
+        svg {
+            path {
+                fill: var(--primary-color);
+            }
+        }
+    }
+}

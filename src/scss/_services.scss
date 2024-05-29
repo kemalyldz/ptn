@@ -1,0 +1,32 @@
+.service-fee-wrapper {
+    max-width: 600px;
+    .service-fee {
+        border: 1px solid var(--highlight-color);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        & > div {
+            height: 50px;
+            line-height: 50px;
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
+        .service-fee-title {
+            background: var(--primary-color);
+            border-right: 1px solid var(--highlight-color);
+            border-bottom: 1px solid var(--highlight-color);
+            &:last-of-type {
+                border-right: 0;
+            }
+        }
+        .service-fee-text {
+            border-right: 1px solid var(--highlight-color);
+        }
+    }
+    span {
+        font-weight: 500;
+        font-size: 18px;
+    }
+}

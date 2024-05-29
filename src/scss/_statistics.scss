@@ -1,0 +1,18 @@
+.statistics-wrapper {
+    background: url("../images/statistics.jpg") no-repeat center;
+    height: 180px;
+    .statistics-item {
+        span {
+            color: var(--primary-color);
+            &:nth-child(1) {
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
+            &:nth-child(2) {
+                font-weight: 600;
+                font-size: 3rem;
+                line-height: 100%;
+            }
+        }
+    }
+}

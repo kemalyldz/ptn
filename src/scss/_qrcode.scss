@@ -1,0 +1,25 @@
+.qrcode-wrapper {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: auto;
+    background-color: #F3F4F6;
+    .qrcode-content {
+        color: var(--highlight-color);
+        .qrcode-content-title {
+            font-weight: 600;
+            font-size: 2.5rem;
+        }
+        span {
+            font-size: 1.75rem;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .qrcode-wrapper {
+        background-image: url('../images/qrcode/download.png');
+        height: 375px;
+    }
+}

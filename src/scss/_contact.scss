@@ -1,0 +1,41 @@
+.contact-title {
+    color: var(--highlight-color);
+    font-size: 18px;
+    font-weight: 500;
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+.contact {
+    .contact-item {
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--bs-border-radius-lg);
+            background: var(--primary-color);
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+        .contact-info {
+            ul {
+                li {
+                    &:first-of-type {
+                        font-weight: 500;
+                        color: var(--highlight-color);
+                        font-size: 1.5rem;
+                    }
+                    a {
+                        color: var(--highlight-color);
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

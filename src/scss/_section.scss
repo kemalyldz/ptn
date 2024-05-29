@@ -1,0 +1,21 @@
+.section-text {
+    .section-title {
+        font-size: 2rem;
+        color: var(--highlight-color);
+        font-weight: 700;
+        line-height: 120%;
+    }
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        color: var(--highlight-color);
+    }
+    a {
+        width: max-content;
+    }
+}
+.about-image {
+    margin-top: -50px;
+    margin-bottom: -75px;
+    z-index: 1000;
+}

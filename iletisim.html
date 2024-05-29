@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Takside ile Sürücü Dostu Çözümlerle Kazancınızı Yükseltin</title>
+    <link rel="apple-touch-icon" sizes="152x152" href="dist/favicon/apple-icon-152x152.png" />
+    <!--[if IE
+            ]><link rel="shortcut icon" href="dist/favicon/favicon.ico"
+        /><![endif]-->
+    <link rel="icon" type="image/png" sizes="192x192" href="dist/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="dist/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="dist/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="dist/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="dist/plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="dist/plugins/swiper/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+</head>
+
+<body>
+    <header class="topnav wrapper">
+        <div class="logo">
+            <a href="index.html" title="Anasayfa">
+                <svg width="149" height="37" viewBox="0 0 149 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_719_11598)">
+                        <path
+                            d="M18.3133 30.136V34.649L14.9852 35.4679C13.9833 35.6334 13.2079 35.7206 12.6677 35.7206C9.53128 35.7206 7.30092 35.0759 5.98536 33.7777C4.6698 32.4796 4.00767 30.3712 4.00767 27.4439V16.4053H0V15.7171C0 13.5041 1.79474 11.7007 4.01638 11.7007V4.80054H10.0366V11.7007H18.383C18.383 14.297 16.2746 16.4053 13.6783 16.4053H10.0366V27.3219C10.0366 29.6655 11.3522 30.833 13.992 30.833C15.0375 30.833 16.475 30.6064 18.322 30.1447L18.3133 30.136Z"
+                            fill="black" />
+                        <path
+                            d="M22.8959 12.572C23.985 12.1973 25.3528 11.8924 27.0081 11.6659C28.6635 11.4394 30.0313 11.3174 31.1204 11.3174C35.0061 11.3174 37.8027 12.0405 39.4929 13.478C41.1831 14.9243 42.0369 17.2766 42.0369 20.535V35.7816H36.644L36.583 33.6471C34.7011 35.1543 32.3575 35.9036 29.5609 35.9036C26.9646 35.9036 24.8998 35.2414 23.349 33.9259C21.7982 32.6103 21.0315 30.8853 21.0315 28.7507C21.0315 26.4071 21.9027 24.5775 23.6365 23.262C25.3702 21.9464 27.8445 21.2059 31.0681 21.0316L35.7727 20.779C35.7727 19.2282 35.6246 18.1653 35.3371 17.5815C35.0409 16.9107 34.5182 16.4489 33.7689 16.205C33.0196 15.9523 31.8261 15.8304 30.1969 15.8304C29.1078 15.8304 27.8445 15.9349 26.3983 16.144C24.952 16.3531 23.7933 16.6232 22.9134 16.963V12.572H22.8959ZM36.008 24.865L31.7389 25.1787C30.1097 25.3007 28.9161 25.6143 28.1669 26.1196C27.4176 26.6249 27.0343 27.3568 27.0343 28.3151C27.0343 29.2735 27.3915 30.0315 28.0972 30.5716C28.8116 31.1118 29.7874 31.3906 31.042 31.3906C32.0439 31.3906 32.8715 31.3034 33.5163 31.1379C34.161 30.9724 34.9886 30.5977 35.9906 30.0053V24.865H36.008Z"
+                            fill="black" />
+                        <path
+                            d="M50.5576 1.28076V35.7816H44.5374V7.30098C44.5374 3.97287 47.2295 1.28076 50.5576 1.28076ZM60.2805 11.692H67.5553L58.268 22.5475L67.9909 35.7816H60.7161L51.1849 22.5475L60.2805 11.692Z"
+                            fill="black" />
+                        <path
+                            d="M69.8117 29.4476C73.2008 30.615 75.8581 31.2074 77.7748 31.2074C79.5695 31.2074 80.8067 31.0158 81.4775 30.6411C82.192 30.2665 82.5405 29.6828 82.5405 28.8813C82.5405 28.2975 82.2094 27.8532 81.5385 27.5657C80.9548 27.2782 79.8483 26.8513 78.2104 26.3111C76.3721 25.771 74.8213 25.2047 73.5668 24.6209C70.4739 23.2444 68.9231 21.0053 68.9231 17.9124C68.9231 15.8215 69.7595 14.201 71.4322 13.051C73.105 11.9009 75.6751 11.3259 79.1514 11.3259C80.8677 11.3259 82.9325 11.6221 85.3632 12.2059V17.2852C82.7321 16.5707 80.676 16.2223 79.2123 16.2223C77.5396 16.2223 76.3024 16.3878 75.5096 16.7276C74.8823 17.0238 74.5687 17.503 74.5687 18.1738C74.5687 18.8447 74.9694 19.3848 75.7623 19.803C76.224 20.0992 77.435 20.5523 79.404 21.1796L80.6586 21.5542C82.4969 22.0944 83.917 22.6084 84.9276 23.0876C85.9295 23.5667 86.7485 24.2724 87.3758 25.1872C88.0031 26.1107 88.3167 27.3653 88.3167 28.951C88.3167 31.251 87.3845 33.0632 85.5288 34.3787C83.6643 35.6943 80.9809 36.3564 77.4699 36.3564C75.1263 36.3564 72.5736 35.8772 69.8205 34.9102V29.4563L69.8117 29.4476Z"
+                            fill="black" />
+                        <path
+                            d="M118.496 1.28076C121.824 1.28076 124.517 3.97287 124.517 7.30098V35.7816H119.751V33.8387C117.616 35.0933 115.464 35.7206 113.286 35.7206C109.523 35.7206 106.534 34.6315 104.313 32.4622C102.1 30.2841 100.985 27.4003 100.985 23.8021C100.985 20.9183 101.612 18.5312 102.866 16.6493C103.999 14.933 105.428 13.6174 107.162 12.6939C108.895 11.7704 110.769 11.3174 112.772 11.3174C115.238 11.3174 117.146 11.6484 118.479 12.3193V1.28076H118.496ZM114.166 16.022C109.523 16.022 107.205 18.7228 107.205 24.1158C107.205 26.3722 107.832 28.0886 109.087 29.256C110.342 30.4235 112.102 31.0159 114.358 31.0159C115.944 31.0159 117.329 30.6151 118.496 29.8223V16.841C117.407 16.3008 115.961 16.022 114.166 16.022Z"
+                            fill="black" />
+                        <path
+                            d="M147.787 35.4678C145.531 36.0951 142.847 36.4087 139.754 36.4087C135.66 36.4087 132.401 35.2674 129.997 32.9935C127.592 30.7108 126.39 27.6702 126.39 23.863C126.39 21.3538 126.912 19.1409 127.958 17.2155C129.003 15.3336 130.362 13.8786 132.035 12.8593C133.708 11.8312 135.546 11.3259 137.559 11.3259C141.157 11.3259 143.936 12.4324 145.905 14.654C147.866 16.867 148.85 19.9424 148.85 23.8717V26.1891H132.48C132.811 29.8309 135.511 31.6431 140.573 31.6431C143.753 31.6431 146.158 31.434 147.787 31.0158V35.4678ZM137.69 16.0219C136.313 16.0219 135.137 16.5795 134.178 17.6859C133.211 18.7924 132.689 20.2299 132.61 21.9811H142.899C142.899 20.0992 142.438 18.6356 141.523 17.5901C140.599 16.5446 139.327 16.0219 137.698 16.0219H137.69Z"
+                            fill="black" />
+                        <path
+                            d="M91.645 35.7815C94.9731 35.7815 97.6652 33.0894 97.6652 29.7612V11.6919H91.645V35.7815Z"
+                            fill="black" />
+                        <path
+                            d="M98.4493 2.31746C98.0137 1.38525 97.2993 0.714397 96.3148 0.304918C95.278 -0.121986 94.0757 -0.113274 93.0477 0.348479C92.0371 0.80152 91.3314 1.5682 90.9393 2.64853C90.556 3.6853 90.6082 4.72206 91.0874 5.74141C91.5666 6.76075 92.3246 7.46645 93.3613 7.84107C93.8405 8.01532 94.3023 8.08502 94.764 8.09373V8.11116C98.8327 8.32897 99.5122 10.5506 99.5122 10.5506C100.375 5.57587 98.4493 2.30875 98.4493 2.30875V2.31746Z"
+                            fill="#FFC41D" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_719_11598">
+                            <rect width="148.85" height="36.4088" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+        <nav class="flex-grow-1 d-flex">
+            <span id="nav-label" hidden>Navigation</span>
+            <button id="btnOpen" class="topnav__open ms-auto" aria-expanded="false" aria-labelledby="nav-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+            <div class="topnav__menu d-flex flex-column flex-lg-row align-items-center flex-grow-1">
+                <div class="main-menu mb-4 mb-lg-0 mx-lg-auto" role="dialog" aria-labelledby="nav-label">
+                    <button class="topnav__close" id="btnClose" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
+                    </button>
+                    <ul
+                        class="list-unstyled mb-0 d-flex flex-column flex-lg-row align-items-center align-items-lg-start">
+                        <li>
+                            <a href="pos-talebi.html" title="POS Talebi">
+                                POS Talebi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="hizmet-bedeli.html" title="Hizmet Bedeli">
+                                Hizmet Bedeli
+                            </a>
+                        </li>
+                        <li>
+                            <a href="nasil-calisir.html" title="Nasıl Çalışır">
+                                Nasıl Çalışır
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kurumsal-cozumler.html" title="Kurumsal Çözümler">
+                                Kurumsal Çözümler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kampanyalar.html" title="Kampanyalar">
+                                Kampanyalar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="iletisim.html" title="İletişim">
+                                İletişim
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="action-menu">
+                    <ul class="mb-0 list-unstyled d-flex">
+                        <li class="me-3">
+                            <a href="#" title="İnternet Şubesi">İnternet Şubesi</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Hemen Başvur">Hemen Başvur</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-header p-5 d-flex align-items-center justify-content-center">
+        <h1 class="page-title mb-0 text-center">İletişim</h1>
+    </div>
+
+    <main role="main">
+        <!-- Contact Start -->
+        <div class="contact-wrapper py-5 background-gray">
+            <div class="container-fluid container-lg">
+                <div class="contact-title mb-5">
+                    <span class="d-block text-center">Takside’ye Hoş Geldiniz.</span>
+                    <h2 class="text-center">Bizimle İletişime Geçin.</h2>
+                    <p class="text-center">
+                        Sizlere daha iyi hizmet vermek için buradayız. Formu
+                        doldurarak mesajınızı<br />
+                        bırakabilirsiniz. Size en kısa sürede dönüş
+                        sağlayacağız.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="contact d-flex flex-column h-100 justify-content-center">
+                            <div class="contact-item mb-3 d-flex align-items-center">
+                                <div class="contact-icon me-3 d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                                    </svg>
+                                </div>
+                                <div class="contact-info">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Mail Adresi</li>
+                                        <li>
+                                            <a href="mailto:info@takside.com" title="Mail Gönder">info@takside.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact-item mb-3 d-flex align-items-center">
+                                <div class="contact-icon me-3 d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-telephone" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                    </svg>
+                                </div>
+                                <div class="contact-info">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Telefon</li>
+                                        <li>
+                                            <a href="tel:0216-222-22-22" title="Bizi Arayın">0216 222 22 22</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contact-item d-flex align-items-center">
+                                <div class="contact-icon me-3 d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                    </svg>
+                                </div>
+                                <div class="contact-info">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Adres</li>
+                                        <li>
+                                            Zümrütevler Mh. Acarlar Sk.
+                                            No:16 Maltepe,İstanbul
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-social-media pt-5">
+                                <span class="d-block mb-3">Sosyal Medya Hesaplarımız</span>
+                                <ul class="list-unstyled mb-0 d-flex">
+                                    <li>
+                                        <a href="#" title="Google">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" rel="noopener" title="Instagram">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" rel="noopener" title="Facebook">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" rel="noopener" title="Twitter - X">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" rel="noopener" title="Youtube">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h3>Biz Size Ulaşalım</h3>
+                        <div class="tab-control-body tab-control-bg">
+                            <form class="tab-page needs-validation" novalidate id="login-taksi" asp-controller="Home"
+                                asp-action="BasvuruYap" method="post">
+                                <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-floating">
+                                            <input required id="name" type="text" name="name" class="form-control"
+                                                value="" placeholder="" />
+                                            <label for="name">Adınız*</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-floating">
+                                            <input required id="Surname" type="text" name="" class="form-control"
+                                                value="" placeholder="" />
+                                            <label for="Surname">Soyadınız*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-floating">
+                                            <input required id="phones" type="text" name="" class="form-control phone"
+                                                placeholder="" value="" />
+                                            <label for="phones">GSM*</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-floating">
+                                            <input required id="city" type="text" name="" class="form-control" value=""
+                                                placeholder="" />
+                                            <label for="city">E-Posta</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3 counter">
+                                    <textarea class="form-control" maxlength="250" placeholder="Leave a comment here"
+                                        id="floatingTextarea2" style="height: 100px"></textarea>
+                                    <label for="floatingTextarea2">Mesajınız*</label>
+                                </div>
+                                <div class="form-check-wrapper mb-3">
+                                    <div class="form-check mb-3">
+                                        <input type="checkbox" id="ticari" name="" class="form-check-input" value="" />
+                                        <label class="form-check-label" for="ticari">
+                                            Takside.com işlemlerimi takip
+                                            edebilir,
+                                            <a href="#" class="modal-export" data-bs-target="#modal-import-staticpage">
+                                                Kullanıcı Sözleşmesini </a>' ve
+                                            <a href="#" class="modal-export" data-bs-target="#modal-import-staticpage">
+                                                Gizlilik Politikasını</a>
+                                            nı Okudum, onaylıyorum.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="kvkk2" name="" class="form-check-input" value=""
+                                            required />
+                                        <label class="form-check-label" for="Kvkk">
+                                            <a href="#" class="modal-export" data-bs-target="#modal-import-staticpage">
+                                                KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum.
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100" name="login-taksi">
+                                    Hesap Aç
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+        <!-- Maps Start -->
+        <div class="maps-wrapper py-5">
+            <div class="text-center">
+                <a href="#" title="Harita için tıklayın">
+                    <img src="dist/images/maps.png" alt="Harita" width="1219" height="485" class="img-fluid"
+                        loading="lazy" />
+                </a>
+            </div>
+        </div>
+        <!-- Maps End -->
+        <!-- QR Code Start -->
+        <div class="w-100 qrcode-wrapper p-5">
+            <div class="container-fluid container-xl h-100">
+                <div class="row h-100">
+                    <div class="col-xl-8">
+                        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center h-100">
+                            <div class="qrcode-content mb-4 mb-lg-0 text-center text-lg-start">
+                                <div class="qrcode-content-title">
+                                    QR Kodu Okut
+                                </div>
+                                <span class="mb-4 d-block">Uygulamayı İndir.</span>
+                                <div class="app-stories">
+                                    <ul class="list-unstyled d-flex flex-column flex-lg-row align-content-center mb-0">
+                                        <li class="mb-3 mb-lg-0 me-0 me-lg-3">
+                                            <a href="#" class="d-block" title="Android Uygulamamızı İndirin">
+                                                <picture>
+                                                    <source srcset="
+                                                                dist/images/qrcode/google-play.webp
+                                                            " type="image/webp" />
+                                                    <source srcset="
+                                                                dist/images/qrcode/google-play.png
+                                                            " type="image/png" />
+                                                    <img src="dist/images/qrcode/google-play.png" width="220"
+                                                        height="68" class="img-fluid w-100" loading="lazy"
+                                                        alt="Google Play Store" />
+                                                </picture>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-block" title="iOS Uygulamamızı İndirin">
+                                                <picture>
+                                                    <source srcset="
+                                                                dist/images/qrcode/app-store.webp
+                                                            " type="image/webp" />
+                                                    <source srcset="
+                                                                dist/images/qrcode/app-store.png
+                                                            " type="image/png" />
+                                                    <img src="dist/images/qrcode/app-store.png" width="220" height="68"
+                                                        class="img-fluid w-100" loading="lazy" alt="App Store" />
+                                                </picture>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="qrcode">
+                                <picture>
+                                    <source srcset="
+                                                dist/images/qrcode/qrcode.webp
+                                            " type="image/webp" />
+                                    <source srcset="
+                                                dist/images/qrcode/qrcode.png
+                                            " type="image/png" />
+                                    <img src="dist/images/qrcode/qrcode.png" width="226" height="226"
+                                        class="img-fluid w-100" loading="lazy" alt="QR Kod" />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- QR Code End -->
+    </main>
+
+    <footer class="pt-5">
+        <div class="container-lg container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo mb-5">
+                        <a href="index.html" title="Anasayfa">
+                            <svg width="228" height="56" viewBox="0 0 149 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_719_11598)">
+                                    <path
+                                        d="M18.3133 30.136V34.649L14.9852 35.4679C13.9833 35.6334 13.2079 35.7206 12.6677 35.7206C9.53128 35.7206 7.30092 35.0759 5.98536 33.7777C4.6698 32.4796 4.00767 30.3712 4.00767 27.4439V16.4053H0V15.7171C0 13.5041 1.79474 11.7007 4.01638 11.7007V4.80054H10.0366V11.7007H18.383C18.383 14.297 16.2746 16.4053 13.6783 16.4053H10.0366V27.3219C10.0366 29.6655 11.3522 30.833 13.992 30.833C15.0375 30.833 16.475 30.6064 18.322 30.1447L18.3133 30.136Z"
+                                        fill="black" />
+                                    <path
+                                        d="M22.8959 12.572C23.985 12.1973 25.3528 11.8924 27.0081 11.6659C28.6635 11.4394 30.0313 11.3174 31.1204 11.3174C35.0061 11.3174 37.8027 12.0405 39.4929 13.478C41.1831 14.9243 42.0369 17.2766 42.0369 20.535V35.7816H36.644L36.583 33.6471C34.7011 35.1543 32.3575 35.9036 29.5609 35.9036C26.9646 35.9036 24.8998 35.2414 23.349 33.9259C21.7982 32.6103 21.0315 30.8853 21.0315 28.7507C21.0315 26.4071 21.9027 24.5775 23.6365 23.262C25.3702 21.9464 27.8445 21.2059 31.0681 21.0316L35.7727 20.779C35.7727 19.2282 35.6246 18.1653 35.3371 17.5815C35.0409 16.9107 34.5182 16.4489 33.7689 16.205C33.0196 15.9523 31.8261 15.8304 30.1969 15.8304C29.1078 15.8304 27.8445 15.9349 26.3983 16.144C24.952 16.3531 23.7933 16.6232 22.9134 16.963V12.572H22.8959ZM36.008 24.865L31.7389 25.1787C30.1097 25.3007 28.9161 25.6143 28.1669 26.1196C27.4176 26.6249 27.0343 27.3568 27.0343 28.3151C27.0343 29.2735 27.3915 30.0315 28.0972 30.5716C28.8116 31.1118 29.7874 31.3906 31.042 31.3906C32.0439 31.3906 32.8715 31.3034 33.5163 31.1379C34.161 30.9724 34.9886 30.5977 35.9906 30.0053V24.865H36.008Z"
+                                        fill="black" />
+                                    <path
+                                        d="M50.5576 1.28076V35.7816H44.5374V7.30098C44.5374 3.97287 47.2295 1.28076 50.5576 1.28076ZM60.2805 11.692H67.5553L58.268 22.5475L67.9909 35.7816H60.7161L51.1849 22.5475L60.2805 11.692Z"
+                                        fill="black" />
+                                    <path
+                                        d="M69.8117 29.4476C73.2008 30.615 75.8581 31.2074 77.7748 31.2074C79.5695 31.2074 80.8067 31.0158 81.4775 30.6411C82.192 30.2665 82.5405 29.6828 82.5405 28.8813C82.5405 28.2975 82.2094 27.8532 81.5385 27.5657C80.9548 27.2782 79.8483 26.8513 78.2104 26.3111C76.3721 25.771 74.8213 25.2047 73.5668 24.6209C70.4739 23.2444 68.9231 21.0053 68.9231 17.9124C68.9231 15.8215 69.7595 14.201 71.4322 13.051C73.105 11.9009 75.6751 11.3259 79.1514 11.3259C80.8677 11.3259 82.9325 11.6221 85.3632 12.2059V17.2852C82.7321 16.5707 80.676 16.2223 79.2123 16.2223C77.5396 16.2223 76.3024 16.3878 75.5096 16.7276C74.8823 17.0238 74.5687 17.503 74.5687 18.1738C74.5687 18.8447 74.9694 19.3848 75.7623 19.803C76.224 20.0992 77.435 20.5523 79.404 21.1796L80.6586 21.5542C82.4969 22.0944 83.917 22.6084 84.9276 23.0876C85.9295 23.5667 86.7485 24.2724 87.3758 25.1872C88.0031 26.1107 88.3167 27.3653 88.3167 28.951C88.3167 31.251 87.3845 33.0632 85.5288 34.3787C83.6643 35.6943 80.9809 36.3564 77.4699 36.3564C75.1263 36.3564 72.5736 35.8772 69.8205 34.9102V29.4563L69.8117 29.4476Z"
+                                        fill="black" />
+                                    <path
+                                        d="M118.496 1.28076C121.824 1.28076 124.517 3.97287 124.517 7.30098V35.7816H119.751V33.8387C117.616 35.0933 115.464 35.7206 113.286 35.7206C109.523 35.7206 106.534 34.6315 104.313 32.4622C102.1 30.2841 100.985 27.4003 100.985 23.8021C100.985 20.9183 101.612 18.5312 102.866 16.6493C103.999 14.933 105.428 13.6174 107.162 12.6939C108.895 11.7704 110.769 11.3174 112.772 11.3174C115.238 11.3174 117.146 11.6484 118.479 12.3193V1.28076H118.496ZM114.166 16.022C109.523 16.022 107.205 18.7228 107.205 24.1158C107.205 26.3722 107.832 28.0886 109.087 29.256C110.342 30.4235 112.102 31.0159 114.358 31.0159C115.944 31.0159 117.329 30.6151 118.496 29.8223V16.841C117.407 16.3008 115.961 16.022 114.166 16.022Z"
+                                        fill="black" />
+                                    <path
+                                        d="M147.787 35.4678C145.531 36.0951 142.847 36.4087 139.754 36.4087C135.66 36.4087 132.401 35.2674 129.997 32.9935C127.592 30.7108 126.39 27.6702 126.39 23.863C126.39 21.3538 126.912 19.1409 127.958 17.2155C129.003 15.3336 130.362 13.8786 132.035 12.8593C133.708 11.8312 135.546 11.3259 137.559 11.3259C141.157 11.3259 143.936 12.4324 145.905 14.654C147.866 16.867 148.85 19.9424 148.85 23.8717V26.1891H132.48C132.811 29.8309 135.511 31.6431 140.573 31.6431C143.753 31.6431 146.158 31.434 147.787 31.0158V35.4678ZM137.69 16.0219C136.313 16.0219 135.137 16.5795 134.178 17.6859C133.211 18.7924 132.689 20.2299 132.61 21.9811H142.899C142.899 20.0992 142.438 18.6356 141.523 17.5901C140.599 16.5446 139.327 16.0219 137.698 16.0219H137.69Z"
+                                        fill="black" />
+                                    <path
+                                        d="M91.645 35.7815C94.9731 35.7815 97.6652 33.0894 97.6652 29.7612V11.6919H91.645V35.7815Z"
+                                        fill="black" />
+                                    <path
+                                        d="M98.4493 2.31746C98.0137 1.38525 97.2993 0.714397 96.3148 0.304918C95.278 -0.121986 94.0757 -0.113274 93.0477 0.348479C92.0371 0.80152 91.3314 1.5682 90.9393 2.64853C90.556 3.6853 90.6082 4.72206 91.0874 5.74141C91.5666 6.76075 92.3246 7.46645 93.3613 7.84107C93.8405 8.01532 94.3023 8.08502 94.764 8.09373V8.11116C98.8327 8.32897 99.5122 10.5506 99.5122 10.5506C100.375 5.57587 98.4493 2.30875 98.4493 2.30875V2.31746Z"
+                                        fill="#FFC41D" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_719_11598">
+                                        <rect width="148.85" height="36.4088" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-social-media">
+                        <span class="d-block mb-3">Sosyal Medya Hesaplarımız</span>
+                        <ul class="list-unstyled mb-0 d-flex">
+                            <li>
+                                <a href="#" title="Google">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-google" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener" title="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener" title="Facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener" title="Twitter - X">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" rel="noopener" title="Youtube">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-youtube" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="footer-widget">
+                                <div class="footer-widget-title mb-4">
+                                    Kurumsal
+                                </div>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="hakkimizda.html" title="Hakkımızda">
+                                            Hakkımızda
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="kampanyalar.html" title="Kampanyalar">
+                                            Kampanyalar
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="iletisim.html" title="İletişim">
+                                            İletişim
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="nasil-calisir.html" title="Nasıl Çalışır">
+                                            Nasıl Çalışır
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="footer-widget">
+                                <div class="footer-widget-title mb-4">
+                                    Bilgi Merkezi
+                                </div>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#" title="Ticari İleti Onayı">
+                                            Ticari İleti Onayı
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Başvuru Formu">
+                                            Başvuru Formu
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Kişisel Verilerin Korunması">
+                                            Kişisel Verilerin Korunması
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Kullanıcı Sözleşmesi">
+                                            Kullanıcı Sözleşmesi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Gizlilik ve Güvenlik">
+                                            Gizlilik ve Güvenlik
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="footer-widget">
+                                <div class="footer-widget-title mb-4">
+                                    İletişim
+                                </div>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        Zümrütevler, Acarlar Sk No:16,
+                                        <br />34852 Maltepe/İstanbul
+                                    </li>
+                                    <li>
+                                        <a href="tel:0850-000-00-00" class="Çağrı Merkezi">Tel: 0850 000 00 00</a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:0216-000-00-00" title="Bize Ulaşın">Tel: 0216 000 00 00</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:info@takside.com"
+                                            title="Bize Mail ile Ulaşın">info@takside.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center footer-copy pt-5 pb-3">
+                &copy;2024. Tüm hakları yasal ve saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Start -->
+    <div class="back-to-top">
+        <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.5 18C6.89887 18 7.22222 17.7122 7.22222 17.3571V2.19485L11.7671 6.24028C12.0491 6.49134 12.5064 6.49134 12.7885 6.24028C13.0705 5.98923 13.0705 5.5822 12.7885 5.33115L7.01069 0.188288C6.72864 -0.0627633 6.27136 -0.0627633 5.98931 0.188288L0.211534 5.33115C-0.0705113 5.5822 -0.0705113 5.98923 0.211534 6.24028C0.493579 6.49134 0.950866 6.49134 1.23291 6.24028L5.77778 2.19485V17.3571C5.77778 17.7122 6.10113 18 6.5 18Z"
+                fill="#262626" />
+        </svg>
+    </div>
+    <!-- Back To Top End -->
+
+    <script src="dist/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <script src="dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/plugins/swiper/js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>
