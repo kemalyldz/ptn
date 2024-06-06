@@ -26,7 +26,7 @@
                 color: var(--highlight-color);
                 font-weight: 500;
                 border-radius: var(--bs-border-radius);
-                padding: 1rem .75rem;
+                padding: 1rem 0.75rem;
                 display: block;
                 border: 2px solid var(--primary-color);
             }
@@ -43,21 +43,21 @@
         width: auto;
         ul {
             li {
-                margin-right: .5rem;
+                margin-right: 0.5rem;
                 &:last-of-type {
                     margin-right: 0;
                     &::after {
                         content: none;
                     }
                 }
-                &::after {
-                    content: '';
-                    border-right: 1px solid var(--highlight-color);
-                    position: absolute;
-                    height: 100%;
-                }
+                // &::after {
+                //     content: '';
+                //     border-right: 1px solid var(--highlight-color);
+                //     position: absolute;
+                //     height: 100%;
+                // }
                 a {
-                    padding: .5rem .75rem;
+                    padding: 0.5rem 0.75rem;
                 }
             }
         }

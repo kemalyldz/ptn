@@ -1,0 +1,63 @@
+.calculate-fee-wrapper {
+    max-width: 1280px;
+    .calculate-text {
+        max-width: 450px;
+        h1 {
+            font-size: $display-medium;
+        }
+        p {
+            color: var(--highlight-alt-color);
+        }
+    }
+    .calculate-form-wrapper {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+.money-transfer-wrapper {
+    max-width: 850px;
+    h2 {
+        font-size: $headline-medium;
+        color: var(--highlight-color);
+    }
+    p {
+        color: var(--highlight-alt-color);
+    }
+}
+.three-step {
+    position: relative;
+    overflow: hidden;
+    .three-step-list {
+        // position: relative;
+        &:nth-child(2) {
+            position: relative;
+            &::before {
+                content: "";
+                border-bottom: 1px dashed #d1d1d1;
+                width: 150px;
+                position: absolute;
+                top: 35%;
+                right: 65%;
+                transform: translateX(-50%);
+            }
+            &::after {
+                content: "";
+                border-bottom: 1px dashed #d1d1d1;
+                width: 150px;
+                position: absolute;
+                top: 35%;
+                left: 65%;
+                transform: translateX(45%);
+            }
+        }
+        .three-step-box {
+            background: #f6f6f6;
+            width: 100px;
+            height: 100px;
+        }
+        span {
+            font-weight: 500;
+        }
+    }
+}

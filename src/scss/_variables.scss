@@ -1,0 +1,21 @@
+@use "sass:math";
+
+$default-font: 16;
+$display-large: math.div(56, $default-font) + rem;
+$display-medium: math.div(46, $default-font) + rem;
+$display-small: math.div(36, $default-font) + rem;
+
+$headline-large: math.div(32, $default-font) + rem;
+$headline-medium: math.div(28, $default-font) + rem;
+$headline-small: math.div(24, $default-font) + rem;
+
+$title-large: math.div(22, $default-font) + rem;
+$title-small: math.div(14, $default-font) + rem;
+
+$body-large: math.div(18, $default-font) + rem;
+$body-medium: math.div(14, $default-font) + rem;
+$body-small: math.div(12, $default-font) + rem;
+
+$label-large: math.div(14, $default-font) + rem;
+$label-medium: math.div(12, $default-font) + rem;
+$label-small: math.div(11, $default-font) + rem;
