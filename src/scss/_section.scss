@@ -19,3 +19,90 @@
     margin-bottom: -75px;
     z-index: 1000;
 }
+
+.representative-application-form {
+    background: url("../images/para-transfer-noktasi.jpg") no-repeat center;
+    height: 253px;
+}
+
+.application-form {
+    max-width: 1000px;
+    color: var(--highlight-color);
+    span {
+        font-size: $display-small;
+        font-weight: 700;
+    }
+}
+.fast-send-money-desc {
+    color: var(--highlight-color);
+    .fast-send-money-title {
+        font-size: $display-medium;
+        font-weight: 500;
+        line-height: 120%;
+    }
+    p {
+        font-size: $headline-medium;
+    }
+}
+
+.fast-send-wrapper {
+    background: url("../images/fast-send.png") no-repeat right center;
+    min-height: 500px;
+    .fast-send-box {
+        max-width: 410px;
+        .fast-send-line {
+            border-left: 1px dashed var(--highlight-color);
+            min-height: 100px;
+            .fast-send-dot {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background: #407f9a;
+                left: -8px;
+                &:first-of-type {
+                    top: 65px;
+                }
+                &:last-of-type {
+                    top: 160px;
+                }
+            }
+        }
+        .fast-send-content {
+            ul {
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1.5rem;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                    span {
+                        &:first-of-type {
+                            font-size: $title-large;
+                            font-weight: 500;
+                            color: var(--highlight-color);
+                        }
+                        &:last-of-type {
+                            font-size: $body-large;
+                            color: #407f9a;
+                        }
+                    }
+                }
+            }
+        }
+        .fast-send-time {
+            background: #f1f8fa;
+            color: var(--highlight-color);
+            span {
+                &:first-of-type {
+                    font-size: $body-large;
+                }
+                &:last-of-type {
+                    font-size: $title-large;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

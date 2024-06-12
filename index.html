@@ -173,29 +173,6 @@
         </nav>
     </header>
 
-    <!-- <div class="main-slider">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide text-center">
-                    <picture>
-                        <source srcset="dist/images/slider/2.webp" type="image/webp">
-                        <source srcset="dist/images/slider/2.jpg" type="image/jpg">
-                        <img src="dist/images/slider/2.jpg" class="img-fluid"
-                            alt="Ödemelerin ister IBAN'ında ister cüzdanında" width="1920" height="584">
-                    </picture>
-                </div>
-                <div class="swiper-slide text-center">
-                    <picture>
-                        <source srcset="dist/images/slider/1.webp" type="image/webp">
-                        <source srcset="dist/images/slider/1.jpg" type="image/jpg">
-                        <img src="dist/images/slider/1.jpg" class="img-fluid" alt="İnmeden anında öde" width="1920"
-                            height="584">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <main role="main">
         <!-- Calculate Fee Start -->
         <div class="calculate-fee-wrapper mx-auto py-5 mb-5">
@@ -242,7 +219,7 @@
         <!-- Calculate Fee End -->
 
         <!-- Three Step Start -->
-        <div class="money-transfer-wrapper mx-auto mb-5">
+        <div class="money-transfer-wrapper mxw mx-auto mb-5">
             <h2 class="text-center">3 adımda istediğiniz her yere para gönderin.</h2>
             <p class="text-center">Kayıt olup kimliğinizi doğruladıktan sonra yapmanız gereken tek şey:</p>
             <div class="three-step pt-4">
@@ -310,512 +287,598 @@
         </div>
         <!-- Three Step End -->
 
-        <!-- Create an Account Start -->
-        <div class="create-account-wrapper py-5 d-none">
-            <div class="container-fluid container-lg">
-                <div class="create-account-title text-center mb-4">Hesap Aç, Hemen Kullan.</div>
-                <div class="d-flex flex-column flex-lg-row justify-content-lg-between align-items-center gap-3">
-                    <div class="create-account-content">
-                        <div class="create-account-content-title text-center text-lg-start mb-3">
-                            Sürücü Dostu Çözümlerle<br>Kazancınızı Yükseltin!
+        <!-- Money Transfer Start -->
+        <div class="money-transfer-wrapper mxw mx-auto mb-5 py-5">
+            <h3 class="text-center mb-4">Para Transferi</h3>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="money-transfer-box rounded-3 px-4 py-5">
+                        <div class="money-transfer-box__icon text-center mb-2">
+                            <svg width="74" height="80" viewBox="0 0 74 80" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="41.6021" cy="48.2544" r="31.6908" fill="#FFE988" />
+                                <g clip-path="url(#clip0_5_31)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M66.8724 17.5812C66.8802 17.687 66.8671 17.7932 66.8337 17.8939C66.8003 17.9946 66.7474 18.0877 66.6779 18.1678C66.6085 18.2479 66.5239 18.3136 66.429 18.3609C66.3341 18.4083 66.2307 18.4364 66.1249 18.4437C64.4287 18.6449 62.7612 18.7887 61.0937 18.9037C59.9724 18.9037 58.8512 19.0762 57.7012 19.0762C57.3562 19.0762 56.0049 19.4499 55.4587 19.0762C55.5327 19.4655 55.5807 19.8593 55.6024 20.2549C55.518 21.5796 55.3354 22.8961 55.0562 24.1937C54.8614 25.0307 54.592 25.8485 54.2512 26.6374C52.8655 29.7453 50.7677 32.4833 48.1274 34.6299C45.5576 36.7146 42.7013 38.4187 39.6462 39.6899C38.2609 40.3184 36.8287 40.8375 35.3624 41.2424C34.4263 41.5343 33.4235 41.5343 32.4874 41.2424C32.1359 41.1125 31.8491 40.8505 31.688 40.5121C31.5269 40.1738 31.5042 39.7859 31.6249 39.4312C31.6249 38.9712 33.5799 37.4762 33.8962 37.2174L36.9437 34.3424C38.2456 32.8998 39.3568 31.2958 40.2499 29.5699C41.2263 27.875 41.9984 26.0703 42.5499 24.1937C42.9034 22.9931 43.1914 21.7743 43.4124 20.5424C43.4409 20.1788 43.4409 19.8135 43.4124 19.4499C42.8819 19.4131 42.354 19.3459 41.8312 19.2487H36.6562H33.1774C32.6024 19.2487 31.4237 17.6099 32.2862 16.8912C33.9237 15.4261 35.4786 13.8712 36.9437 12.2337C39.1862 9.76118 41.2849 7.14493 43.3262 4.55743C43.9012 3.83868 44.4762 3.09118 45.1087 2.42993C45.542 1.93437 46.013 1.473 46.5174 1.04993C46.9352 0.689598 47.3879 0.37178 47.8687 0.101177C48.2655 -0.0572205 48.7081 -0.0572205 49.1049 0.101177C49.5926 0.296776 50.0407 0.579269 50.4274 0.934929C51.0312 1.45243 51.6637 2.19993 52.0662 2.54493C52.6214 3.033 53.1492 3.55128 53.6474 4.09743C55.6024 6.08118 57.2987 8.26618 59.3974 10.0774C60.6049 11.1699 61.7549 12.2337 62.8762 13.3837C64.0723 14.5328 65.1777 15.7727 66.1824 17.0924C66.3333 17.0947 66.48 17.1426 66.6032 17.2299C66.7263 17.3171 66.8202 17.4396 66.8724 17.5812ZM61.6399 14.7062C60.4612 13.6712 59.2537 12.7512 57.9887 11.8312C56.7237 10.9112 56.2637 10.4512 55.4587 9.70368C53.6762 8.09368 52.0087 6.28243 50.1399 4.75868L48.6162 3.32118L47.4662 4.38493C46.8624 5.01743 46.2874 5.67868 45.7412 6.31118C43.4699 8.84118 41.1699 11.3424 38.7262 13.6712C37.3749 14.9937 35.9662 16.1724 34.4999 17.3224C35.218 17.3655 35.9381 17.3655 36.6562 17.3224C38.3812 17.3224 40.0774 17.3224 41.7737 17.0637C42.0324 17.0637 43.6424 16.8624 44.2749 17.0637C44.5507 17.0688 44.8186 17.1565 45.0441 17.3153C45.2696 17.4742 45.4423 17.697 45.5399 17.9549C45.7651 18.9449 45.8138 19.9668 45.6837 20.9737C45.5106 22.3115 45.2513 23.6368 44.9074 24.9412C44.4303 27.0451 43.6965 29.0825 42.7224 31.0074C41.7621 32.9122 40.5537 34.6813 39.1287 36.2687L38.6687 36.7287C41.3872 35.5786 43.9398 34.0702 46.2587 32.2437C48.6548 30.4717 50.6203 28.182 52.0087 25.5449C52.3988 24.7373 52.6977 23.8887 52.8999 23.0149C53.1299 22.0662 53.3024 21.1174 53.4462 20.1399C53.4611 19.5436 53.5091 18.9485 53.5899 18.3574C53.6425 17.9759 53.802 17.6171 54.0499 17.3224C54.4107 17.0604 54.8407 16.9105 55.2862 16.8912C56.1223 16.9056 56.9572 16.9632 57.7874 17.0637C58.8792 17.1212 59.9732 17.1212 61.0649 17.0637H64.1124C63.2499 16.2012 62.4737 15.5687 61.6399 14.7349V14.7062Z"
+                                        fill="#2C3F4D" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M48.1275 50.6C46.4381 49.5493 44.5652 48.8274 42.6075 48.4725C40.712 48.0705 38.7531 48.0705 36.8575 48.4725C36.7536 48.4931 36.6548 48.534 36.5667 48.5929C36.4787 48.6518 36.4031 48.7274 36.3444 48.8156C36.2856 48.9037 36.2448 49.0026 36.2243 49.1065C36.2039 49.2105 36.2041 49.3174 36.225 49.4212C36.2733 49.6334 36.4025 49.8182 36.5851 49.9364C36.7677 50.0545 36.9893 50.0967 37.2025 50.0537C38.9023 49.8036 40.6356 49.9113 42.2913 50.37C43.9413 50.8123 45.4924 51.5635 46.8625 52.5837C47.19 52.8053 47.4616 53.0997 47.6562 53.4439C47.8507 53.7881 47.9629 54.1727 47.9838 54.5675C47.9404 54.9325 47.8143 55.2829 47.615 55.5918C47.4157 55.9007 47.1485 56.16 46.8338 56.35L44.8788 57.27C44.3913 57.4724 43.8921 57.6453 43.3838 57.7875C42.8729 57.9233 42.3545 58.0289 41.8313 58.1037C39.1477 58.5182 36.4203 58.5665 33.7238 58.2475C32.0474 58.1092 30.4296 57.5666 29.0088 56.6662C28.5714 56.3283 28.2827 55.8334 28.2038 55.2862V54.1937C28.2782 53.9508 28.3846 53.7188 28.52 53.5037C29.0877 52.8945 29.7721 52.4056 30.5325 52.0662C31.3367 51.6811 32.187 51.4009 33.0625 51.2325C33.3044 51.1901 33.5205 51.0556 33.6653 50.8572C33.81 50.6588 33.8722 50.4121 33.8388 50.1687C33.7967 49.9286 33.661 49.7151 33.4616 49.5749C33.2621 49.4348 33.0152 49.3795 32.775 49.4212C31.5085 49.5931 30.2766 49.9617 29.1238 50.5137C28.8561 50.6227 28.6046 50.7678 28.3763 50.945V49.795V44.9937C28.3763 43.3837 28.3763 41.745 28.175 40.1925C27.9668 36.7388 27.5443 33.3013 26.91 29.9C26.8699 29.0821 26.6285 28.2868 26.2072 27.5847C25.7859 26.8825 25.1978 26.2953 24.495 25.875C22.8011 24.8451 20.9285 24.1429 18.975 23.805C17.0795 23.403 15.1206 23.403 13.225 23.805C13.1211 23.8256 13.0223 23.8665 12.9343 23.9254C12.8462 23.9843 12.7706 24.0599 12.7119 24.1481C12.6531 24.2362 12.6123 24.3351 12.5918 24.439C12.5714 24.543 12.5716 24.6499 12.5925 24.7537C12.6131 24.8577 12.6541 24.9565 12.7129 25.0445C12.7718 25.1326 12.8475 25.2082 12.9356 25.2669C13.0238 25.3257 13.1226 25.3665 13.2266 25.387C13.3305 25.4074 13.4374 25.4072 13.5413 25.3862C15.2151 25.1945 16.9106 25.3611 18.515 25.875C20.131 26.28 21.6537 26.9925 23 27.9737C23.3328 28.1922 23.6101 28.4852 23.8097 28.8296C24.0093 29.174 24.1259 29.5602 24.15 29.9575C24.1005 30.3055 23.9708 30.6372 23.7712 30.9265C23.5717 31.2159 23.3077 31.455 23 31.625L21.0738 32.545C20.5847 32.7431 20.0857 32.9158 19.5788 33.0625C19.0705 33.2091 18.5514 33.3149 18.0263 33.3787C15.3374 33.7617 12.6077 33.7617 9.91879 33.3787C8.23458 33.235 6.60866 32.693 5.17504 31.7975C5.10258 31.7466 5.03518 31.6888 4.97379 31.625C3.91004 30.59 4.19754 28.5775 6.81379 27.3412C7.62785 26.9558 8.48769 26.6757 9.37254 26.5075C9.61264 26.4654 9.82622 26.3297 9.96637 26.1303C10.1065 25.9308 10.1618 25.6839 10.12 25.4437C10.1026 25.326 10.0618 25.213 10 25.1113C9.93821 25.0096 9.85667 24.9214 9.76021 24.8517C9.66374 24.782 9.5543 24.7324 9.43834 24.7057C9.32239 24.679 9.20226 24.6758 9.08504 24.6962C7.80535 24.8988 6.56427 25.2964 5.40504 25.875C4.57101 26.2526 3.81895 26.7898 3.19129 27.4562C1.12129 29.6987 2.81754 29.8137 2.47254 39.4162V44.045V48.6737C2.67379 53.3887 3.01879 57.5287 3.16254 59.5125C3.16626 59.6333 3.19375 59.7523 3.24345 59.8625C3.29316 59.9727 3.36409 60.072 3.4522 60.1548C3.54031 60.2375 3.64388 60.3021 3.75697 60.3448C3.87006 60.3876 3.99046 60.4076 4.11129 60.4037C4.23333 60.404 4.35412 60.3792 4.46618 60.3308C4.57824 60.2825 4.67917 60.2117 4.76273 60.1227C4.84629 60.0338 4.91069 59.9286 4.95194 59.8137C4.99319 59.6989 5.01041 59.5768 5.00254 59.455C5.00254 58.2187 5.00254 56.1775 5.23254 53.705C7.45513 54.8789 9.85332 55.6848 12.3338 56.0912C13.5408 56.288 14.7621 56.3842 15.985 56.3787C17.2131 56.3521 18.4358 56.2077 19.6363 55.9475C21.7067 55.486 23.6943 54.7104 25.53 53.6475C25.53 55.2575 25.53 60.0587 25.3863 60.5475C23.3915 61.3183 21.3033 61.821 19.1763 62.0425C18.0838 62.0425 17.02 62.2437 15.9275 62.2725C14.8358 62.3302 13.7418 62.3302 12.65 62.2725C10.067 62.1381 7.52296 61.5846 5.11754 60.6337C4.9039 60.5356 4.66015 60.5259 4.43937 60.6067C4.2186 60.6875 4.03867 60.8522 3.93879 61.065C3.82841 61.2823 3.8088 61.5346 3.88427 61.7664C3.95973 61.9982 4.12411 62.1906 4.34129 62.3012C6.81261 63.7287 9.51944 64.7024 12.3338 65.1762C13.5408 65.373 14.7621 65.4692 15.985 65.4637C17.2131 65.4371 18.4358 65.2927 19.6363 65.0325C21.7098 64.5814 23.699 63.8051 25.53 62.7325C25.53 63.6812 25.76 64.63 25.8463 65.6075C25.8463 65.8515 25.9432 66.0855 26.1157 66.258C26.2883 66.4306 26.5223 66.5275 26.7663 66.5275C27.0103 66.5275 27.2443 66.4306 27.4168 66.258C27.5894 66.0855 27.6863 65.8515 27.6863 65.6075C27.9163 64.4287 28.2038 63.3075 28.3763 62.1287C28.4048 61.6308 28.4048 61.1317 28.3763 60.6337V59.5412C29.8245 60.342 31.4002 60.8867 33.0338 61.1512C36.0276 61.5806 39.0674 61.5806 42.0613 61.1512C42.6938 61.1512 43.355 60.8925 43.9588 60.72C44.5841 60.5345 45.1984 60.3138 45.7988 60.0587C46.2875 59.8575 46.805 59.6275 47.2938 59.3687V61.0362C47.2938 62.1862 47.5238 63.3075 47.5525 64.4287L46.5463 64.8025C45.4389 65.124 44.3026 65.3358 43.1538 65.435C41.8797 65.6529 40.5928 65.7873 39.3013 65.8375C38.0282 65.9235 36.7507 65.9235 35.4775 65.8375C33.7439 65.7518 32.0308 65.4228 30.3888 64.86C30.1639 64.7609 29.9087 64.7552 29.6796 64.8441C29.4505 64.9331 29.266 65.1094 29.1669 65.3344C29.0678 65.5593 29.0621 65.8144 29.151 66.0436C29.24 66.2727 29.4164 66.4571 29.6413 66.5562C31.8469 67.8264 34.2781 68.6564 36.8 69C38.0137 69.1292 39.2376 69.1292 40.4513 69C41.6468 68.8518 42.829 68.6115 43.9875 68.2812C44.9699 67.961 45.9303 67.5769 46.8625 67.1312C47.9075 66.6775 48.8771 66.0667 49.7375 65.32C50.1142 64.026 50.3551 62.6964 50.4563 61.3525C50.4991 60.8263 50.4991 60.2975 50.4563 59.7712C50.4848 59.2446 50.4848 58.7167 50.4563 58.19C50.4563 56.4362 50.6575 56.1487 50.4563 54.5675C50.4047 53.7703 50.1673 52.9963 49.7629 52.3073C49.3585 51.6184 48.7984 51.0337 48.1275 50.6ZM9.54504 36.4837C12.5271 36.9417 15.5617 36.9417 18.5438 36.4837C19.1835 36.3737 19.8169 36.2297 20.4413 36.0525C21.0801 35.8798 21.7048 35.6587 22.31 35.3912C22.8218 35.1916 23.3211 34.9612 23.805 34.7012C24.1766 34.5255 24.5244 34.3033 24.84 34.04C25.0171 33.8918 25.1806 33.7283 25.3288 33.5512V40.25V41.4862C23.3828 42.2111 21.3551 42.6939 19.2913 42.9237C18.17 43.125 17.25 43.125 16.0138 43.125H12.7363C10.2584 42.9844 7.81588 42.4707 5.49129 41.6012V39.3587C5.49129 37.8062 5.49129 36.34 5.26129 34.9887C6.6041 35.7038 8.04891 36.208 9.54504 36.4837ZM19.2625 53.0437C18.17 53.0437 17.1063 53.245 16.0138 53.2737C14.9221 53.3315 13.828 53.3315 12.7363 53.2737C10.2176 53.1602 7.73304 52.6459 5.37629 51.75V48.875V44.2175V43.93C7.54665 45.0414 9.87315 45.8169 12.2763 46.23C13.4825 46.4314 14.705 46.5181 15.9275 46.4887C17.2067 46.4671 18.4796 46.3031 19.7225 46C21.737 45.5753 23.6756 44.8483 25.4725 43.8437V45.195V49.9387V51.6062C23.4734 52.352 21.386 52.8352 19.2625 53.0437Z"
+                                        fill="#2C3F4D" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_5_31">
+                                        <rect width="69" height="69" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
                         </div>
-                        <p class="create-account-content-text text-center text-lg-start">
-                            Hızlı ödemeler, özel promosyonlar ve kullanıcı dostu arayüz ile işinizi kolaylaştırıyoruz.
-                            Daha fazla müşteri, daha fazla gelir ve daha fazla kontrol sizinle! Yolda kazanın, işte
-                            rahatlayın.
+                        <div class="money-transfer-box__title text-center mb-2">
+                            Para Gönder
+                        </div>
+                        <p class="text-center">
+                            PTN ile yurt içine ve yurt dışına ucuz, hızlı ve güvenli bir şekilde para gönderebilirsiniz.
                         </p>
-                    </div>
-                    <div class="create-tab-content">
-                        <div id="" class="">
-                            <div class="create-tab-menu mb-4">
-                                <div class="btn-group d-flex align-items-center h-100" role="group"
-                                    aria-label="Tab Menu Button">
-                                    <button type="button" class="tab-button active" name="login-taksi"> Taksi</button>
-                                    <button type="button" class="tab-button" name="login-durak">Durak</button>
-                                </div>
-                            </div>
-                            <div class="tab-control-body tab-control-bg position-relative">
-                                <div
-                                    class="form-loading position-absolute d-flex align-items-center justify-content-center">
-                                    <div class="loader"></div>
-                                </div>
-                                <form class="tab-page needs-validation" novalidate id="login-taksi"
-                                    asp-controller="Home" asp-action="BasvuruYap" method="post">
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-3">
-                                            <div class="form-floating">
-                                                <input required id="name" type="text" name="name" class="form-control"
-                                                    value="" placeholder="">
-                                                <label for="name">Adınız*</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 mb-3">
-                                            <div class="form-floating">
-                                                <input required id="Surname" type="text" name="" class="form-control"
-                                                    value="" placeholder="">
-                                                <label for="Surname">Soyadınız*</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-3">
-                                            <div class="form-floating">
-                                                <input required id="phones" type="text" name=""
-                                                    class="form-control phone" placeholder="" value="">
-                                                <label for="phones">GSM*</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 mb-3">
-                                            <div class="form-floating">
-                                                <input required id="city" type="text" name="" class="form-control"
-                                                    value="" placeholder="">
-                                                <label for="city">Şehir*</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6 mb-3">
-                                            <div class="form-floating">
-                                                <input required id="district" type="text" name="" class="form-control"
-                                                    value="" placeholder="">
-                                                <label for="district">İlçe*</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 mb-3">
-                                            <div class="form-floating">
-                                                <input required id="station" type="text" name="" class="form-control"
-                                                    value="" placeholder="">
-                                                <label for="station">Durak*</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-check-wrapper mb-3">
-                                        <div class="form-check mb-3">
-                                            <input type="checkbox" id="ticari" name="" class="form-check-input"
-                                                value="">
-                                            <label class="form-check-label" for="ticari">
-                                                Takside.com işlemlerimi takip edebilir,
-                                                <a href="#" class="modal-export"
-                                                    data-bs-target="#modal-import-staticpage">
-                                                    Kullanıcı Sözleşmesini
-                                                </a>' ve
-                                                <a href="#" class="modal-export"
-                                                    data-bs-target="#modal-import-staticpage">
-                                                    Gizlilik Politikasını</a> nı Okudum, onaylıyorum.
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" id="kvkk2" name="" class="form-check-input" value=""
-                                                required>
-                                            <label class="form-check-label" for="kvkk2">
-                                                <a href="#" class="modal-export"
-                                                    data-bs-target="#modal-import-staticpage">
-                                                    KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum.
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary w-100" name="login-taksi">Hesap
-                                        Aç</button>
-                                </form>
-                                <form class="tab-page needs-validation" id="login-durak" asp-controller="Home"
-                                    asp-action="BasvuruYap" method="post" style="display: none;">
-                                    <input hidden="hidden" class="form-control" name="@nameof(@Model.durak.WebFormId)"
-                                        value="@Model.durak.WebFormId">
-                                    <input hidden="hidden" class="form-control" name="@nameof(@Model.durak.WebFormName)"
-                                        value="@Model.durak.WebFormName">
-                                    <input hidden="hidden" class="form-control" name="@nameof(@Model.durak.DemandType)"
-                                        value="@Model.durak.DemandType">
-                                    <input hidden="hidden" class="form-control"
-                                        name="@nameof(@Model.durak.DemandSubject)" value="@Model.durak.DemandSubject">
-                                    <input hidden="hidden" class="form-control"
-                                        name="@nameof(@Model.durak.AddedAddress)" value="@Model.durak.AddedAddress">
-                                    <div class="row mt-2">
-                                        <div class="col form-floating">
-                                            <input required id="name" type="text"
-                                                name="@nameof(Model.durak.CustomerName)" class="form-control"
-                                                value="@Model.durak.CustomerName">
-                                            <label for="name">Adınız*</label>
-                                        </div>
-                                        <div class="col form-floating">
-                                            <input required id="surname" type="text"
-                                                name="@nameof(Model.durak.CustomerSurName)" class="form-control"
-                                                value="@Model.durak.CustomerSurName">
-                                            <label for="surname">Soyadınız*</label>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col form-floating">
-                                            <input required id="phone" type="tel"
-                                                name="@nameof(Model.durak.CustomerPhone)" class="form-control phone"
-                                                value="@Model.durak.CustomerPhone">
-                                            <label for="phone">GSM*</label>
-                                        </div>
-                                        <div class="col form-floating">
-                                            <input required id="city" type="text" name="@nameof(Model.durak.City)"
-                                                class="form-control" value="@Model.durak.City">
-                                            <label for="city">Şehir*</label>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col form-floating">
-                                            <input required id="district" type="text"
-                                                name="@nameof(Model.durak.District)" class="form-control"
-                                                value="@Model.durak.District">
-                                            <label for="district">İlçe*</label>
-                                        </div>
-                                        <div class="col form-floating">
-                                            <input required id="station" type="text"
-                                                name="@nameof(Model.durak.WebContactMessage)" class="form-control"
-                                                value="@Model.durak.WebContactMessage">
-                                            <label for="station">Durak*</label>
-                                        </div>
-                                        <div class="col form-floating">
-                                            <input required id="taksi" type="text"
-                                                name="@nameof(Model.durak.WebContactMessage)" class="form-control"
-                                                value="@Model.durak.WebContactMessage">
-                                            <label for="taksi">Taksi*</label>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-5">
-                                        <div class="col col-12 d-grid gap-2">
-                                            <button type="submit" class="btn btn-block btn-dark"
-                                                name="login-taksi">Hesap Aç</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 ">
-                                        <div class="form-check mb-3">
-                                            <input type="checkbox" id="ticari"
-                                                name="@nameof(Model.durak.TicariIletiOnay)" class="form-check-input"
-                                                value="@Model.durak.TicariIletiOnay">
-                                            <label class="form-check-label" for="ticari">
-                                                Takside.com.net işlemlerimi takip edebilir,
-                                                <a href="@Url.Action(" Popup_Contract", "Component" )"
-                                                    class="modal-export" data-bs-target="#modal-import-staticpage">
-                                                    Kullanıcı Sözleşmesini
-                                                </a>' ve
-                                                <a href="@Url.Action(" Popup_Privacy", "Component" )"
-                                                    class="modal-export" data-bs-target="#modal-import-staticpage">
-                                                    Gizlilik Politikasını</a> nı Okudum, onaylıyorum.
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-3">
-                                            <input type="checkbox" id="kvkk2" name="" class="form-check-input" value=""
-                                                required>
-                                            <label class="form-check-label" for="Kvkk">
-                                                <a href="" class="modal-export"
-                                                    data-bs-target="#modal-import-staticpage">
-                                                    KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum.
-                                            </label>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                        <div class="money-transfer-box__btn text-center">
+                            <a href="#" class="btn btn-primary" title="Hizmet Noktalarımız">
+                                Hizmet Noktalarımız
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Create an Account End -->
-
-        <!-- We Will Contact You Start -->
-        <div class="we-contact-wrapper">
-            <div class="container-fluid container-lg">
-                <div class="we-contact we-contact-order background-gray rounded-3 shadow-sm p-4">
-                    <div class="we-contact-title mb-3">Biz Size Ulaşalım</div>
-                    <div class="we-contact-form">
-                        <form class="w-100">
-                            <div class="d-flex flex-wrap gap-3">
-                                <div class="form-floating flex-grow-1">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">Adınız*</label>
-                                </div>
-                                <div class="form-floating flex-grow-1">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">Soyadınız*</label>
-                                </div>
-                                <div class="form-floating flex-grow-1">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">GSM Numaranız*</label>
-                                </div>
-                                <div class="form-check-wrapper we-order-5">
-                                    <div class="form-check mb-3">
-                                        <input type="checkbox" id="ticari" name="" class="form-check-input" value="">
-                                        <label class="form-check-label" for="ticari">
-                                            Takside.com işlemlerimi takip edebilir,
-                                            <a href="#" class="modal-export" data-bs-target="#modal-import-staticpage">
-                                                Kullanıcı Sözleşmesini
-                                            </a>' ve
-                                            <a href="#" class="modal-export" data-bs-target="#modal-import-staticpage">
-                                                Gizlilik Politikasını</a> nı Okudum, onaylıyorum.
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" id="kvkk2" name="" class="form-check-input" value=""
-                                            required>
-                                        <label class="form-check-label" for="Kvkk">
-                                            <a href="#" class="modal-export" data-bs-target="#modal-import-staticpage">
-                                                KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum.
-                                        </label>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary flex-grow-1">Gönder</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- We Will Contact You Start -->
-
-        <!-- All Payment Start -->
-        <div class="w-100 all-payment-wrapper py-5 mt-5">
-            <div class="container-fluid container-lg">
-                <h1 class="text-center mb-4">Tüm Ödeme Seçenekleri Bir Arada.<br>Hemen Başvur POS’un 1 Dakikada Seninle!
-                </h1>
-                <div class="row">
-                    <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
-                        <div class="all-payment-list">
-                            <div class="all-payment-list-image mb-3 text-center">
-                                <picture>
-                                    <source srcset="dist/images/all-payments/temassiz.webp" type="image/webp">
-                                    <source srcset="dist/images/all-payments/temassiz.png" type="image/png">
-                                    <img src="dist/images/all-payments/temassiz.png" width="200" height="403"
-                                        class="img-fluid" loading="lazy" alt="Temassız ödeme al">
-                                </picture>
-                            </div>
-                            <div class="text-center all-payment-list-title mb-2">
-                                Temassız <br>Ödeme Al.
-                            </div>
-                            <div class="text-center all-payment-list-desc">
-                                Android telefonunla anında temassız ödeme al.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
-                        <div class="all-payment-list">
-                            <div class="all-payment-list-image mb-3 text-center">
-                                <picture>
-                                    <source srcset="dist/images/all-payments/kart-no-ile-odeme.webp" type="image/webp">
-                                    <source srcset="dist/images/all-payments/kart-no-ile-odeme.png" type="image/png">
-                                    <img src="dist/images/all-payments/kart-no-ile-odeme.png" width="200" height="403"
-                                        class="img-fluid" loading="lazy" alt="Kart numarası ile ödeme al">
-                                </picture>
-                            </div>
-                            <div class="text-center all-payment-list-title mb-2">
-                                Kart Numarası<br> ile Ödeme Al.
-                            </div>
-                            <div class="text-center all-payment-list-desc">
-                                Müşterin kart numarası ile anında ödeme yapabilir.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
-                        <div class="all-payment-list">
-                            <div class="all-payment-list-image mb-3 text-center">
-                                <picture>
-                                    <source srcset="dist/images/all-payments/link-ile-odeme.webp" type="image/webp">
-                                    <source srcset="dist/images/all-payments/link-ile-odeme.png" type="image/png">
-                                    <img src="dist/images/all-payments/link-ile-odeme.png" width="200" height="403"
-                                        class="img-fluid" loading="lazy" alt="Link ile ödeme al">
-                                </picture>
-                            </div>
-                            <div class="text-center all-payment-list-title mb-2">
-                                Link ile <br>Ödeme Al.
-                            </div>
-                            <div class="text-center all-payment-list-desc">
-                                Müşterine gönderdiğin link üzerinden ödeme al.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
-                        <div class="all-payment-list">
-                            <div class="all-payment-list-image mb-3 text-center">
-                                <picture>
-                                    <source srcset="dist/images/all-payments/qr-ile-odeme.webp" type="image/webp">
-                                    <source srcset="dist/images/all-payments/qr-ile-odeme.png" type="image/png">
-                                    <img src="dist/images/all-payments/qr-ile-odeme.png" width="200" height="403"
-                                        class="img-fluid" loading="lazy" alt="QR kod ile ödeme al">
-                                </picture>
-                            </div>
-                            <div class="text-center all-payment-list-title mb-2">
-                                QR Kod ile <br>Ödeme Al.
-                            </div>
-                            <div class="text-center all-payment-list-desc">
-                                Uygulamada oluşturduğun QR kod ile ödeme alabilirsin.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
-                        <div class="all-payment-list">
-                            <div class="all-payment-list-image mb-3 text-center">
-                                <picture>
-                                    <source srcset="dist/images/all-payments/iban-odeme-al.webp" type="image/webp">
-                                    <source srcset="dist/images/all-payments/iban-odeme-al.png" type="image/png">
-                                    <img src="dist/images/all-payments/iban-odeme-al.png" width="200" height="403"
-                                        class="img-fluid" loading="lazy" alt="IBAN ile ödeme al">
-                                </picture>
-                            </div>
-                            <div class="text-center all-payment-list-title mb-2">
-                                IBAN ile<br> Ödeme Al.
-                            </div>
-                            <div class="text-center all-payment-list-desc">
-                                IBAN’ını müşterinle paylaşarak hemen ödeme al.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
-                        <div class="all-payment-list">
-                            <div class="all-payment-list-image mb-3 text-center">
-                                <picture>
-                                    <source srcset="dist/images/all-payments/para-iste.webp" type="image/webp">
-                                    <source srcset="dist/images/all-payments/para-iste.png" type="image/png">
-                                    <img src="dist/images/all-payments/para-iste.png" width="200" height="403"
-                                        class="img-fluid" loading="lazy" alt="Para iste ile ödeme al">
-                                </picture>
-                            </div>
-                            <div class="text-center all-payment-list-title mb-2">
-                                Para İste ile<br> Ödeme Al.
-                            </div>
-                            <div class="text-center all-payment-list-desc">
-                                Müşterinin istediği kişiye link göndererek para isteyebilirsin.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- All Payment End -->
-
-        <!-- Takside Info Start -->
-        <div class="w-100 py-5">
-            <div class="container-fluid container-lg">
-                <div class="d-flex flex-column flex-sm-row justify-content-sm-around">
-                    <div class="takside-info d-flex flex-column align-items-center mb-4 mb-sm-0">
-                        <div class="takside-info-icon d-flex align-items-center justify-content-center mb-3">
-                            <svg width="66" height="58" viewBox="0 0 66 58" fill="none"
+                <div class="col-lg-6">
+                    <div class="money-transfer-box rounded-3 px-4 py-5">
+                        <div class="money-transfer-box__icon text-center mb-2">
+                            <svg width="74" height="80" viewBox="0 0 74 80" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.7422 29.8006H52.6476L48.2239 16.5957" stroke="#252525" stroke-width="4"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M26.8926 36.0527H40.7261" stroke="#252525" stroke-width="4"
-                                    stroke-miterlimit="10" stroke-linecap="round" />
-                                <path d="M26.8926 41.0996H40.7261" stroke="#252525" stroke-width="4"
-                                    stroke-miterlimit="10" stroke-linecap="round" />
-                                <path d="M10 41.0455H16.1482V37" stroke="#252525" stroke-width="4"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M49.9473 41.0983H56.0955V37.0527" stroke="#252525" stroke-width="4"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M8.07058 52.6982H11.8979C12.9632 52.6982 13.8269 53.5619 13.8269 54.6272C13.8269 55.6926 12.9632 56.5562 11.8979 56.5562H8.07058C7.00522 56.5562 6.14158 55.6926 6.14158 54.6272C6.14158 53.5619 7.00522 52.6982 8.07058 52.6982Z"
-                                    fill="#252525" stroke="#252525" stroke-width="1.53706" />
-                                <path
-                                    d="M54.1819 52.6982H58.0092C59.0745 52.6982 59.9382 53.5619 59.9382 54.6272C59.9382 55.6926 59.0745 56.5562 58.0092 56.5562H54.1819C53.1166 56.5562 52.2529 55.6926 52.2529 54.6272C52.2529 53.5619 53.1165 52.6982 54.1819 52.6982Z"
-                                    fill="#252525" stroke="#252525" stroke-width="1.53706" />
-                                <path
-                                    d="M60.885 26.5869H63.4849C64.45 26.5869 65.2323 27.3692 65.2323 28.3342C65.2323 29.2992 64.45 30.0815 63.4849 30.0815H60.885C59.92 30.0815 59.1377 29.2992 59.1377 28.3342C59.1377 27.3692 59.92 26.5869 60.885 26.5869Z"
-                                    fill="#252525" stroke="#252525" stroke-width="1.53706" />
-                                <path
-                                    d="M2.51585 26.8681H5.11579C6.08081 26.8681 6.86311 27.6504 6.86311 28.6155C6.86311 29.5805 6.08081 30.3628 5.11579 30.3628H2.51585C1.55083 30.3628 0.768529 29.5805 0.768529 28.6155C0.768529 27.6504 1.55083 26.8681 2.51585 26.8681Z"
-                                    fill="#252525" stroke="#252525" stroke-width="1.53706" />
-                                <path
-                                    d="M18.2656 8.61918C18.2656 4.97866 20.0794 2 22.2952 2H43.7857C46.002 2 47.8152 4.97866 47.8152 8.61918"
-                                    stroke="#252525" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M7.83008 30.1766L10.9821 19.473C12.7156 13.5861 18.3881 8.76953 23.5875 8.76953H33.0409"
-                                    stroke="#252525" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M58.2517 30.1763L55.0998 19.473C53.3661 13.5861 47.6938 8.76953 42.4944 8.76953H33.041"
-                                    stroke="#252525" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M33.4443 51.9295H8.31491C7.11872 51.9218 5.97419 51.441 5.13132 50.5921C4.28845 49.7433 3.81573 48.5954 3.81641 47.3992V36.5825C3.81641 34.1286 5.18439 30.3184 7.64783 30.3184"
-                                    stroke="#252525" stroke-width="3.07411" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M32.5566 51.9295H57.686C58.8822 51.9218 60.0267 51.441 60.8696 50.5921C61.7124 49.7433 62.1852 48.5954 62.1845 47.3992V36.5825C62.1845 34.1286 60.8165 30.3184 58.3531 30.3184"
-                                    stroke="#252525" stroke-width="3.07411" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                <circle cx="37.6021" cy="43.6945" r="31.6908" fill="#FFE988" />
+                                <g clip-path="url(#clip0_5_31)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M66.8724 23.8625C66.8802 23.7567 66.8671 23.6505 66.8337 23.5498C66.8003 23.4491 66.7474 23.356 66.6779 23.2759C66.6085 23.1957 66.5239 23.1301 66.429 23.0828C66.3341 23.0354 66.2307 23.0073 66.1249 23C64.4287 22.7988 62.7612 22.655 61.0937 22.54C59.9724 22.54 58.8512 22.3675 57.7012 22.3675C57.3562 22.3675 56.0049 21.9938 55.4587 22.3675C55.5327 21.9782 55.5807 21.5844 55.6024 21.1888C55.518 19.8641 55.3354 18.5476 55.0562 17.25C54.8614 16.413 54.592 15.5951 54.2512 14.8063C52.8655 11.6984 50.7677 8.96037 48.1274 6.81376C45.5576 4.72909 42.7013 3.02497 39.6462 1.75376C38.2609 1.1253 36.8287 0.606212 35.3624 0.201264C34.4263 -0.0905663 33.4235 -0.0905663 32.4874 0.201264C32.1359 0.331192 31.8491 0.593234 31.688 0.93156C31.5269 1.26989 31.5042 1.65775 31.6249 2.01251C31.6249 2.47251 33.5799 3.96751 33.8962 4.22626L36.9437 7.10126C38.2456 8.54391 39.3568 10.1479 40.2499 11.8738C41.2263 13.5687 41.9984 15.3734 42.5499 17.25C42.9034 18.4506 43.1914 19.6694 43.4124 20.9013C43.4409 21.2649 43.4409 21.6302 43.4124 21.9938C42.8819 22.0306 42.354 22.0978 41.8312 22.195H36.6562H33.1774C32.6024 22.195 31.4237 23.8338 32.2862 24.5525C33.9237 26.0176 35.4786 27.5725 36.9437 29.21C39.1862 31.6825 41.2849 34.2988 43.3262 36.8863C43.9012 37.605 44.4762 38.3525 45.1087 39.0138C45.542 39.5093 46.013 39.9707 46.5174 40.3938C46.9352 40.7541 47.3879 41.0719 47.8687 41.3425C48.2655 41.5009 48.7081 41.5009 49.1049 41.3425C49.5926 41.1469 50.0407 40.8644 50.4274 40.5088C51.0312 39.9913 51.6637 39.2438 52.0662 38.8988C52.6214 38.4107 53.1492 37.8924 53.6474 37.3463C55.6024 35.3625 57.2987 33.1775 59.3974 31.3663C60.6049 30.2738 61.7549 29.21 62.8762 28.06C64.0723 26.9109 65.1777 25.671 66.1824 24.3513C66.3333 24.349 66.48 24.3011 66.6032 24.2138C66.7263 24.1266 66.8202 24.0041 66.8724 23.8625ZM61.6399 26.7375C60.4612 27.7725 59.2537 28.6925 57.9887 29.6125C56.7237 30.5325 56.2637 30.9925 55.4587 31.74C53.6762 33.35 52.0087 35.1613 50.1399 36.685L48.6162 38.1225L47.4662 37.0588C46.8624 36.4263 46.2874 35.765 45.7412 35.1325C43.4699 32.6025 41.1699 30.1013 38.7262 27.7725C37.3749 26.45 35.9662 25.2713 34.4999 24.1213C35.218 24.0782 35.9381 24.0782 36.6562 24.1213C38.3812 24.1213 40.0774 24.1213 41.7737 24.38C42.0324 24.38 43.6424 24.5813 44.2749 24.38C44.5507 24.3749 44.8186 24.2872 45.0441 24.1284C45.2696 23.9695 45.4423 23.7467 45.5399 23.4888C45.7651 22.4988 45.8138 21.4769 45.6837 20.47C45.5106 19.1322 45.2513 17.8069 44.9074 16.5025C44.4303 14.3986 43.6965 12.3612 42.7224 10.4363C41.7621 8.5315 40.5537 6.76235 39.1287 5.17501L38.6687 4.71501C41.3872 5.8651 43.9398 7.37347 46.2587 9.20002C48.6548 10.972 50.6203 13.2617 52.0087 15.8988C52.3988 16.7064 52.6977 17.5549 52.8999 18.4288C53.1299 19.3775 53.3024 20.3263 53.4462 21.3038C53.4611 21.9001 53.5091 22.4952 53.5899 23.0863C53.6425 23.4677 53.802 23.8266 54.0499 24.1213C54.4107 24.3833 54.8407 24.5332 55.2862 24.5525C56.1223 24.5381 56.9572 24.4805 57.7874 24.38C58.8792 24.3225 59.9732 24.3225 61.0649 24.38H64.1124C63.2499 25.2425 62.4737 25.875 61.6399 26.7088V26.7375Z"
+                                        fill="#2C3F4D" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M48.1275 50.6C46.4381 49.5493 44.5652 48.8274 42.6075 48.4725C40.712 48.0705 38.7531 48.0705 36.8575 48.4725C36.7536 48.4931 36.6548 48.534 36.5667 48.5929C36.4787 48.6518 36.4031 48.7274 36.3444 48.8156C36.2856 48.9037 36.2448 49.0026 36.2243 49.1065C36.2039 49.2105 36.2041 49.3174 36.225 49.4212C36.2733 49.6334 36.4025 49.8182 36.5851 49.9364C36.7677 50.0545 36.9893 50.0967 37.2025 50.0537C38.9023 49.8036 40.6356 49.9113 42.2913 50.37C43.9413 50.8123 45.4924 51.5635 46.8625 52.5837C47.19 52.8053 47.4616 53.0997 47.6562 53.4439C47.8507 53.7881 47.9629 54.1727 47.9838 54.5675C47.9404 54.9325 47.8143 55.2829 47.615 55.5918C47.4157 55.9007 47.1485 56.16 46.8338 56.35L44.8788 57.27C44.3913 57.4724 43.8921 57.6453 43.3838 57.7875C42.8729 57.9233 42.3545 58.0289 41.8313 58.1037C39.1477 58.5182 36.4203 58.5665 33.7238 58.2475C32.0474 58.1092 30.4296 57.5666 29.0088 56.6662C28.5714 56.3283 28.2827 55.8334 28.2038 55.2862V54.1937C28.2782 53.9508 28.3846 53.7188 28.52 53.5037C29.0877 52.8945 29.7721 52.4056 30.5325 52.0662C31.3367 51.6811 32.187 51.4009 33.0625 51.2325C33.3044 51.1901 33.5205 51.0556 33.6653 50.8572C33.81 50.6588 33.8722 50.4121 33.8388 50.1687C33.7967 49.9286 33.661 49.7151 33.4616 49.5749C33.2621 49.4348 33.0152 49.3795 32.775 49.4212C31.5085 49.5931 30.2766 49.9617 29.1238 50.5137C28.8561 50.6227 28.6046 50.7678 28.3763 50.945V49.795V44.9937C28.3763 43.3837 28.3763 41.745 28.175 40.1925C27.9668 36.7388 27.5443 33.3013 26.91 29.9C26.8699 29.0821 26.6285 28.2868 26.2072 27.5847C25.7859 26.8825 25.1978 26.2953 24.495 25.875C22.8011 24.8451 20.9285 24.1429 18.975 23.805C17.0795 23.403 15.1206 23.403 13.225 23.805C13.1211 23.8256 13.0223 23.8665 12.9343 23.9254C12.8462 23.9843 12.7706 24.0599 12.7119 24.1481C12.6531 24.2362 12.6123 24.3351 12.5918 24.439C12.5714 24.543 12.5716 24.6499 12.5925 24.7537C12.6131 24.8577 12.6541 24.9565 12.7129 25.0445C12.7718 25.1326 12.8475 25.2082 12.9356 25.2669C13.0238 25.3257 13.1226 25.3665 13.2266 25.387C13.3305 25.4074 13.4374 25.4072 13.5413 25.3862C15.2151 25.1945 16.9106 25.3611 18.515 25.875C20.131 26.28 21.6537 26.9925 23 27.9737C23.3328 28.1922 23.6101 28.4852 23.8097 28.8296C24.0093 29.174 24.1259 29.5602 24.15 29.9575C24.1005 30.3055 23.9708 30.6372 23.7712 30.9265C23.5717 31.2159 23.3077 31.455 23 31.625L21.0738 32.545C20.5847 32.7431 20.0857 32.9158 19.5788 33.0625C19.0705 33.2091 18.5514 33.3149 18.0263 33.3787C15.3374 33.7617 12.6077 33.7617 9.91879 33.3787C8.23458 33.235 6.60866 32.693 5.17504 31.7975C5.10258 31.7466 5.03518 31.6888 4.97379 31.625C3.91004 30.59 4.19754 28.5775 6.81379 27.3412C7.62785 26.9558 8.48769 26.6757 9.37254 26.5075C9.61264 26.4654 9.82622 26.3297 9.96637 26.1303C10.1065 25.9308 10.1618 25.6839 10.12 25.4437C10.1026 25.326 10.0618 25.213 10 25.1113C9.93821 25.0096 9.85667 24.9214 9.76021 24.8517C9.66374 24.782 9.5543 24.7324 9.43834 24.7057C9.32239 24.679 9.20226 24.6758 9.08504 24.6962C7.80535 24.8988 6.56427 25.2964 5.40504 25.875C4.57101 26.2526 3.81895 26.7898 3.19129 27.4562C1.12129 29.6987 2.81754 29.8137 2.47254 39.4162V44.045V48.6737C2.67379 53.3887 3.01879 57.5287 3.16254 59.5125C3.16626 59.6333 3.19375 59.7523 3.24345 59.8625C3.29316 59.9727 3.36409 60.072 3.4522 60.1548C3.54031 60.2375 3.64388 60.3021 3.75697 60.3448C3.87006 60.3876 3.99046 60.4076 4.11129 60.4037C4.23333 60.404 4.35412 60.3792 4.46618 60.3308C4.57824 60.2825 4.67917 60.2117 4.76273 60.1227C4.84629 60.0338 4.91069 59.9286 4.95194 59.8137C4.99319 59.6989 5.01041 59.5768 5.00254 59.455C5.00254 58.2187 5.00254 56.1775 5.23254 53.705C7.45513 54.8789 9.85332 55.6848 12.3338 56.0912C13.5408 56.288 14.7621 56.3842 15.985 56.3787C17.2131 56.3521 18.4358 56.2077 19.6363 55.9475C21.7067 55.486 23.6943 54.7104 25.53 53.6475C25.53 55.2575 25.53 60.0587 25.3863 60.5475C23.3915 61.3183 21.3033 61.821 19.1763 62.0425C18.0838 62.0425 17.02 62.2437 15.9275 62.2725C14.8358 62.3302 13.7418 62.3302 12.65 62.2725C10.067 62.1381 7.52296 61.5846 5.11754 60.6337C4.9039 60.5356 4.66015 60.5259 4.43937 60.6067C4.2186 60.6875 4.03867 60.8522 3.93879 61.065C3.82841 61.2823 3.8088 61.5346 3.88427 61.7664C3.95973 61.9982 4.12411 62.1906 4.34129 62.3012C6.81261 63.7287 9.51944 64.7024 12.3338 65.1762C13.5408 65.373 14.7621 65.4692 15.985 65.4637C17.2131 65.4371 18.4358 65.2927 19.6363 65.0325C21.7098 64.5814 23.699 63.8051 25.53 62.7325C25.53 63.6812 25.76 64.63 25.8463 65.6075C25.8463 65.8515 25.9432 66.0855 26.1157 66.258C26.2883 66.4306 26.5223 66.5275 26.7663 66.5275C27.0103 66.5275 27.2443 66.4306 27.4168 66.258C27.5894 66.0855 27.6863 65.8515 27.6863 65.6075C27.9163 64.4287 28.2038 63.3075 28.3763 62.1287C28.4048 61.6308 28.4048 61.1317 28.3763 60.6337V59.5412C29.8245 60.342 31.4002 60.8867 33.0338 61.1512C36.0276 61.5806 39.0674 61.5806 42.0613 61.1512C42.6938 61.1512 43.355 60.8925 43.9588 60.72C44.5841 60.5345 45.1984 60.3138 45.7988 60.0587C46.2875 59.8575 46.805 59.6275 47.2938 59.3687V61.0362C47.2938 62.1862 47.5238 63.3075 47.5525 64.4287L46.5463 64.8025C45.4389 65.124 44.3026 65.3358 43.1538 65.435C41.8797 65.6529 40.5928 65.7873 39.3013 65.8375C38.0282 65.9235 36.7507 65.9235 35.4775 65.8375C33.7439 65.7518 32.0308 65.4228 30.3888 64.86C30.1639 64.7609 29.9087 64.7552 29.6796 64.8441C29.4505 64.9331 29.266 65.1094 29.1669 65.3344C29.0678 65.5593 29.0621 65.8144 29.151 66.0436C29.24 66.2727 29.4164 66.4571 29.6413 66.5562C31.8469 67.8264 34.2781 68.6564 36.8 69C38.0137 69.1292 39.2376 69.1292 40.4513 69C41.6468 68.8518 42.829 68.6115 43.9875 68.2812C44.9699 67.961 45.9303 67.5769 46.8625 67.1312C47.9075 66.6775 48.8771 66.0667 49.7375 65.32C50.1142 64.026 50.3551 62.6964 50.4563 61.3525C50.4991 60.8263 50.4991 60.2975 50.4563 59.7712C50.4848 59.2446 50.4848 58.7167 50.4563 58.19C50.4563 56.4362 50.6575 56.1487 50.4563 54.5675C50.4047 53.7703 50.1673 52.9963 49.7629 52.3073C49.3585 51.6184 48.7984 51.0337 48.1275 50.6ZM9.54504 36.4837C12.5271 36.9417 15.5617 36.9417 18.5438 36.4837C19.1835 36.3737 19.8169 36.2297 20.4413 36.0525C21.0801 35.8798 21.7048 35.6587 22.31 35.3912C22.8218 35.1916 23.3211 34.9612 23.805 34.7012C24.1766 34.5255 24.5244 34.3033 24.84 34.04C25.0171 33.8918 25.1806 33.7283 25.3288 33.5512V40.25V41.4862C23.3828 42.2111 21.3551 42.6939 19.2913 42.9237C18.17 43.125 17.25 43.125 16.0138 43.125H12.7363C10.2584 42.9844 7.81588 42.4707 5.49129 41.6012V39.3587C5.49129 37.8062 5.49129 36.34 5.26129 34.9887C6.6041 35.7038 8.04891 36.208 9.54504 36.4837ZM19.2625 53.0437C18.17 53.0437 17.1063 53.245 16.0138 53.2737C14.9221 53.3315 13.828 53.3315 12.7363 53.2737C10.2176 53.1602 7.73304 52.6459 5.37629 51.75V48.875V44.2175V43.93C7.54665 45.0414 9.87315 45.8169 12.2763 46.23C13.4825 46.4314 14.705 46.5181 15.9275 46.4887C17.2067 46.4671 18.4796 46.3031 19.7225 46C21.737 45.5753 23.6756 44.8483 25.4725 43.8437V45.195V49.9387V51.6062C23.4734 52.352 21.386 52.8352 19.2625 53.0437Z"
+                                        fill="#2C3F4D" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_5_31">
+                                        <rect width="69" height="69" fill="white" />
+                                    </clipPath>
+                                </defs>
                             </svg>
                         </div>
-                        <div class="takside-info-title mb-1">Hızlı</div>
-                        <span class="text-center">Hızlı ödeme almanın <br>uygun yolu Takside.</span>
-                    </div>
-                    <div class="takside-info d-flex flex-column align-items-center mb-4 mb-sm-0">
-                        <div class="takside-info-icon d-flex align-items-center justify-content-center mb-3">
-                            <svg width="71" height="59" viewBox="0 0 71 59" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M28.733 0.697266H38.9767C45.0267 0.697266 49.8194 0.697266 53.5686 1.20089C57.4264 1.72097 60.5502 2.81381 63.0157 5.27597C66.0572 8.32077 67.0282 12.3959 67.3804 17.6856C69.2797 18.5184 70.7149 20.286 70.8696 22.5243C70.8861 22.7251 70.8861 22.9391 70.8861 23.1366V35.8621C70.8861 36.0596 70.8861 36.2736 70.8729 36.4711C70.7149 38.7094 69.2797 40.4804 67.3804 41.3164C67.0282 46.6029 66.0572 50.6779 63.0157 53.7227C60.5502 56.1849 57.4264 57.2777 53.5686 57.7978C49.8161 58.3014 45.0267 58.3014 38.9767 58.3014H28.733C22.6829 58.3014 17.8902 58.3014 14.141 57.7978C10.2832 57.2777 7.1594 56.1849 4.69394 53.7227C2.23178 51.2573 1.13894 48.1335 0.618859 44.2756C0.115234 40.5231 0.115234 35.7338 0.115234 29.6837V29.315C0.115234 23.2649 0.115234 18.4723 0.618859 14.7231C1.13894 10.8652 2.23178 7.74143 4.69394 5.27597C7.1594 2.81381 10.2832 1.72097 14.141 1.20089C17.8935 0.697266 22.6829 0.697266 28.733 0.697266ZM62.387 41.8431H56.0077C48.9471 41.8431 42.9036 36.4843 42.9036 29.4993C42.9036 22.5144 48.9471 17.1556 56.0044 17.1556H62.3837C62.0084 12.7415 61.1625 10.4077 59.5199 8.76843C58.1276 7.37606 56.2184 6.53997 52.907 6.0956C49.5264 5.64135 45.0662 5.63477 38.789 5.63477H28.914C22.6368 5.63477 18.1799 5.64135 14.7928 6.0956C11.4847 6.53997 9.57548 7.37606 8.18311 8.76843C6.79073 10.1608 5.95465 12.07 5.51028 15.3814C5.05603 18.7652 5.04944 23.2221 5.04944 29.4993C5.04944 35.7766 5.05603 40.2368 5.51028 43.6206C5.95465 46.9287 6.79073 48.8379 8.18311 50.2303C9.57548 51.6226 11.4847 52.4587 14.7961 52.9031C18.1799 53.3574 22.6368 53.3639 28.914 53.3639H38.789C45.0662 53.3639 49.5264 53.3574 52.9103 52.9031C56.2184 52.4587 58.1276 51.6226 59.5199 50.2303C61.1625 48.591 62.0117 46.2605 62.387 41.8431ZM13.2819 16.3327C13.2819 15.6779 13.542 15.05 14.005 14.587C14.468 14.124 15.0959 13.8639 15.7507 13.8639H28.9173C29.5721 13.8639 30.2 14.124 30.663 14.587C31.126 15.05 31.3861 15.6779 31.3861 16.3327C31.3861 16.9874 31.126 17.6154 30.663 18.0784C30.2 18.5413 29.5721 18.8014 28.9173 18.8014H15.7507C15.0959 18.8014 14.468 18.5413 14.005 18.0784C13.542 17.6154 13.2819 16.9874 13.2819 16.3327ZM64.8755 22.0931H56.0077C51.3204 22.0931 47.8411 25.579 47.8411 29.4993C47.8411 33.4197 51.3204 36.9056 56.0044 36.9056H64.9512C65.6293 36.8628 65.9222 36.4053 65.9453 36.1288V22.8699C65.9222 22.5934 65.6293 22.1359 64.9512 22.0964L64.8755 22.0931Z"
-                                    fill="#252525" />
-                            </svg>
+                        <div class="money-transfer-box__title text-center mb-2">
+                            Para Al
                         </div>
-                        <div class="takside-info-title mb-1">Kolay</div>
-                        <span class="text-center">Ödemelerin ertesi gün<br> hesabında.</span>
-                    </div>
-                    <div class="takside-info d-flex flex-column align-items-center">
-                        <div class="takside-info-icon d-flex align-items-center justify-content-center mb-3">
-                            <svg width="60" height="68" viewBox="0 0 60 68" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M18.7694 6.71135C14.1879 7.95328 9.54808 9.42151 6.80201 10.3176C6.04649 10.5641 5.51595 11.2184 5.41632 11.966C3.07967 29.5013 8.47862 42.2999 14.9207 50.7275C18.155 54.9587 21.6546 58.0882 24.572 60.1455C26.0319 61.175 27.3225 61.9194 28.3366 62.3968C28.8443 62.6358 29.2595 62.7969 29.5749 62.8946C29.8347 62.9751 29.9683 62.9941 30 62.9986C30.0318 62.9941 30.1654 62.9751 30.4251 62.8946C30.7405 62.7969 31.1557 62.6358 31.6634 62.3968C32.6776 61.9194 33.9682 61.175 35.428 60.1455C38.3454 58.0882 41.845 54.9587 45.0793 50.7275C51.5214 42.2999 56.9203 29.5013 54.5837 11.966C54.4841 11.2184 53.9535 10.5641 53.198 10.3176C50.4519 9.4215 45.8121 7.95328 41.2306 6.71135C36.5462 5.44156 32.2395 4.5 30 4.5C27.7605 4.5 23.4538 5.44156 18.7694 6.71135ZM17.6461 2.36104C22.2265 1.11942 27.0912 0 30 0C32.9088 0 37.7735 1.11942 42.354 2.36103C47.0372 3.63052 51.7554 5.12413 54.5309 6.02979C56.8471 6.78559 58.599 8.83233 58.9354 11.3573C61.4524 30.246 55.6161 44.2415 48.5372 53.5021C45.011 58.115 41.1787 61.5531 37.9182 63.8524C36.2892 65.0012 34.7793 65.8823 33.4972 66.4859C32.3125 67.0435 31.045 67.5 30 67.5C28.955 67.5 27.6875 67.0435 26.5029 66.4859C25.2207 65.8823 23.7109 65.0012 22.0818 63.8524C18.8213 61.5531 14.989 58.115 11.4628 53.5021C4.38392 44.2415 -1.45244 30.246 1.06457 11.3573C1.40103 8.83234 3.15294 6.78559 5.46914 6.02979C8.24459 5.12413 12.9628 3.63052 17.6461 2.36104Z"
-                                    fill="#252525" />
-                                <path
-                                    d="M42.0384 21.7116C42.8622 22.5353 42.8622 23.8709 42.0384 24.6947L29.3822 37.3509C28.9866 37.7465 28.4501 37.9688 27.8906 37.9688C27.3312 37.9688 26.7947 37.7465 26.3991 37.3509L20.0709 31.0228C19.2472 30.199 19.2472 28.8635 20.0709 28.0397C20.8947 27.2159 22.2303 27.2159 23.0541 28.0397L27.8906 32.8763L39.0553 21.7116C39.8791 20.8878 41.2147 20.8878 42.0384 21.7116Z"
-                                    fill="#252525" />
-                            </svg>
+                        <p class="text-center">
+                            PTN ile 150+ ülkeden adınıza gelen parayı geçerli kimlik belgeniz ile PTN noktalarından
+                            alabilirsiniz.
+                        </p>
+                        <div class="money-transfer-box__btn text-center">
+                            <a href="#" class="btn btn-primary" title="Hizmet Noktalarımız">
+                                Hizmet Noktalarımız
+                            </a>
                         </div>
-                        <div class="takside-info-title mb-1">Güvenli</div>
-                        <span class="text-center">Takside ile paran güvende<br> sen güvendesin.</span>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Takside Info End -->
+        <!-- Money Transfer End -->
 
-        <!-- Nereye Gidersen Git Start -->
-        <div class="w-100 text-center">
+        <!-- Money Transfer Free Start -->
+        <div class="w-100 text-center mb-5">
             <picture>
-                <source srcset="dist/images/nereye-gidersen-git.webp" type="image/webp">
-                <source srcset="dist/images/nereye-gidersen-git.jpg" type="image/jpg">
-                <img src="dist/images/nereye-gidersen-git.jpg" alt="Nereye gidersen git takside seninle" loading="lazy"
-                    class="img-fluid" width="1920" height="465">
+                <source srcset="dist/images/money-transfer-free.webp" type="image/webp">
+                <source srcset="dist/images/money-transfer-free.jpg" type="image/jpg">
+                <img src="dist/images/money-transfer-free.jpg"
+                    alt="Zolotay Korona ile USD, TL ve EURO para göndermek ücretsiz!" loading="lazy" class="img-fluid"
+                    width="2560" height="338">
             </picture>
         </div>
-        <!-- Nereye Gidersen Git End -->
+        <!-- Money Transfer Free End -->
 
-        <!-- All Payment Detail Start -->
-        <div class="w-100 py-5">
-            <div class="container-fluid container-lg">
-                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
-                    <div class="content order-2 order-lg-1">
-                        <div class="content-title mb-2">
-                            Tüm Ödeme Seçenekleri<br>
-                            Bir Arada Takside!
-                        </div>
-                        <div class="content-parag mb-4">
-                            Nerede olursa ol, Takside tüm ödeme<br>
-                            seçenekleriyle seninle!
-                        </div>
-                        <div class="content-btn">
-                            <a href="#" class="btn btn-outline-primary me-3">Şimdi Başvur</a>
-                            <a href="#" class="btn btn-primary">Hesap Aç</a>
+        <!-- FAQ Start -->
+        <div class="container-fluid container-lg py-5">
+            <div class="faq-content mx-auto">
+                <div class="faq-content-title mb-5 text-center">
+                    Sıkça Sorulan Sorular
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">PTN ile para transferi yapmak güvenli mi?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
                         </div>
                     </div>
-                    <div class="all-payment-images order-1 order-lg-2">
-                        <picture>
-                            <source srcset="dist/images/all-payment.webp" type="image/webp">
-                            <source srcset="dist/images/all-payment.png" type="image/png">
-                            <img src="dist/images/all-payment.png" alt="Tüm Ödeme Seçenekleri Bir Arada Takside"
-                                width="585" height="300" class="img-fluid" loading="lazy">
-                        </picture>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Adıma gelen ödemeyi nasıl alabilirim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Nasıl para gönderebilirim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">18 yaşından küçüğüm, ödeme alabilir miyim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Para Transferi işlem tutar limitleri nelerdir?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Adıma gelen parayı alırken masraf ödeyecek miyim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Gönderdiğim para ne zaman alıcıya ulaşır?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">PTN Noktaları kimlerdir?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Para gönderim işlemlerinde düzeltme yapılabilir mi?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">PTN noktalarını nasıl bulabilirim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Para gönderim işlemini iptal edebilir miyim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Herhangi bir bankada hesabı olmayan bir kişiye PTN ile para gönderebilir
+                            miyim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Haftasonu ve resmi tatillerde açık PTN şubeleri var mı?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
                     </div>
                 </div>
             </div>
         </div>
-        <!-- All Payment Detail End -->
+        <!-- FAQ End -->
 
-        <!-- Home Tabs Start -->
-        <div id="FormApiKampanya" class="campaing-bg py-5">
+        <!-- PTN Info Start -->
+        <div class="money-transfer-wrapper mb-5 py-5">
             <div class="container-fluid container-lg">
                 <div class="row">
+                    <div class="col-lg-3">
+                        <div class="money-transfer-box rounded-3 p-4 mb-4 mb-lg-0">
+                            <div class="money-transfer-box__icon text-center mb-2">
+                                <svg width="78" height="74" viewBox="0 0 78 74" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="45.6024" cy="42.2542" r="31.6908" fill="#FFE988" />
+                                    <path
+                                        d="M13.994 0C15.0424 0 15.8922 0.862145 15.8922 1.92565V3.85131H46.2625V1.92565C46.2625 0.862145 47.1123 0 48.1607 0C49.209 0 50.0588 0.862145 50.0588 1.92565V3.85131H53.8551C58.0484 3.85131 61.4477 7.29989 61.4477 11.5539V53.9183C61.4477 58.1724 58.0484 61.6209 53.8551 61.6209H8.29961C4.10635 61.6209 0.707031 58.1724 0.707031 53.9183V11.5539C0.707031 7.29989 4.10635 3.85131 8.29961 3.85131H12.0959V1.92565C12.0959 0.862145 12.9457 0 13.994 0ZM8.29961 7.70262C6.20298 7.70262 4.50332 9.42691 4.50332 11.5539V15.4052H57.6514V11.5539C57.6514 9.42691 55.9517 7.70262 53.8551 7.70262H8.29961ZM57.6514 19.2565H4.50332V53.9183C4.50332 56.0453 6.20298 57.7696 8.29961 57.7696H53.8551C55.9517 57.7696 57.6514 56.0454 57.6514 53.9183V19.2565Z"
+                                        fill="#2C3F4D" />
+                                </svg>
+
+                            </div>
+                            <div class="money-transfer-box__title text-center mb-2">
+                                Haftanın Her Günü<br> Para Transferi
+                            </div>
+                            <p class="text-center mb-0">
+                                PTN ile haftanın her günü, geç saatlere kadar para transferi işlemlerinizi
+                                gerçekleştirin!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="money-transfer-box rounded-3 p-4 mb-4 mb-lg-0">
+                            <div class="money-transfer-box__icon text-center mb-2">
+                                <svg width="78" height="74" viewBox="0 0 78 74" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="45.6024" cy="42.2542" r="31.6908" fill="#FFE988" />
+                                    <path
+                                        d="M13.994 0C15.0424 0 15.8922 0.862145 15.8922 1.92565V3.85131H46.2625V1.92565C46.2625 0.862145 47.1123 0 48.1607 0C49.209 0 50.0588 0.862145 50.0588 1.92565V3.85131H53.8551C58.0484 3.85131 61.4477 7.29989 61.4477 11.5539V53.9183C61.4477 58.1724 58.0484 61.6209 53.8551 61.6209H8.29961C4.10635 61.6209 0.707031 58.1724 0.707031 53.9183V11.5539C0.707031 7.29989 4.10635 3.85131 8.29961 3.85131H12.0959V1.92565C12.0959 0.862145 12.9457 0 13.994 0ZM8.29961 7.70262C6.20298 7.70262 4.50332 9.42691 4.50332 11.5539V15.4052H57.6514V11.5539C57.6514 9.42691 55.9517 7.70262 53.8551 7.70262H8.29961ZM57.6514 19.2565H4.50332V53.9183C4.50332 56.0453 6.20298 57.7696 8.29961 57.7696H53.8551C55.9517 57.7696 57.6514 56.0454 57.6514 53.9183V19.2565Z"
+                                        fill="#2C3F4D" />
+                                </svg>
+
+                            </div>
+                            <div class="money-transfer-box__title text-center mb-2">
+                                Hızlı ve Güvenilir Para Transferi
+                            </div>
+                            <p class="text-center mb-0">
+                                Para transferinizi PTN temsilci noktalarından kolay, güvenli ve hızlı bir şekilde
+                                tamamlayın.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="money-transfer-box rounded-3 p-4 mb-4 mb-lg-0">
+                            <div class="money-transfer-box__icon text-center mb-2">
+                                <svg width="78" height="74" viewBox="0 0 78 74" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="45.6024" cy="42.2542" r="31.6908" fill="#FFE988" />
+                                    <path
+                                        d="M13.994 0C15.0424 0 15.8922 0.862145 15.8922 1.92565V3.85131H46.2625V1.92565C46.2625 0.862145 47.1123 0 48.1607 0C49.209 0 50.0588 0.862145 50.0588 1.92565V3.85131H53.8551C58.0484 3.85131 61.4477 7.29989 61.4477 11.5539V53.9183C61.4477 58.1724 58.0484 61.6209 53.8551 61.6209H8.29961C4.10635 61.6209 0.707031 58.1724 0.707031 53.9183V11.5539C0.707031 7.29989 4.10635 3.85131 8.29961 3.85131H12.0959V1.92565C12.0959 0.862145 12.9457 0 13.994 0ZM8.29961 7.70262C6.20298 7.70262 4.50332 9.42691 4.50332 11.5539V15.4052H57.6514V11.5539C57.6514 9.42691 55.9517 7.70262 53.8551 7.70262H8.29961ZM57.6514 19.2565H4.50332V53.9183C4.50332 56.0453 6.20298 57.7696 8.29961 57.7696H53.8551C55.9517 57.7696 57.6514 56.0454 57.6514 53.9183V19.2565Z"
+                                        fill="#2C3F4D" />
+                                </svg>
+
+                            </div>
+                            <div class="money-transfer-box__title text-center mb-2">
+                                Bankasız Para<br> Transferi
+                            </div>
+                            <p class="text-center mb-0">
+                                Bankalara ihtiyaç duymadan Türkiye’nin her yerinden haftanın her günü para transferi
+                                yapın.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="money-transfer-box rounded-3 p-4 mb-4 mb-lg-0">
+                            <div class="money-transfer-box__icon text-center mb-2">
+                                <svg width="78" height="74" viewBox="0 0 78 74" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="45.6024" cy="42.2542" r="31.6908" fill="#FFE988" />
+                                    <path
+                                        d="M13.994 0C15.0424 0 15.8922 0.862145 15.8922 1.92565V3.85131H46.2625V1.92565C46.2625 0.862145 47.1123 0 48.1607 0C49.209 0 50.0588 0.862145 50.0588 1.92565V3.85131H53.8551C58.0484 3.85131 61.4477 7.29989 61.4477 11.5539V53.9183C61.4477 58.1724 58.0484 61.6209 53.8551 61.6209H8.29961C4.10635 61.6209 0.707031 58.1724 0.707031 53.9183V11.5539C0.707031 7.29989 4.10635 3.85131 8.29961 3.85131H12.0959V1.92565C12.0959 0.862145 12.9457 0 13.994 0ZM8.29961 7.70262C6.20298 7.70262 4.50332 9.42691 4.50332 11.5539V15.4052H57.6514V11.5539C57.6514 9.42691 55.9517 7.70262 53.8551 7.70262H8.29961ZM57.6514 19.2565H4.50332V53.9183C4.50332 56.0453 6.20298 57.7696 8.29961 57.7696H53.8551C55.9517 57.7696 57.6514 56.0454 57.6514 53.9183V19.2565Z"
+                                        fill="#2C3F4D" />
+                                </svg>
+                            </div>
+                            <div class="money-transfer-box__title text-center mb-2">
+                                PTN Size<br> Hep Yakın
+                            </div>
+                            <p class="text-center mb-0">
+                                Size en yakın PTN noktasına <br>giderek para transferinizi<br> gerçekleştirin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PTN Info End -->
+
+        <!-- Fast Send Money Start -->
+        <div class="w-100 fast-send-money-wrapper">
+            <div class="container-fluid container-lg">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="fast-send-money-desc d-flex flex-column justify-content-center h-100">
+                            <div class="fast-send-money-title">
+                                PTN ile Ne Kadar Hızlı Para Gönderebilirim?
+                            </div>
+                            <p>
+                                PTN ile yurt içi ve yurt dışına dakikalar içinde para transferi yapabilirsiniz.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="fast-send-wrapper d-flex align-items-center">
+                            <div class="fast-send-box rounded-3 bg-white shadow-sm p-4">
+                                <div class="d-flex mb-3">
+                                    <div class="pt-4 pb-3">
+                                        <div class="fast-send-line me-4 h-100 position-relative">
+                                            <div class="fast-send-dot"></div>
+                                            <div class="fast-send-dot"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fast-send-content">
+                                        <ul class="list-unstyled mb-0">
+                                            <li>
+                                                <span>Para Alındı</span>
+                                                <span>Paranız hesabınızdan başarıyla çekildi.</span>
+                                            </li>
+                                            <li>
+                                                <span>İşleniyor</span>
+                                                <span>Para gönderme işleminiz devam ediyor.</span>
+                                            </li>
+                                            <li>
+                                                <span>Alıcıya Teslim Edildi</span>
+                                                <span>Para gönderme işleminiz tamamlandı.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="fast-send-time d-flex flex-column align-items-center rounded-3 p-2">
+                                    <span class="mb-1">Tahmini teslim süresi:</span>
+                                    <span>Dakikalar içinde</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fast Send Money End -->
+
+        <!-- Statistics Start -->
+        <div class="w-100 statistics-wrapper">
+            <div class="container-fluid container-lg h-100">
+                <div class="d-flex align-items-center h-100">
+                    <div class="statistics-item d-flex align-items-center">
+                        <span>40+</span>
+                        <span>Çözüm<br> Ortağı</span>
+                    </div>
+                    <div class="statistics-item d-flex align-items-center">
+                        <span>2000+</span>
+                        <span>
+                            Yurt İçi<br>
+                            Para Transferi<br>
+                            Noktası
+                        </span>
+                    </div>
+                    <div class="statistics-item d-flex align-items-center">
+                        <span>300+</span>
+                        <span>
+                            Yurt Dışı<br>
+                            Para Transferi<br>
+                            Noktası
+                        </span>
+                    </div>
+                    <div class="statistics-item d-flex align-items-center">
+                        <span>650K+</span>
+                        <span>
+                            Dünya<br>
+                            Üzerindeki<br>
+                            İşlem Noktası
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Statistics End -->
+
+        <!-- Countries Start -->
+        <div class="countries-wrapper background-gray py-5">
+            <div class="countries-mx-width mx-auto">
+                <div class="countries-title mb-5">
+                    <span class="d-block text-center">150’den Fazla Ülkeye Para Gönderin, Alın.</span>
+                    <p class="text-center mb-0">
+                        Uluslararası para transferi yapın.
+                    </p>
+                </div>
+                <div class="countries-list mb-4">
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <img src="dist/images/countries/russia.png" loading="lazy" width="40" height="30"
+                                alt="Rusya">
+                            <span>Rusya</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/uzbekistan.png" loading="lazy" width="40" height="30"
+                                alt="Özbekistan">
+                            <span>Özbekistan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/kyrgyzstan.png" loading="lazy" width="40" height="30"
+                                alt="Kırgızistan">
+                            <span>Kırgızistan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/azerbaijan.png" loading="lazy" width="40" height="30"
+                                alt="Azerbaycan">
+                            <span>Azerbaycan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/ukraine.png" loading="lazy" width="40" height="30"
+                                alt="Ukrayna">
+                            <span>Ukrayna</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/georgia.png" loading="lazy" width="40" height="30"
+                                alt="Gürcistan">
+                            <span>Gürcistan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/kazakhstan.png" loading="lazy" width="40" height="30"
+                                alt="Kazakistan">
+                            <span>Kazakistan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/philippines.png" loading="lazy" width="40" height="30"
+                                alt="Filipinler">
+                            <span>Filipinler</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#" title="Tümünü Gör" class="all-countries">
+                        Tümünü Gör
+                        <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.25 3.17188C12.25 2.90436 12.0541 2.6875 11.8125 2.6875H6.5625C6.32088 2.6875 6.125 2.90436 6.125 3.17188C6.125 3.43939 6.32088 3.65625 6.5625 3.65625H10.7563L1.87814 13.4856C1.70729 13.6748 1.70729 13.9815 1.87814 14.1706C2.049 14.3598 2.326 14.3598 2.49686 14.1706L11.375 4.34126V8.98438C11.375 9.25189 11.5709 9.46875 11.8125 9.46875C12.0541 9.46875 12.25 9.25189 12.25 8.98438V3.17188Z"
+                                fill="#2F4858" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Countries End -->
+
+        <!-- Our Business Partners Start -->
+        <div class="background-gray px-4 py-5">
+            <div class="business-partners-title text-center mb-5">
+                İş Ortaklarımız
+            </div>
+            <div class="business-partners-list d-flex justify-content-center">
+                <ul class="list-unstyled mb-0 d-flex">
+                    <li class="me-5">
+                        <img src="dist/images/partners/ria.png" loading="lazy" alt="Ria">
+                    </li>
+                    <li>
+                        <img src="dist/images/partners/payporter.png" loading="lazy" alt="Payporter">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Our Business Partners End -->
+
+        <!-- Home Tabs Start -->
+        <div id="FormApiKampanya" class="py-5">
+            <div class="container-fluid container-lg">
+                <div class="row">
+                    <div class="campaing-title pb-4 text-center">Kampanyalar ve Duyurular</div>
                     <div class="btn-group filters-content" role="group" aria-label="Basic outlined example">
                         <button type="button" class="filters__button tab-button active" name="">
                             Hepsi
@@ -947,112 +1010,21 @@
         </div>
         <!-- Home Tabs End -->
 
-        <!-- FAQ Start -->
-        <div class="container-fluid container-lg py-5">
-            <div class="faq-content">
-                <div class="faq-content-title mb-5 text-center">
-                    Sıkça Sorulan Sorular
+        <!-- Representative Application Form Start -->
+        <div class="representative-application-form mb-5">
+            <div class="d-flex justify-content-between align-items-center application-form mx-auto h-100">
+                <div class="app-form-title">
+                    <span>PTN Para Transfer Noktası Olun!</span>
+                    <p>
+                        PTN temsilci ağına katılarak para transfer noktası olabilirsiniz.
+                        <br>
+                        Daha detaylı bilgi için şimdi temsilci başvurusu yapın.
+                    </p>
                 </div>
-                <div class="faq-content__item py-3 mb-3">
-                    <div class="faq-item_title d-flex justify-content-between align-items-center">
-                        <div class="faq-title">Takside nedir?</div>
-                        <div class="faq-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-item_content">
-                        İşyerimPOS, Faturamatik markasıdır. Faturamatik Elektronik Para ve Ödeme Kuruluşu A.Ş. ise
-                        17.02.2016 tarihli 29627 sayılı Resmi Gazete’de yayımlanan 01.02.2016 tarih 6730 numaralı
-                        Bankacılık Düzenleme ve Denetleme Kurulu (BDDK) kararıyla 6493 sayılı kanunun 12. maddesinin 1.
-                        fıkrasının E bendi kapsamında ve 2021 yılında kanunun 12. maddesinin 1. fıkrasının A, B, C, Ç
-                        bentleri kapsamında Türkiye Cumhuriyet Merkez Bankası’ndan lisans almıştır.
-                    </div>
-                </div>
-                <div class="faq-content__item py-3 mb-3">
-                    <div class="faq-item_title d-flex justify-content-between align-items-center">
-                        <div class="faq-title">Takside'ye nasıl üye olabilirim?</div>
-                        <div class="faq-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-item_content">
-                        İşyerimPOS, Faturamatik markasıdır. Faturamatik Elektronik Para ve Ödeme Kuruluşu A.Ş. ise
-                        17.02.2016 tarihli 29627 sayılı Resmi Gazete’de yayımlanan 01.02.2016 tarih 6730 numaralı
-                        Bankacılık Düzenleme ve Denetleme Kurulu (BDDK) kararıyla 6493 sayılı kanunun 12. maddesinin 1.
-                        fıkrasının E bendi kapsamında ve 2021 yılında kanunun 12. maddesinin 1. fıkrasının A, B, C, Ç
-                        bentleri kapsamında Türkiye Cumhuriyet Merkez Bankası’ndan lisans almıştır.
-                    </div>
-                </div>
-                <div class="faq-content__item py-3 mb-3">
-                    <div class="faq-item_title d-flex justify-content-between align-items-center">
-                        <div class="faq-title">Takside'nin avantajları nedir?</div>
-                        <div class="faq-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-item_content">
-                        İşyerimPOS, Faturamatik markasıdır. Faturamatik Elektronik Para ve Ödeme Kuruluşu A.Ş. ise
-                        17.02.2016 tarihli 29627 sayılı Resmi Gazete’de yayımlanan 01.02.2016 tarih 6730 numaralı
-                        Bankacılık Düzenleme ve Denetleme Kurulu (BDDK) kararıyla 6493 sayılı kanunun 12. maddesinin 1.
-                        fıkrasının E bendi kapsamında ve 2021 yılında kanunun 12. maddesinin 1. fıkrasının A, B, C, Ç
-                        bentleri kapsamında Türkiye Cumhuriyet Merkez Bankası’ndan lisans almıştır.
-                    </div>
-                </div>
-                <div class="faq-content__item py-3 mb-3">
-                    <div class="faq-item_title d-flex justify-content-between align-items-center">
-                        <div class="faq-title">POS'u ne zaman kullanabilirim?</div>
-                        <div class="faq-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-item_content">
-                        İşyerimPOS, Faturamatik markasıdır. Faturamatik Elektronik Para ve Ödeme Kuruluşu A.Ş. ise
-                        17.02.2016 tarihli 29627 sayılı Resmi Gazete’de yayımlanan 01.02.2016 tarih 6730 numaralı
-                        Bankacılık Düzenleme ve Denetleme Kurulu (BDDK) kararıyla 6493 sayılı kanunun 12. maddesinin 1.
-                        fıkrasının E bendi kapsamında ve 2021 yılında kanunun 12. maddesinin 1. fıkrasının A, B, C, Ç
-                        bentleri kapsamında Türkiye Cumhuriyet Merkez Bankası’ndan lisans almıştır.
-                    </div>
-                </div>
+                <button class="btn btn-secondary">Temsilci Başvuru Formu</button>
             </div>
         </div>
-        <!-- FAQ End -->
-
-        <!-- Takside Statistics Start -->
-        <div class="w-100 statistics-wrapper">
-            <div class="container-fluid container-lg h-100">
-                <div class="d-flex justify-content-around align-items-center h-100">
-                    <div class="statistics-item d-flex flex-column align-items-center">
-                        <span>İl</span>
-                        <span>41</span>
-                    </div>
-                    <div class="statistics-item d-flex flex-column align-items-center">
-                        <span>Durak</span>
-                        <span>500+</span>
-                    </div>
-                    <div class="statistics-item d-flex flex-column align-items-center">
-                        <span>Taksi</span>
-                        <span>1000+</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Takside Statistics End -->
+        <!-- Representative Application Form End -->
     </main>
 
     <footer>
@@ -1694,7 +1666,7 @@
         <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M6.5 18C6.89887 18 7.22222 17.7122 7.22222 17.3571V2.19485L11.7671 6.24028C12.0491 6.49134 12.5064 6.49134 12.7885 6.24028C13.0705 5.98923 13.0705 5.5822 12.7885 5.33115L7.01069 0.188288C6.72864 -0.0627633 6.27136 -0.0627633 5.98931 0.188288L0.211534 5.33115C-0.0705113 5.5822 -0.0705113 5.98923 0.211534 6.24028C0.493579 6.49134 0.950866 6.49134 1.23291 6.24028L5.77778 2.19485V17.3571C5.77778 17.7122 6.10113 18 6.5 18Z"
-                fill="#262626" />
+                fill="#192833" />
         </svg>
     </div>
     <!-- Back To Top End -->
@@ -1703,7 +1675,12 @@
     <div class="whatsapp">
         <a href="https://web.whatsapp.com/send?phone=905498051392&text=Bilgi%20Almak%20%C4%B0stiyorum" target="_blank"
             rel="noopener" class="d-block" title="Bize Ulaşın">
-            <img src="dist/images/whatsapp.png" class="img-fluid" alt="Whatsapp" loading="lazy" />
+            <picture>
+                <source srcset="dist/images/whatsapp.webp" type="image/webp">
+                <source srcset="dist/images/whatsapp.png" type="image/png">
+                <img src="dist/images/whatsapp.png" class="img-fluid" width="103" height="103" alt="Whatsapp"
+                    loading="lazy" />
+            </picture>
         </a>
     </div>
     <!-- Whatsapp End -->

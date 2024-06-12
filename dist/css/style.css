@@ -224,59 +224,59 @@ textarea {
     padding: 0.5rem 0.75rem;
   }
 }
+.faq-content {
+  max-width: 950px;
+}
 .faq-content .faq-content-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: var(--highlight-color);
   font-weight: 500;
-}
-.faq-content__item {
-  border-bottom: 1px solid #6B7280;
-}
-.faq-content__item:last-of-type {
-  border-bottom: 0;
 }
 .faq-content__item .faq-item_title {
   cursor: pointer;
-  font-weight: 500;
-  color: var(--highlight-color);
 }
 .faq-content__item .faq-item_title .faq-icon {
-  transition: all 0.25s;
+  background: #bedae3;
 }
 .faq-content__item .faq-item_title .faq-icon svg {
+  transition: all 0.5s;
   width: 30px;
   height: 30px;
 }
 .faq-content__item .faq-item_content {
   display: none;
   padding-top: 1rem;
-  color: #58595B;
-  font-size: 18px;
+  color: var(--highlight-color);
 }
-.faq-content__item.active .faq-item_title .faq-icon {
+.faq-content__item.active .faq-item_title .faq-icon svg {
   transform: rotate(180deg);
 }
 .faq-content__item .faq-title {
   color: var(--highlight-color);
-  font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
 }
 
 .statistics-wrapper {
-  background: url("../images/statistics.jpg") no-repeat center;
+  background: url("../images/statistics.png") no-repeat center;
+  background-color: #fff5c6;
   height: 180px;
 }
+.statistics-wrapper .statistics-item:nth-child(1) {
+  margin-left: 100px;
+}
+.statistics-wrapper .statistics-item:nth-child(n+2) {
+  margin-left: 40px;
+}
 .statistics-wrapper .statistics-item span {
-  color: var(--primary-color);
+  color: var(--highlight-color);
 }
 .statistics-wrapper .statistics-item span:nth-child(1) {
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-right: 0.5rem;
 }
 .statistics-wrapper .statistics-item span:nth-child(2) {
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 100%;
+  font-size: 1.125rem;
 }
 
 .back-to-top {
@@ -365,16 +365,8 @@ img.aspect-ratio-item {
   object-fit: cover;
 }
 
-.campaing-bg {
-  background-image: url("../images/campaing-bg.png");
-  background-color: var(--gray-color);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .filters-content {
-  background-color: #fff;
+  background-color: #f6f6f6;
   border-radius: calc(infinity * 1px);
   display: flex;
   justify-content: space-between;
@@ -390,7 +382,7 @@ img.aspect-ratio-item {
   width: 100%;
   border: none;
   outline: none;
-  padding: 1rem 1rem;
+  padding: 1rem;
   transition: 0.3s;
   border-radius: calc(infinity * 1px);
   transition: all 0.3s;
@@ -398,15 +390,24 @@ img.aspect-ratio-item {
   text-align: center;
   text-decoration: none;
   background: none;
-  color: rgba(38, 38, 38, 0.6);
+  color: #6d6d6d;
   font-size: 18px;
   font-weight: 500;
 }
 
+.filters__button:hover {
+  background-color: #d1d1d1;
+}
+
 .filters__button.active {
   background-color: var(--primary-color);
-  color: var(--highlight-color);
+  color: #262626;
   transition: all 0.3s;
+}
+
+.campaing-title {
+  font-size: 1.75rem;
+  font-weight: 500;
 }
 
 .campaing-card {
@@ -459,8 +460,8 @@ img.aspect-ratio-item {
   font-size: 0.85rem;
 }
 .campaing-card__title {
-  font-weight: 600;
-  font-size: 1.35rem;
+  font-weight: 500;
+  font-size: 1.375rem;
   word-break: break-word;
   max-height: 4.25rem;
   height: 4.25rem;
@@ -474,6 +475,7 @@ img.aspect-ratio-item {
   text-overflow: ellipsis;
   white-space: normal;
   margin-bottom: 1rem;
+  color: var(--highlight-color);
 }
 .campaing-card__desc {
   color: var(--highlight-color);
@@ -494,29 +496,29 @@ img.aspect-ratio-item {
   margin-top: auto;
 }
 .campaing-card__btn a {
-  background: var(--primary-color);
+  background: none;
   display: inline-block;
   border-radius: 0.5rem;
-  color: var(--highlight-color);
+  color: var(--secondary-color);
   text-decoration: none;
   padding: 0.75rem 1.75rem;
   transition: all 0.2s;
   font-weight: 500;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--secondary-color);
 }
 .campaing-card__btn a * {
   transition: all 0.2s;
 }
 .campaing-card__btn a svg path {
-  fill: var(--highlight-color);
+  fill: var(--secondary-color);
 }
 .campaing-card__btn a:hover {
   background: #fff;
-  border-color: var(--primary-color);
-  color: var(--primary-color);
+  border-color: var(--secondary-color-hover);
+  color: var(--secondary-color-hover);
 }
 .campaing-card__btn a:hover svg path {
-  fill: var(--primary-color);
+  fill: var(--secondary-color-hover);
 }
 
 .all-campaing {
@@ -617,15 +619,24 @@ img.aspect-ratio-item {
   width: 100%;
 }
 
-.money-transfer-wrapper {
+.money-transfer-wrapper.mxw {
   max-width: 850px;
 }
-.money-transfer-wrapper h2 {
+.money-transfer-wrapper h2,
+.money-transfer-wrapper h3 {
   font-size: 1.75rem;
   color: var(--highlight-color);
 }
 .money-transfer-wrapper p {
   color: var(--highlight-alt-color);
+}
+.money-transfer-wrapper .money-transfer-box {
+  background: #f1f8fa;
+  color: var(--highlight-color);
+}
+.money-transfer-wrapper .money-transfer-box__title {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .three-step {
@@ -681,6 +692,86 @@ img.aspect-ratio-item {
   margin-top: -50px;
   margin-bottom: -75px;
   z-index: 1000;
+}
+
+.representative-application-form {
+  background: url("../images/para-transfer-noktasi.jpg") no-repeat center;
+  height: 253px;
+}
+
+.application-form {
+  max-width: 1000px;
+  color: var(--highlight-color);
+}
+.application-form span {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.fast-send-money-desc {
+  color: var(--highlight-color);
+}
+.fast-send-money-desc .fast-send-money-title {
+  font-size: 2.875rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+.fast-send-money-desc p {
+  font-size: 1.75rem;
+}
+
+.fast-send-wrapper {
+  background: url("../images/fast-send.png") no-repeat right center;
+  min-height: 500px;
+}
+.fast-send-wrapper .fast-send-box {
+  max-width: 410px;
+}
+.fast-send-wrapper .fast-send-box .fast-send-line {
+  border-left: 1px dashed var(--highlight-color);
+  min-height: 100px;
+}
+.fast-send-wrapper .fast-send-box .fast-send-line .fast-send-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #407f9a;
+  left: -8px;
+}
+.fast-send-wrapper .fast-send-box .fast-send-line .fast-send-dot:first-of-type {
+  top: 65px;
+}
+.fast-send-wrapper .fast-send-box .fast-send-line .fast-send-dot:last-of-type {
+  top: 160px;
+}
+.fast-send-wrapper .fast-send-box .fast-send-content ul li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+.fast-send-wrapper .fast-send-box .fast-send-content ul li:last-of-type {
+  margin-bottom: 0;
+}
+.fast-send-wrapper .fast-send-box .fast-send-content ul li span:first-of-type {
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--highlight-color);
+}
+.fast-send-wrapper .fast-send-box .fast-send-content ul li span:last-of-type {
+  font-size: 1.125rem;
+  color: #407f9a;
+}
+.fast-send-wrapper .fast-send-box .fast-send-time {
+  background: #f1f8fa;
+  color: var(--highlight-color);
+}
+.fast-send-wrapper .fast-send-box .fast-send-time span:first-of-type {
+  font-size: 1.125rem;
+}
+.fast-send-wrapper .fast-send-box .fast-send-time span:last-of-type {
+  font-size: 1.375rem;
+  font-weight: 500;
 }
 
 .service-fee-wrapper {
@@ -821,6 +912,59 @@ img.aspect-ratio-item {
 }
 .topnav__item {
   list-style-type: none;
+}
+
+.countries-wrapper .countries-mx-width {
+  max-width: 800px;
+}
+.countries-wrapper .countries-title {
+  color: var(--highlight-color);
+}
+.countries-wrapper .countries-title span {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.countries-wrapper .countries-title p {
+  color: var(--highlight-alt-color);
+  font-size: 1.125rem;
+}
+.countries-wrapper .countries-list ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 32px;
+}
+.countries-wrapper .countries-list ul li {
+  display: flex;
+  align-items: center;
+}
+.countries-wrapper .countries-list ul li span {
+  color: var(--highlight-color);
+  font-size: 1.125rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.countries-wrapper .all-countries {
+  color: var(--highlight-alt-color);
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.countries-wrapper .all-countries svg path {
+  transition: all 0.25s;
+}
+.countries-wrapper .all-countries:hover {
+  color: var(--primary-color);
+}
+.countries-wrapper .all-countries:hover svg path {
+  fill: var(--primary-color);
+}
+
+.business-partners-title {
+  color: var(--highlight-color);
+  font-size: 1.75rem;
+  font-weight: 500;
 }
 
 footer {
