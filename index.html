@@ -1021,7 +1021,8 @@
                         Daha detaylı bilgi için şimdi temsilci başvurusu yapın.
                     </p>
                 </div>
-                <button class="btn btn-secondary">Temsilci Başvuru Formu</button>
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Temsilci
+                    Başvuru Formu</button>
             </div>
         </div>
         <!-- Representative Application Form End -->
@@ -1684,6 +1685,82 @@
         </a>
     </div>
     <!-- Whatsapp End -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Başvuru Formu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Adınız</label>
+                                    <input type="text" class="form-control form-control-lg" id="name"
+                                        aria-describedby="userName">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="surname" class="form-label">Soyadınız</label>
+                                    <input type="text" class="form-control form-control-lg" id="surname"
+                                        aria-describedby="userSurname">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Cep Telefonunuz</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone"
+                                        aria-describedby="GsmPhone">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="surname" class="form-label">E-Postanız<small>(Opsiyonel)</small></label>
+                                    <input type="email" class="form-control form-control-lg" id="surname"
+                                        aria-describedby="userSurname">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="selectCity" class="form-label">İl</label>
+                                    <select class="form-select form-select-lg" aria-label="Select City">
+                                        <option selected>Seçiniz</option>
+                                        <option value="1">İstanbul</option>
+                                        <option value="2">Ankara</option>
+                                        <option value="3">İzmir</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="selectDistrict" class="form-label">İlçe</label>
+                                    <select class="form-select form-select-lg" aria-label="Select District">
+                                        <option selected>Seçiniz</option>
+                                        <option value="1">Maltep</option>
+                                        <option value="2">Sultangazi</option>
+                                        <option value="3">Sultanbeyli</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Açıklama</label>
+                                <textarea class="form-control" id="description" class="no-resize" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-primary w-100">Başvur</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="dist/plugins/jquery/jquery-3.7.1.min.js"></script>
     <script src="dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
