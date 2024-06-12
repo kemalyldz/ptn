@@ -75,7 +75,8 @@
 //     }
 // }
 .page-header {
-    background: url("../images/page-header.png");
+    background-image: url("../images/page-header.png");
+    background-color: var(--primary-color);
     height: 313px;
     background-repeat: no-repeat;
     background-position: center;
@@ -113,5 +114,25 @@
     p {
         font-size: 20px;
         line-height: 1.5;
+    }
+}
+
+.solution-partnership {
+    color: var(--highlight-color);
+    &__title {
+        font-size: $display-small;
+        font-weight: 700;
+        line-height: 120%;
+    }
+    p {
+        font-size: $body-large;
+    }
+}
+.solution-form-wrapper {
+    .solution-form {
+        .solution-form-title {
+            font-size: $body-large;
+            font-weight: 500;
+        }
     }
 }
