@@ -1,7 +1,6 @@
 .statistics-wrapper {
-    background: url("../images/statistics.png") no-repeat center;
-    background-color: #fff5c6;
-    height: 180px;
+    background: url("../images/statistics.png") #fff5c6 no-repeat center;
+    height: 190px;
     .statistics-item {
         &:nth-child(1) {
             margin-left: 100px;
@@ -17,9 +16,30 @@
                 margin-right: 0.5rem;
             }
             &:nth-child(2) {
-                //font-weight: 600;
                 font-size: $body-large;
-                //line-height: 100%;
+            }
+        }
+    }
+}
+.statistics-blue-wrapper {
+    background: url("../images/statistics-blue.png") #f1f8fa no-repeat center;
+    height: 190px;
+    .statistics-item {
+        &:nth-child(1) {
+            margin-left: 100px;
+        }
+        &:nth-child(n + 2) {
+            margin-left: 40px;
+        }
+        span {
+            color: var(--highlight-color);
+            &:nth-child(1) {
+                font-weight: 700;
+                font-size: $display-large;
+                margin-right: 0.5rem;
+            }
+            &:nth-child(2) {
+                font-size: $body-large;
             }
         }
     }
