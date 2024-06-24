@@ -62,3 +62,10 @@
         font-size: $body-large;
     }
 }
+.money-transfer-countries {
+    color: var(--highlight-color);
+    h2 {
+        font-size: $headline-medium;
+        font-weight: 500;
+    }
+}

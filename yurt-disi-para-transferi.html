@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTN ile Yurt İçi ve Yurt Dışı Transferi İşlemleri</title>
+    <meta name="description" content="Takside POS">
+    <link rel="apple-touch-icon" sizes="152x152" href="dist/favicon/apple-icon-152x152.png">
+    <!--[if IE]><link rel="shortcut icon" href="dist/favicon/favicon.ico"><![endif]-->
+    <link rel="icon" type="image/png" sizes="192x192" href="dist/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="dist/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="dist/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="dist/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="dist/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/plugins/swiper/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+
+    <header class="topnav wrapper">
+        <div class="logo">
+            <a href="index.html" title="Anasayfa">
+                <svg width="147" height="54" viewBox="0 0 147 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M139.809 53.7265H88.3973C87.7897 53.7265 87.327 53.1793 87.4276 52.5787L88.2806 47.4936C88.3601 47.0189 88.7694 46.6722 89.2502 46.6722H140.662C141.269 46.6722 141.732 47.2195 141.631 47.8201L140.778 52.9052C140.699 53.3799 140.289 53.7265 139.809 53.7265Z"
+                        fill="#FFC700" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M23.3232 27.7103L34.9843 39.3922L23.3232 51.0751H0L11.6611 39.3922L23.3232 27.7103L34.9843 16.0253L46.6465 27.7103L34.9843 39.3922L23.3232 27.7103Z"
+                        fill="#191F26" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M23.3232 27.7103L34.9843 16.0254L23.3232 4.34344H0L11.6631 16.0254L23.3232 27.7103Z"
+                        fill="#FFC700" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M34.9844 39.3922L23.3232 27.7103L34.9844 16.0253L46.6465 27.7103L34.9844 39.3922Z"
+                        fill="#25292E" />
+                    <path
+                        d="M86.6874 22.479L85.9078 27.1661C84.048 38.3451 77.7502 42.5515 68.6319 42.5515C66.9521 42.5515 65.1526 42.3711 63.2927 42.1313L61.4328 52.5283C61.3132 53.1894 60.7137 53.7305 60.0528 53.7305H52.7944C52.1949 53.7305 51.7151 53.3093 51.7151 52.7087V52.5283L59.1535 10.399C59.3336 9.4366 59.6333 9.01637 61.3132 8.65559C64.9122 7.81411 69.7112 7.09357 74.3302 7.09357C82.3681 7.09357 86.9871 11.961 86.9871 19.233C86.9871 20.2549 86.8674 21.3372 86.6874 22.479ZM72.9501 15.1466C70.9706 15.1466 69.1711 15.2665 67.971 15.4469L64.6718 34.1982C66.3516 34.439 67.8513 34.559 69.171 34.559C72.9501 34.559 75.1701 33.1159 76.189 27.1661L76.9696 22.479C77.1497 21.2767 77.2694 20.2549 77.2694 19.3529C77.2694 16.5887 76.1901 15.1466 72.9501 15.1466Z"
+                        fill="#191F26" />
+                    <path
+                        d="M113.204 7.57132H96.3619L95.0845 14.8433H111.944C112.604 14.8433 113.204 14.3011 113.323 13.6481L114.219 8.77458V8.59621C114.219 7.99458 113.805 7.57031 113.204 7.57031V7.57132Z"
+                        fill="#191F26" />
+                    <path
+                        d="M89.4387 48.596H90.8208C91.5601 48.596 91.9966 49.0102 91.9966 49.6491C91.9966 50.5147 91.3629 51.1013 90.4265 51.1013H89.9708L89.841 51.9619H88.9287L89.4377 48.595L89.4387 48.596ZM90.4798 50.3656C90.8157 50.3656 91.0652 50.1066 91.0652 49.7599C91.0652 49.505 90.9022 49.3326 90.6327 49.3326H90.2394L90.0855 50.3666H90.4788L90.4798 50.3656Z"
+                        fill="#25292E" />
+                    <path
+                        d="M92.0049 51.0004C92.0049 50.1489 92.5712 49.519 93.2914 49.519C93.5217 49.519 93.7762 49.6007 93.911 49.8173H93.9251L93.9583 49.6057H94.7982L94.4381 51.9629H93.5982L93.6314 51.7512H93.6173C93.4161 51.9679 93.1375 52.0495 92.9072 52.0495C92.3499 52.0495 92.0049 51.6222 92.0049 51.0015V51.0004ZM93.7622 50.6548C93.7622 50.3666 93.6223 50.1791 93.397 50.1791C93.0942 50.1791 92.8548 50.4915 92.8548 50.9097C92.8548 51.1939 92.9896 51.3915 93.2099 51.3915C93.5268 51.3915 93.7622 51.0841 93.7622 50.6558V50.6548Z"
+                        fill="#25292E" />
+                    <path
+                        d="M95.319 49.6057H96.1589L96.1207 49.8707H96.1297C96.2544 49.645 96.4466 49.519 96.6487 49.519C96.7252 49.519 96.7976 49.5281 96.87 49.5533L96.7544 50.3424C96.6779 50.3182 96.6055 50.3081 96.5381 50.3081C96.2504 50.3081 96.0482 50.5399 95.9859 50.939L95.832 51.9629H94.9629L95.318 49.6057H95.319Z"
+                        fill="#25292E" />
+                    <path
+                        d="M96.8638 51.0004C96.8638 50.1489 97.4301 49.519 98.1503 49.519C98.3807 49.519 98.6351 49.6007 98.7699 49.8173H98.784L98.8172 49.6057H99.6571L99.297 51.9629H98.4571L98.4903 51.7512H98.4752C98.274 51.9679 97.9954 52.0495 97.7651 52.0495C97.2078 52.0495 96.8628 51.6222 96.8628 51.0015L96.8638 51.0004ZM98.6211 50.6548C98.6211 50.3666 98.4813 50.1791 98.2559 50.1791C97.9542 50.1791 97.7138 50.4915 97.7138 50.9097C97.7138 51.1939 97.8486 51.3915 98.0688 51.3915C98.3857 51.3915 98.6211 51.0841 98.6211 50.6558V50.6548Z"
+                        fill="#25292E" />
+                    <path
+                        d="M104.133 49.3508H103.154L102.76 51.9629H101.848L102.242 49.3508H101.263L101.373 48.596H104.249L104.133 49.3508Z"
+                        fill="#25292E" />
+                    <path
+                        d="M104.223 49.6057H105.063L105.025 49.8707H105.034C105.158 49.645 105.351 49.519 105.553 49.519C105.629 49.519 105.702 49.5281 105.774 49.5533L105.658 50.3424C105.582 50.3182 105.51 50.3081 105.442 50.3081C105.154 50.3081 104.952 50.5399 104.89 50.939L104.736 51.9629H103.867L104.222 49.6057H104.223Z"
+                        fill="#25292E" />
+                    <path
+                        d="M105.767 51.0004C105.767 50.1489 106.333 49.519 107.053 49.519C107.284 49.519 107.538 49.6007 107.673 49.8173H107.687L107.72 49.6057H108.56L108.2 51.9629H107.36L107.393 51.7512H107.378C107.177 51.9679 106.898 52.0495 106.668 52.0495C106.111 52.0495 105.766 51.6222 105.766 51.0015L105.767 51.0004ZM107.524 50.6548C107.524 50.3666 107.384 50.1791 107.159 50.1791C106.857 50.1791 106.617 50.4915 106.617 50.9097C106.617 51.1939 106.752 51.3915 106.972 51.3915C107.289 51.3915 107.524 51.0841 107.524 50.6558V50.6548Z"
+                        fill="#25292E" />
+                    <path
+                        d="M109.082 49.6057H109.927L109.894 49.8173H109.904C110.101 49.6158 110.379 49.519 110.605 49.519C111.133 49.519 111.431 49.9423 111.339 50.553L111.123 51.9618H110.254L110.441 50.7163C110.484 50.4321 110.388 50.2597 110.182 50.2597C109.975 50.2597 109.826 50.428 109.787 50.7021L109.595 51.9618H108.726L109.081 49.6047L109.082 49.6057Z"
+                        fill="#25292E" />
+                    <path
+                        d="M111.557 51.1839H112.301C112.315 51.3612 112.459 51.4529 112.661 51.4529C112.81 51.4529 112.916 51.3804 112.916 51.2655C112.916 50.9289 111.787 51.2846 111.787 50.4381C111.787 49.8758 112.272 49.519 112.949 49.519C113.558 49.519 113.938 49.7982 113.938 50.3373H113.184C113.175 50.1741 113.04 50.0874 112.872 50.0874C112.743 50.0874 112.627 50.1539 112.627 50.2799C112.627 50.6115 113.832 50.3081 113.832 51.1456C113.832 51.723 113.371 52.0495 112.575 52.0495C111.917 52.0495 111.533 51.7129 111.557 51.1839Z"
+                        fill="#25292E" />
+                    <path
+                        d="M114.55 50.3133H114.128L114.239 49.6058H114.661L114.713 49.2501C114.814 48.5719 115.266 48.1486 115.909 48.1486C116.058 48.1486 116.226 48.1637 116.375 48.2111L116.269 48.9085C116.193 48.8843 116.106 48.8702 116.029 48.8702C115.794 48.8702 115.616 49.0284 115.577 49.2743L115.529 49.6058H116.168L116.057 50.3133H115.418L115.173 51.963H114.3L114.549 50.3133H114.55Z"
+                        fill="#25292E" />
+                    <path
+                        d="M116.153 50.9813C116.153 50.1257 116.757 49.519 117.578 49.519C118.323 49.519 118.716 49.9947 118.591 50.7939L118.558 51.0055H116.955C116.965 51.2504 117.108 51.4136 117.329 51.4136C117.473 51.4136 117.626 51.3461 117.708 51.2363H118.505C118.342 51.722 117.823 52.0485 117.208 52.0485C116.55 52.0485 116.152 51.6212 116.152 50.9803L116.153 50.9813ZM117.857 50.5631C117.876 50.3031 117.746 50.1257 117.511 50.1257C117.29 50.1257 117.097 50.299 117.026 50.5631H117.857Z"
+                        fill="#25292E" />
+                    <path
+                        d="M119.199 49.6057H120.039L120 49.8707H120.009C120.134 49.645 120.326 49.519 120.528 49.519C120.605 49.519 120.677 49.5281 120.749 49.5533L120.634 50.3424C120.558 50.3182 120.485 50.3081 120.418 50.3081C120.13 50.3081 119.928 50.5399 119.866 50.939L119.712 51.9629H118.843L119.198 49.6057H119.199Z"
+                        fill="#25292E" />
+                    <path
+                        d="M125.48 48.596L124.971 51.9629H124.227L123.152 50.1399L122.873 51.9629H121.961L122.47 48.596H123.209L124.284 50.4573L124.567 48.596H125.479H125.48Z"
+                        fill="#25292E" />
+                    <path
+                        d="M125.555 50.9763C125.555 50.1207 126.178 49.519 127.033 49.519C127.714 49.519 128.133 49.9473 128.133 50.5913C128.133 51.4429 127.504 52.0485 126.654 52.0485C125.972 52.0485 125.555 51.6162 125.555 50.9763ZM127.331 50.683C127.331 50.3998 127.177 50.2164 126.928 50.2164C126.601 50.2164 126.356 50.4956 126.356 50.8856C126.356 51.1647 126.51 51.3522 126.76 51.3522C127.086 51.3522 127.331 51.073 127.331 50.683Z"
+                        fill="#25292E" />
+                    <path
+                        d="M128.912 48.2352H129.781L129.397 50.7838L130.29 49.6048H131.227L130.333 50.7838L130.957 51.9619H129.939L129.383 50.8987L129.22 51.9619H128.351L128.912 48.2352Z"
+                        fill="#25292E" />
+                    <path
+                        d="M131.561 51.0923L131.68 50.3133H131.253L131.364 49.6059H131.786L131.902 48.8561H132.771L132.66 49.6059H133.289L133.178 50.3133H132.55L132.453 50.9482C132.42 51.179 132.51 51.2938 132.741 51.2938C132.832 51.2938 132.938 51.2797 133.038 51.2656L132.928 51.9721C132.803 52.0204 132.601 52.0486 132.414 52.0486C131.814 52.0486 131.473 51.6687 131.56 51.0923H131.561Z"
+                        fill="#25292E" />
+                    <path
+                        d="M133.432 51.0004C133.432 50.1489 133.998 49.519 134.718 49.519C134.949 49.519 135.203 49.6007 135.338 49.8173H135.352L135.385 49.6057H136.225L135.865 51.9629H135.025L135.058 51.7512H135.044C134.843 51.9679 134.564 52.0495 134.334 52.0495C133.777 52.0495 133.432 51.6222 133.432 51.0015V51.0004ZM135.188 50.6548C135.188 50.3666 135.048 50.1791 134.823 50.1791C134.52 50.1791 134.281 50.4915 134.281 50.9097C134.281 51.1939 134.415 51.3915 134.636 51.3915C134.953 51.3915 135.188 51.0841 135.188 50.6558V50.6548Z"
+                        fill="#25292E" />
+                    <path
+                        d="M136.337 51.1839H137.082C137.096 51.3612 137.24 51.4529 137.442 51.4529C137.591 51.4529 137.696 51.3804 137.696 51.2655C137.696 50.9289 136.569 51.2846 136.569 50.4381C136.569 49.8758 137.054 49.519 137.731 49.519C138.34 49.519 138.719 49.7982 138.719 50.3373H137.966C137.957 50.1741 137.822 50.0874 137.654 50.0874C137.524 50.0874 137.409 50.1539 137.409 50.2799C137.409 50.6115 138.614 50.3081 138.614 51.1456C138.614 51.723 138.153 52.0495 137.356 52.0495C136.699 52.0495 136.314 51.7129 136.338 51.1839H136.337Z"
+                        fill="#25292E" />
+                    <path d="M139.255 49.6058H140.129L139.769 51.963H138.9L139.255 49.6058Z" fill="#25292E" />
+                    <path
+                        d="M103.724 14.8453L100.544 32.6946C100.484 33.0554 100.425 33.3557 100.425 33.656C100.425 34.9188 101.265 35.1586 103.665 35.1586H108.164C108.763 35.1586 109.243 35.3995 109.243 36.0001V36.1805L108.464 40.8081C108.344 41.4692 107.804 41.8894 107.024 42.0103C105.225 42.3107 102.285 42.5515 99.7054 42.5515C94.4266 42.5515 90.5872 40.5682 90.5872 35.0992C90.5872 34.3171 90.6475 33.5361 90.8266 32.6352L96.1054 2.46497C96.2251 1.80388 96.8849 1.38365 97.5448 1.26272L105.044 0H105.224C105.764 0 106.124 0.481708 106.124 1.02187V1.20125L104.984 7.57228L103.724 14.8432V14.8453Z"
+                        fill="#191F26" />
+                    <path
+                        d="M146.434 20.3143L142.835 40.7486C142.716 41.4097 142.116 42.0113 141.455 42.0113H134.077C133.478 42.0113 133.057 41.5911 133.057 40.9895C133.057 40.929 133.118 40.8091 133.118 40.7486L136.836 19.5938C136.956 18.8722 137.016 18.2716 137.016 17.67C137.016 16.108 136.357 15.0861 134.077 15.0861H131.078C127.959 15.0861 127.299 16.6481 126.759 19.5938L123.04 40.7486C122.92 41.4097 122.259 42.0113 121.6 42.0113H114.222C113.623 42.0113 113.263 41.5306 113.263 40.9895C113.263 40.929 113.323 40.8091 113.323 40.7486L117.162 18.8722C118.602 10.6389 123.821 7.09357 132.459 7.09357H135.458C142.897 7.09357 146.736 10.7598 146.736 17.0099C146.736 18.0318 146.617 19.1735 146.436 20.3143H146.434Z"
+                        fill="#191F26" />
+                </svg>
+            </a>
+        </div>
+        <nav class="flex-grow-1 d-flex">
+            <span id="nav-label" hidden>Navigation</span>
+            <button id="btnOpen" class="topnav__open ms-auto" aria-expanded="false" aria-labelledby="nav-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+            <div class="topnav__menu d-flex flex-column flex-lg-row align-items-center flex-grow-1">
+                <div class="main-menu mb-4 mb-lg-0 mx-lg-auto" role="dialog" aria-labelledby="nav-label">
+                    <button class="topnav__close" id="btnClose" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
+                    </button>
+                    <ul
+                        class="list-unstyled mb-0 d-flex flex-column flex-lg-row align-items-center align-items-lg-start">
+                        <li>
+                            <a href="pos-talebi.html" title="Para Transferi">
+                                Para Transferi
+                            </a>
+                            <div class="sub-menu-wrapper">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="hizmet-bedeli.html" title="Temsilcilik">
+                                Temsilcilik
+                            </a>
+                        </li>
+                        <li>
+                            <a href="nasil-calisir.html" title="Çözüm Ortaklığı">
+                                Çözüm Ortaklığı
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kurumsal-cozumler.html" title="Noktalarımız">
+                                Noktalarımız
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kampanyalar.html" title="Kampanyalar">
+                                Kampanyalar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="action-menu">
+                    <ul class="mb-0 list-unstyled d-flex">
+                        <li class="me-3">
+                            <a href="#" title="İnternet Şubesi">İnternet Şubesi</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Hemen Başvur">Hemen Başvur</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Calculate Fee Start -->
+        <div class="calculate-fee-wrapper mx-auto py-5">
+            <div class="d-flex flex-column flex-lg-row justify-content-lg-between align-items-center gap-3">
+                <div class="calculate-text">
+                    <h1>
+                        Yurt Dışı<br> Para Transferi
+                    </h1>
+                    <p>
+                        150'den fazla ülkeye PTN noktalarımızdan yurt dışı para transferi işlemlerini hızlı, kolay ve
+                        güvenli şekilde yapabilirsiniz.
+                    </p>
+                    <a href="#" class="btn btn-secondary btn-lg" title="Şimdi Para Gönderin">Şimdi Para Gönderin</a>
+                </div>
+                <div class="calculate-form-wrapper shadow-sm rounded-4 py-3 px-4">
+                    <div class="calculate-form">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipientCountry" class="form-label">Alıcı Ülke</label>
+                                <select class="form-select form-select-lg" id="recipientCountry"
+                                    aria-label="Alıcı Ülke">
+                                    <option value="Seçiniz" selected>Seçiniz</option>
+                                    <option value="DEU">Almanya</option>
+                                    <option value="USA">Amerika Birleşik Devletleri</option>
+                                    <option value="AND">Andora</option>
+                                    <option value="ATG">Antigua ve Barbuda</option>
+                                    <option value="ARG">Arjantin</option>
+                                    <option value="ALB">Arnavutluk</option>
+                                    <option value="AUS">Avustralya</option>
+                                    <option value="AUT">Avusturya</option>
+                                    <option value="AZE">Azerbaycan</option>
+                                    <option value="BHS">Bahamalar</option>
+                                    <option value="BHR">Bahreyn</option>
+                                    <option value="BGD">Bangladeş</option>
+                                    <option value="BLR">Belarus</option>
+                                    <option value="BEL">Belçika</option>
+                                    <option value="BEN">Benin</option>
+                                    <option value="ARE">Birleşik Arap Emirlikleri</option>
+                                    <option value="BOL">Bolivya (Çokuluslu Devlet)</option>
+                                    <option value="BIH">Bosna Hersek</option>
+                                    <option value="BRA">Brezilya</option>
+                                    <option value="BGR">Bulgaristan</option>
+                                    <option value="BFA">Burkina Faso</option>
+                                    <option value="BDI">Burundi</option>
+                                    <option value="CPV">Cabo Verde</option>
+                                    <option value="GIB">Cebelitarık</option>
+                                    <option value="DJI">Cibuti</option>
+                                    <option value="TCD">Çad</option>
+                                    <option value="CZE">Çekya</option>
+                                    <option value="CHN">Çin</option>
+                                    <option value="DNK">Danimarka</option>
+                                    <option value="ECU">Ekvador</option>
+                                    <option value="GNQ">Ekvator Ginesi</option>
+                                    <option value="SLV">El Salvador</option>
+                                    <option value="IDN">Endonezya</option>
+                                    <option value="ERI">Eritre</option>
+                                    <option value="EST">Estonya</option>
+                                    <option value="ETH">Etiyopya</option>
+                                    <option value="MAR">Fas</option>
+                                    <option value="CIV">Fildişi Sahili</option>
+                                    <option value="PHL">Filipinler</option>
+                                    <option value="PSE">Filistin, Devlet</option>
+                                    <option value="FIN">Finlandiya</option>
+                                    <option value="FRA">Fransa</option>
+                                    <option value="GAB">Gabon</option>
+                                    <option value="GMB">Gambiya</option>
+                                    <option value="GHA">Gana</option>
+                                    <option value="GIN">Gine</option>
+                                    <option value="GNB">Gine-Bissau</option>
+                                    <option value="GTM">Guatemala</option>
+                                    <option value="GUY">Guyana</option>
+                                    <option value="GEO">Gürcistan</option>
+                                    <option value="HTI">Haiti</option>
+                                    <option value="IND">Hindistan</option>
+                                    <option value="NLD">Hollanda</option>
+                                    <option value="VAT">Holy See</option>
+                                    <option value="HND">Honduras</option>
+                                    <option value="IRQ">Irak</option>
+                                    <option value="GBR">İngiltere</option>
+                                    <option value="IRL">İrlanda</option>
+                                    <option value="ESP">İspanya</option>
+                                    <option value="ISR">İsrail</option>
+                                    <option value="SWE">İsveç</option>
+                                    <option value="CHE">İsviçre</option>
+                                    <option value="ITA">İtalya</option>
+                                    <option value="ISL">İzlanda</option>
+                                    <option value="JAM">Jamaika</option>
+                                    <option value="JPN">Japonya</option>
+                                    <option value="KHM">Kamboçya</option>
+                                    <option value="CMR">Kamerun</option>
+                                    <option value="CAN">Kanada</option>
+                                    <option value="MNE">Karadağ</option>
+                                    <option value="QAT">Katar</option>
+                                    <option value="KAZ">Kazakistan</option>
+                                    <option value="KEN">Kenya</option>
+                                    <option value="KGZ">Kırgızistan</option>
+                                    <option value="COL">Kolombiya</option>
+                                    <option value="COM">Komorlar</option>
+                                    <option value="COG">Kongo</option>
+                                    <option value="COD">Kongo (Demokratik Cumhuriyeti)</option>
+                                    <option value="KOR">Kore (Cumhuriyeti)</option>
+                                    <option value="XRK">Kosova</option>
+                                    <option value="CRI">Kosta Rika</option>
+                                    <option value="KWT">Kuveyt</option>
+                                    <option value="MKD">Kuzey Makedonya Cumhuriyeti</option>
+                                    <option value="CUB">Küba</option>
+                                    <option value="LAO">Lao Demokratik Halk Cumhuriyeti </option>
+                                    <option value="LVA">Letonya</option>
+                                    <option value="LBR">Liberya</option>
+                                    <option value="LBY">Libya</option>
+                                    <option value="LIE">Lihtenştayn</option>
+                                    <option value="LTU">Litvanya</option>
+                                    <option value="LBN">Lübnan</option>
+                                    <option value="LUX">Lüksemburg</option>
+                                    <option value="HUN">Macaristan</option>
+                                    <option value="MDG">Madagaskar</option>
+                                    <option value="MWI">Malavi</option>
+                                    <option value="MYS">Malezya</option>
+                                    <option value="MLI">Mali</option>
+                                    <option value="MLT">Malta</option>
+                                    <option value="MUS">Mauritius</option>
+                                    <option value="MEX">Meksika</option>
+                                    <option value="EGY">Mısır</option>
+                                    <option value="MNG">Moğolistan</option>
+                                    <option value="MDA">Moldova (Cumhuriyeti)</option>
+                                    <option value="MRT">Moritanya</option>
+                                    <option value="MOZ">Mozambik</option>
+                                    <option value="MMR">Myanmar</option>
+                                    <option value="NPL">Nepal</option>
+                                    <option value="NER">Nijer</option>
+                                    <option value="NGA">Nijerya</option>
+                                    <option value="NIC">Nikaragua</option>
+                                    <option value="NOR">Norveç</option>
+                                    <option value="UZB">Özbekistan</option>
+                                    <option value="PAK">Pakistan</option>
+                                    <option value="PAN">Panama</option>
+                                    <option value="PRY">Paraguay</option>
+                                    <option value="PER">Peru</option>
+                                    <option value="POL">Polonya</option>
+                                    <option value="PRT">Portekiz</option>
+                                    <option value="PRI">Porto Riko</option>
+                                    <option value="ROU">Romanya</option>
+                                    <option value="RWA">Ruanda</option>
+                                    <option value="RUS">Rusya Federasyonu</option>
+                                    <option value="WSM">Samoa</option>
+                                    <option value="SMR">San Marino</option>
+                                    <option value="SEN">Senegal</option>
+                                    <option value="SYC">Seyşeller</option>
+                                    <option value="SRB">Sırbistan</option>
+                                    <option value="SLE">Sierra Leone</option>
+                                    <option value="SGP">Singapur</option>
+                                    <option value="SVK">Slovakya</option>
+                                    <option value="SVN">Slovenya</option>
+                                    <option value="SOM">Somali</option>
+                                    <option value="LKA">Sri Lanka</option>
+                                    <option value="SDN">Sudan</option>
+                                    <option value="SUR">Surinam</option>
+                                    <option value="SAU">Suudi Arabistan</option>
+                                    <option value="CHL">Şili</option>
+                                    <option value="TJK">Tacikistan</option>
+                                    <option value="TZA">Tanzanya, Birleşik Cumhuriyeti</option>
+                                    <option value="THA">Tayland</option>
+                                    <option value="TON">Tonga</option>
+                                    <option value="TTO">Trinidad ve Tobago</option>
+                                    <option value="TUN">Tunus</option>
+                                    <option value="TKM">Türkmenistan</option>
+                                    <option value="UGA">Uganda</option>
+                                    <option value="UKR">Ukrayna</option>
+                                    <option value="OMN">Umman</option>
+                                    <option value="URY">Uruguay</option>
+                                    <option value="JOR">Ürdün</option>
+                                    <option value="VNM">Vietnam</option>
+                                    <option value="VGB">Virgin Adaları (İngiliz)</option>
+                                    <option value="YEM">Yemen</option>
+                                    <option value="NZL">Yeni Zelanda</option>
+                                    <option value="GRC">Yunanistan</option>
+                                    <option value="ZMB">Zambiya</option>
+                                    <option value="ZWE">Zimbabve</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="amount" class="form-label">Tutar</label>
+                                        <input type="email" class="form-control form-control-lg" id="amount"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="currencyUnit" class="form-label">Para Birimi</label>
+                                        <select class="form-select form-select-lg" id="currencyUnit"
+                                            aria-label="Para Birimi">
+                                            <option value="Seçiniz">Seçiniz</option>
+                                            <option value="EUR">Euro</option>
+                                            <option value="USD">Dolar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="service-fee" class="form-label">Hizmet Bedeli</label>
+                                <input type="email" class="form-control form-control-lg mb-1 disabled" id="service-fee"
+                                    placeholder="">
+                                <span class="small">*Başlayan fiyatlarla</span>
+                            </div>
+                            <div class="w-100">
+                                <button class="btn btn-primary btn-lg w-100">Hesapla</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Calculate Fee End -->
+
+        <!-- PTN Info Start -->
+        <div class="money-transfer-wrapper mb-5 py-5">
+            <div class="container-fluid container-lg">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="money-transfer-box rounded-3 p-4 mb-4 mb-lg-0">
+                            <div class="money-transfer-box__icon text-center mb-2">
+                                <svg width="78" height="74" viewBox="0 0 78 74" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="45.6024" cy="42.2542" r="31.6908" fill="#FFE988" />
+                                    <path
+                                        d="M13.994 0C15.0424 0 15.8922 0.862145 15.8922 1.92565V3.85131H46.2625V1.92565C46.2625 0.862145 47.1123 0 48.1607 0C49.209 0 50.0588 0.862145 50.0588 1.92565V3.85131H53.8551C58.0484 3.85131 61.4477 7.29989 61.4477 11.5539V53.9183C61.4477 58.1724 58.0484 61.6209 53.8551 61.6209H8.29961C4.10635 61.6209 0.707031 58.1724 0.707031 53.9183V11.5539C0.707031 7.29989 4.10635 3.85131 8.29961 3.85131H12.0959V1.92565C12.0959 0.862145 12.9457 0 13.994 0ZM8.29961 7.70262C6.20298 7.70262 4.50332 9.42691 4.50332 11.5539V15.4052H57.6514V11.5539C57.6514 9.42691 55.9517 7.70262 53.8551 7.70262H8.29961ZM57.6514 19.2565H4.50332V53.9183C4.50332 56.0453 6.20298 57.7696 8.29961 57.7696H53.8551C55.9517 57.7696 57.6514 56.0454 57.6514 53.9183V19.2565Z"
+                                        fill="#2C3F4D" />
+                                </svg>
+
+                            </div>
+                            <div class="money-transfer-box__title text-center mb-2">
+                                Haftanın Her Günü<br> Para Transferi
+                            </div>
+                            <p class="text-center mb-0">
+                                PTN ile haftanın her günü, geç saatlere kadar para transferi işlemlerinizi
+                                gerçekleştirin!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="money-transfer-box rounded-3 p-4 mb-4 mb-lg-0">
+                            <div class="money-transfer-box__icon text-center mb-2">
+                                <svg width="78" height="74" viewBox="0 0 78 74" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="45.6024" cy="42.2542" r="31.6908" fill="#FFE988" />
+                                    <path
+                                        d="M13.994 0C15.0424 0 15.8922 0.862145 15.8922 1.92565V3.85131H46.2625V1.92565C46.2625 0.862145 47.1123 0 48.1607 0C49.209 0 50.0588 0.862145 50.0588 1.92565V3.85131H53.8551C58.0484 3.85131 61.4477 7.29989 61.4477 11.5539V53.9183C61.4477 58.1724 58.0484 61.6209 53.8551 61.6209H8.29961C4.10635 61.6209 0.707031 58.1724 0.707031 53.9183V11.5539C0.707031 7.29989 4.10635 3.85131 8.29961 3.85131H12.0959V1.92565C12.0959 0.862145 12.9457 0 13.994 0ZM8.29961 7.70262C6.20298 7.70262 4.50332 9.42691 4.50332 11.5539V15.4052H57.6514V11.5539C57.6514 9.42691 55.9517 7.70262 53.8551 7.70262H8.29961ZM57.6514 19.2565H4.50332V53.9183C4.50332 56.0453 6.20298 57.7696 8.29961 57.7696H53.8551C55.9517 57.7696 57.6514 56.0454 57.6514 53.9183V19.2565Z"
+                                        fill="#2C3F4D" />
+                                </svg>
+
+                            </div>
+                            <div class="money-transfer-box__title text-center mb-2">
+                                Hızlı ve Güvenilir Para Transferi
+                            </div>
+                            <p class="text-center mb-0">
+                                Para transferinizi PTN temsilci noktalarından kolay, güvenli ve hızlı bir şekilde
+                                tamamlayın.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="money-transfer-box rounded-3 p-4 mb-4 mb-lg-0">
+                            <div class="money-transfer-box__icon text-center mb-2">
+                                <svg width="78" height="74" viewBox="0 0 78 74" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="45.6024" cy="42.2542" r="31.6908" fill="#FFE988" />
+                                    <path
+                                        d="M13.994 0C15.0424 0 15.8922 0.862145 15.8922 1.92565V3.85131H46.2625V1.92565C46.2625 0.862145 47.1123 0 48.1607 0C49.209 0 50.0588 0.862145 50.0588 1.92565V3.85131H53.8551C58.0484 3.85131 61.4477 7.29989 61.4477 11.5539V53.9183C61.4477 58.1724 58.0484 61.6209 53.8551 61.6209H8.29961C4.10635 61.6209 0.707031 58.1724 0.707031 53.9183V11.5539C0.707031 7.29989 4.10635 3.85131 8.29961 3.85131H12.0959V1.92565C12.0959 0.862145 12.9457 0 13.994 0ZM8.29961 7.70262C6.20298 7.70262 4.50332 9.42691 4.50332 11.5539V15.4052H57.6514V11.5539C57.6514 9.42691 55.9517 7.70262 53.8551 7.70262H8.29961ZM57.6514 19.2565H4.50332V53.9183C4.50332 56.0453 6.20298 57.7696 8.29961 57.7696H53.8551C55.9517 57.7696 57.6514 56.0454 57.6514 53.9183V19.2565Z"
+                                        fill="#2C3F4D" />
+                                </svg>
+
+                            </div>
+                            <div class="money-transfer-box__title text-center mb-2">
+                                Bankasız Para<br> Transferi
+                            </div>
+                            <p class="text-center mb-0">
+                                Bankalara ihtiyaç duymadan Türkiye’nin her yerinden haftanın her günü para transferi
+                                yapın.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="money-transfer-box rounded-3 p-4 mb-4 mb-lg-0">
+                            <div class="money-transfer-box__icon text-center mb-2">
+                                <svg width="78" height="74" viewBox="0 0 78 74" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="45.6024" cy="42.2542" r="31.6908" fill="#FFE988" />
+                                    <path
+                                        d="M13.994 0C15.0424 0 15.8922 0.862145 15.8922 1.92565V3.85131H46.2625V1.92565C46.2625 0.862145 47.1123 0 48.1607 0C49.209 0 50.0588 0.862145 50.0588 1.92565V3.85131H53.8551C58.0484 3.85131 61.4477 7.29989 61.4477 11.5539V53.9183C61.4477 58.1724 58.0484 61.6209 53.8551 61.6209H8.29961C4.10635 61.6209 0.707031 58.1724 0.707031 53.9183V11.5539C0.707031 7.29989 4.10635 3.85131 8.29961 3.85131H12.0959V1.92565C12.0959 0.862145 12.9457 0 13.994 0ZM8.29961 7.70262C6.20298 7.70262 4.50332 9.42691 4.50332 11.5539V15.4052H57.6514V11.5539C57.6514 9.42691 55.9517 7.70262 53.8551 7.70262H8.29961ZM57.6514 19.2565H4.50332V53.9183C4.50332 56.0453 6.20298 57.7696 8.29961 57.7696H53.8551C55.9517 57.7696 57.6514 56.0454 57.6514 53.9183V19.2565Z"
+                                        fill="#2C3F4D" />
+                                </svg>
+                            </div>
+                            <div class="money-transfer-box__title text-center mb-2">
+                                PTN Size<br> Hep Yakın
+                            </div>
+                            <p class="text-center mb-0">
+                                Size en yakın PTN noktasına <br>giderek para transferinizi<br> gerçekleştirin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PTN Info End -->
+
+        <!-- Yurt Dışı Para Transferi Start -->
+        <div class="container-fluid container-lg">
+            <div class="row mb-5">
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="section-text d-flex flex-column justify-content-center h-100">
+                        <div class="section-title mb-3">150’den Fazla Ülkeye<br> Para Transferi</div>
+                        <p>
+                            PTN, anlaşmalı aracı kurumlarıyla birlikte müşterilerine en güvenli, en hızlı ve en kolay
+                            yurt dışı para transfer işlemlerini sunuyor. Üstelik 150’den fazla ülkeye. Yurt dışından
+                            isminize gelen parayı almak veya yurt dışına para göndermek için PTN noktalarını ziyaret
+                            edebilirsiniz.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-1 order-lg-2">
+                    <picture class="d-block text-center text-lg-end">
+                        <!-- <source srcset="dist/images/how-working/takside-nedir.webp" type="image/webp">
+                        <source srcset="dist/images/how-working/takside-nedir.png" type="image/png"> -->
+                        <img src="dist/images/yurtdisi/150-ulke.png" alt="150'den Fazla Ülkeye Para Transferi"
+                            width="354" height="330" loading="lazy" class="img-fluid">
+                    </picture>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-7">
+                    <picture class="d-block text-lg-start text-center">
+                        <!-- <source srcset="dist/images/how-working/hiz-ve-guven.webp" type="image/webp">
+                        <source srcset="dist/images/how-working/hiz-ve-guven.png" type="image/png"> -->
+                        <img src="dist/images/yurtdisi/doviz-tl-para-transferi.png"
+                            alt="Türkiye’nin Her Yerine Para Transferi Yapın" width="408" height="330" loading="lazy"
+                            class="img-fluid">
+                    </picture>
+                </div>
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="section-text d-flex flex-column justify-content-center h-100">
+                        <div class="section-title mb-3 text-lg-end">
+                            Döviz ve Türk Lirasıyla Yurt Dışı Para Transferi
+                        </div>
+                        <p class="text-lg-end">
+                            PTN noktalarından TL (Türk Lirası), USD (Dolar) ve EUR (Euro) para
+                            birimleriyle haftanın her günü, geç saatlere kadar hatta
+                            resmi tatillerde bile para transferi yapabilirsiniz. İsminize
+                            gelen parayı alabilir ya da yurt dışına isme gönderebilirsiniz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Yurt Dışı Para Transferi End -->
+
+        <!-- Money Transfer Free Start -->
+        <div class="w-100 text-center mb-5">
+            <picture>
+                <source srcset="dist/images/money-transfer-free.webp" type="image/webp">
+                <source srcset="dist/images/money-transfer-free.jpg" type="image/jpg">
+                <img src="dist/images/money-transfer-free.jpg"
+                    alt="Zolotay Korona ile USD, TL ve EURO para göndermek ücretsiz!" loading="lazy" class="img-fluid"
+                    width="2560" height="338">
+            </picture>
+        </div>
+        <!-- Money Transfer Free End -->
+
+        <!-- Yurt Dışı Para Transferi Start -->
+        <div class="container-fluid container-lg">
+            <div class="row mb-5">
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="section-text d-flex flex-column justify-content-center h-100">
+                        <div class="section-title mb-3">
+                            Uygun Komisyon / Masraf
+                        </div>
+                        <p>
+                            Yurt dışı para transferi hizmetini PTN noktalarında ucuz ve uygun masraflarla alabilirsiniz.
+                            Yurt dışına göndereceğiniz para transferi için düşük masraf ödersiniz. Yurt dışından
+                            isminize gelen parayı ise masrafsız alırsınız.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-1 order-lg-2">
+                    <picture class="d-block text-center text-lg-end">
+                        <!-- <source srcset="dist/images/how-working/takside-nedir.webp" type="image/webp">
+                        <source srcset="dist/images/how-working/takside-nedir.png" type="image/png"> -->
+                        <img src="dist/images/yurtici/dusuk-masraf.png" alt="Düşük Masrafla Birçok Hizmet" width="339"
+                            height="330" loading="lazy" class="img-fluid">
+                    </picture>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <picture class="d-block text-lg-start text-center">
+                        <!-- <source srcset="dist/images/how-working/hiz-ve-guven.webp" type="image/webp">
+                        <source srcset="dist/images/how-working/hiz-ve-guven.png" type="image/png"> -->
+                        <img src="dist/images/yurtdisi/uluslararasi-para-transferi.png"
+                            alt="Uluslararası Para Transferi Nasıl Yapılıyor?" width="363" height="326" loading="lazy"
+                            class="img-fluid">
+                    </picture>
+                </div>
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="section-text d-flex flex-column justify-content-center h-100">
+                        <div class="section-title mb-3 text-lg-end">
+                            Uluslararası Para Transferi Nasıl Yapılıyor?
+                        </div>
+                        <p class="text-lg-end">
+                            PTN, Türkiye geneline yaygınlaşmış temsilci noktalarından güvenli
+                            ve kolay bir şekilde pasaport ve/veya kimlik belgesiyle birlikte
+                            bankaya ihtiyaç duymadan dakikalar içerisinde yurt dışına
+                            para gönderebilir ya da isminize gelen parayı alabilirsiniz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="section-text d-flex flex-column justify-content-center h-100">
+                        <div class="section-title mb-3">
+                            Para Transferi Yapmak için Gerekenler
+                        </div>
+                        <p>
+                            PTN noktalarında işlem yapmak her zaman kolay ve güvenlidir. Bunun için yapmanız gerekenler
+                            ise;
+                        </p>
+                        <ul class="mb-0">
+                            <li>
+                                PTN noktasına gelmek,
+                            </li>
+                            <li>
+                                18 yaşını doldurmuş olmak,
+                            </li>
+                            <li>
+                                Yanında geçerli bir kimlik belgesi bulundurmak,
+                            </li>
+                            <li>
+                                Geçerli para biriminde işlem yapmak.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-1 order-lg-2">
+                    <picture class="d-block text-center text-lg-end">
+                        <!-- <source srcset="dist/images/how-working/takside-nedir.webp" type="image/webp">
+                        <source srcset="dist/images/how-working/takside-nedir.png" type="image/png"> -->
+                        <img src="dist/images/yurtici/para-transferi-gerekenler.png"
+                            alt="Para Transferi Yapmak için Gerekenler" width="366" height="325" loading="lazy"
+                            class="img-fluid">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <!-- Yurt Dışı Para Transferi End -->
+
+        <!-- Representative Application Form Start -->
+        <div class="representative-application-form">
+            <div class="d-flex justify-content-between align-items-center application-form mx-auto h-100">
+                <div class="app-form-title">
+                    <span>PTN Para Transfer Noktası Olun!</span>
+                    <p>
+                        PTN temsilci ağına katılarak para transfer noktası olabilirsiniz.
+                        <br>
+                        Daha detaylı bilgi için şimdi temsilci başvurusu yapın.
+                    </p>
+                </div>
+                <button class="btn btn-secondary btn-lg" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Temsilci
+                    Başvuru Formu</button>
+            </div>
+        </div>
+        <!-- Representative Application Form End -->
+
+        <!-- Countries Start -->
+        <div class="countries-wrapper background-gray py-5">
+            <div class="countries-mx-width mx-auto">
+                <div class="countries-title mb-5">
+                    <span class="d-block text-center">150’den Fazla Ülkeye Para Gönderin, Alın.</span>
+                    <p class="text-center mb-0">
+                        Uluslararası para transferi yapın.
+                    </p>
+                </div>
+                <div class="countries-list mb-4">
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <img src="dist/images/countries/russia.png" loading="lazy" width="40" height="30"
+                                alt="Rusya">
+                            <span>Rusya</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/uzbekistan.png" loading="lazy" width="40" height="30"
+                                alt="Özbekistan">
+                            <span>Özbekistan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/kyrgyzstan.png" loading="lazy" width="40" height="30"
+                                alt="Kırgızistan">
+                            <span>Kırgızistan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/azerbaijan.png" loading="lazy" width="40" height="30"
+                                alt="Azerbaycan">
+                            <span>Azerbaycan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/ukraine.png" loading="lazy" width="40" height="30"
+                                alt="Ukrayna">
+                            <span>Ukrayna</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/georgia.png" loading="lazy" width="40" height="30"
+                                alt="Gürcistan">
+                            <span>Gürcistan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/kazakhstan.png" loading="lazy" width="40" height="30"
+                                alt="Kazakistan">
+                            <span>Kazakistan</span>
+                        </li>
+                        <li>
+                            <img src="dist/images/countries/philippines.png" loading="lazy" width="40" height="30"
+                                alt="Filipinler">
+                            <span>Filipinler</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#" title="Tümünü Gör" class="all-countries">
+                        Tümünü Gör
+                        <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.25 3.17188C12.25 2.90436 12.0541 2.6875 11.8125 2.6875H6.5625C6.32088 2.6875 6.125 2.90436 6.125 3.17188C6.125 3.43939 6.32088 3.65625 6.5625 3.65625H10.7563L1.87814 13.4856C1.70729 13.6748 1.70729 13.9815 1.87814 14.1706C2.049 14.3598 2.326 14.3598 2.49686 14.1706L11.375 4.34126V8.98438C11.375 9.25189 11.5709 9.46875 11.8125 9.46875C12.0541 9.46875 12.25 9.25189 12.25 8.98438V3.17188Z"
+                                fill="#2F4858" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Countries End -->
+
+        <!-- Our Business Partners Start -->
+        <div class="background-gray px-4 py-5">
+            <div class="business-partners-title text-center mb-5">
+                İş Ortaklarımız
+            </div>
+            <div class="business-partners-list d-flex justify-content-center">
+                <ul class="list-unstyled mb-0 d-flex">
+                    <li class="me-5">
+                        <img src="dist/images/partners/ria.png" loading="lazy" alt="Ria">
+                    </li>
+                    <li>
+                        <img src="dist/images/partners/payporter.png" loading="lazy" alt="Payporter">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Our Business Partners End -->
+
+        <!-- FAQ Start -->
+        <div class="container-fluid container-lg py-5">
+            <div class="faq-content mx-auto">
+                <div class="faq-content-title mb-5 text-center">
+                    Sıkça Sorulan Sorular
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">PTN ile para transferi yapmak güvenli mi?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Adıma gelen ödemeyi nasıl alabilirim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Nasıl para gönderebilirim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">18 yaşından küçüğüm, ödeme alabilir miyim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Para Transferi işlem tutar limitleri nelerdir?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Adıma gelen parayı alırken masraf ödeyecek miyim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Gönderdiğim para ne zaman alıcıya ulaşır?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">PTN Noktaları kimlerdir?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Para gönderim işlemlerinde düzeltme yapılabilir mi?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">PTN noktalarını nasıl bulabilirim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Para gönderim işlemini iptal edebilir miyim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Herhangi bir bankada hesabı olmayan bir kişiye PTN ile para gönderebilir
+                            miyim?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+                <div class="faq-content__item py-3 mb-3">
+                    <div class="faq-item_title d-flex justify-content-between align-items-center">
+                        <div class="faq-title">Haftasonu ve resmi tatillerde açık PTN şubeleri var mı?</div>
+                        <div class="faq-icon rounded-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-item_content">
+                        PTN, Türkiye Cumhuriyet Merkez Bankası (TCMB) tarafından yetkilendirilmiş Faturamatik Elektronik
+                        Para ve Ödeme Kuruluşu A.Ş.’nin lisanslı bir markasıdır. Tüm faaliyetleri TCMB tarafından
+                        denetlenmekte ve bankalarla aynı yüksek güvenlik standartlarını sunmaktadır.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ End -->
+
+        <!-- Home Tabs Start -->
+        <div id="FormApiKampanya" class="py-5">
+            <div class="container-fluid container-lg">
+                <div class="row">
+                    <div class="campaing-title pb-4 text-center">Kampanyalar ve Duyurular</div>
+                    <div class="btn-group filters-content" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="filters__button tab-button active" name="">
+                            Hepsi
+                        </button>
+                        <button type="button" class="filters__button tab-button" name="">
+                            Blog
+                        </button>
+                        <button type="button" class="filters__button tab-button" name="">
+                            Duyurular
+                        </button>
+                        <button type="button" class="filters__button tab-button" name="">
+                            Kampanyalar
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-control-foother">
+                    <div class="tab-page row" id="">
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <div class="campaing-card">
+                                <div class="campaing-card__badge badge-danger">
+                                    Sona Erdi
+                                </div>
+                                <a href="#" title="">
+                                    <div class="campaing-card__image aspect-ratio-container">
+                                        <img src="dist/images/campaing-1.jpg" width="381" height="300"
+                                            class="aspect-ratio-item"
+                                            alt="Günde 300 Müşteri Alın Deponuzu Biz Fulleyelim!">
+                                    </div>
+                                </a>
+                                <div class="campaing-card__title">
+                                    Günde 300 Müşteri Alın Deponuzu Biz Fulleyelim!
+                                </div>
+                                <div class="campaing-card__desc">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit unde
+                                    similique iure exercitationem! Vel ipsa cupiditate, pariatur, ipsam adipisci sequi
+                                    debitis quae dolorem tenetur sint iusto, sunt rem ratione.
+                                </div>
+                                <div class="campaing-card__btn">
+                                    <a href="#" title="Gönderiyi Oku">
+                                        Gönderiyi Oku
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.19564 4.94985L6.50428 4.10155C6.65721 3.74239 7.05724 3.56046 7.41101 3.68918L15.0633 6.45157C15.4297 6.60671 15.6193 7.00317 15.4931 7.3502L12.7574 14.8692C12.6311 15.2162 12.2311 15.3981 11.8506 15.2816L10.9859 14.9669C10.6195 14.8118 10.4299 14.4153 10.5435 14.0419L12.3169 9.53481L4.66305 13.0157C4.28969 13.1855 3.89661 13.0425 3.71967 12.6725L3.31521 11.8267C3.1509 11.4831 3.27856 11.0711 3.65192 10.9013L11.3057 7.42039L6.63801 5.8749C6.2716 5.71976 6.05535 5.33543 6.19564 4.94985Z"
+                                                fill="#262626" />
+                                            <path
+                                                d="M6.19564 4.94985L6.50428 4.10155C6.65721 3.74239 7.05724 3.56046 7.41101 3.68918L15.0633 6.45157C15.4297 6.60671 15.6193 7.00317 15.4931 7.3502L12.7574 14.8692C12.6311 15.2162 12.2311 15.3981 11.8506 15.2816L10.9859 14.9669C10.6195 14.8118 10.4299 14.4153 10.5435 14.0419L12.3169 9.53481L4.66305 13.0157C4.28969 13.1855 3.89661 13.0425 3.71967 12.6725L3.31521 11.8267C3.1509 11.4831 3.27856 11.0711 3.65192 10.9013L11.3057 7.42039L6.63801 5.8749C6.2716 5.71976 6.05535 5.33543 6.19564 4.94985Z"
+                                                fill="#262626" fill-opacity="0.2" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <div class="campaing-card">
+                                <div class="campaing-card__badge badge-danger">
+                                    Sona Erdi
+                                </div>
+                                <a href="#" title="">
+                                    <div class="campaing-card__image aspect-ratio-container">
+                                        <img src="dist/images/campaing-1.jpg" width="381" height="300"
+                                            class="aspect-ratio-item"
+                                            alt="Günde 300 Müşteri Alın Deponuzu Biz Fulleyelim!">
+                                    </div>
+                                </a>
+                                <div class="campaing-card__title">
+                                    Günde 300 Müşteri Alın Deponuzu Biz Fulleyelim!
+                                </div>
+                                <div class="campaing-card__desc">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit unde
+                                    similique iure exercitationem! Vel ipsa cupiditate, pariatur, ipsam adipisci sequi
+                                    debitis quae dolorem tenetur sint iusto, sunt rem ratione.
+                                </div>
+                                <div class="campaing-card__btn">
+                                    <a href="#" title="Gönderiyi Oku">
+                                        Gönderiyi Oku
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.19564 4.94985L6.50428 4.10155C6.65721 3.74239 7.05724 3.56046 7.41101 3.68918L15.0633 6.45157C15.4297 6.60671 15.6193 7.00317 15.4931 7.3502L12.7574 14.8692C12.6311 15.2162 12.2311 15.3981 11.8506 15.2816L10.9859 14.9669C10.6195 14.8118 10.4299 14.4153 10.5435 14.0419L12.3169 9.53481L4.66305 13.0157C4.28969 13.1855 3.89661 13.0425 3.71967 12.6725L3.31521 11.8267C3.1509 11.4831 3.27856 11.0711 3.65192 10.9013L11.3057 7.42039L6.63801 5.8749C6.2716 5.71976 6.05535 5.33543 6.19564 4.94985Z"
+                                                fill="#262626" />
+                                            <path
+                                                d="M6.19564 4.94985L6.50428 4.10155C6.65721 3.74239 7.05724 3.56046 7.41101 3.68918L15.0633 6.45157C15.4297 6.60671 15.6193 7.00317 15.4931 7.3502L12.7574 14.8692C12.6311 15.2162 12.2311 15.3981 11.8506 15.2816L10.9859 14.9669C10.6195 14.8118 10.4299 14.4153 10.5435 14.0419L12.3169 9.53481L4.66305 13.0157C4.28969 13.1855 3.89661 13.0425 3.71967 12.6725L3.31521 11.8267C3.1509 11.4831 3.27856 11.0711 3.65192 10.9013L11.3057 7.42039L6.63801 5.8749C6.2716 5.71976 6.05535 5.33543 6.19564 4.94985Z"
+                                                fill="#262626" fill-opacity="0.2" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <div class="campaing-card">
+                                <div class="campaing-card__badge badge-danger">
+                                    Sona Erdi
+                                </div>
+                                <a href="#" title="">
+                                    <div class="campaing-card__image aspect-ratio-container">
+                                        <img src="dist/images/campaing-1.jpg" width="381" height="300"
+                                            class="aspect-ratio-item"
+                                            alt="Günde 300 Müşteri Alın Deponuzu Biz Fulleyelim!">
+                                    </div>
+                                </a>
+                                <div class="campaing-card__title">
+                                    Günde 300 Müşteri Alın Deponuzu Biz Fulleyelim!
+                                </div>
+                                <div class="campaing-card__desc">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit unde
+                                    similique iure exercitationem! Vel ipsa cupiditate, pariatur, ipsam adipisci sequi
+                                    debitis quae dolorem tenetur sint iusto, sunt rem ratione.
+                                </div>
+                                <div class="campaing-card__btn">
+                                    <a href="#" title="Gönderiyi Oku">
+                                        Gönderiyi Oku
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.19564 4.94985L6.50428 4.10155C6.65721 3.74239 7.05724 3.56046 7.41101 3.68918L15.0633 6.45157C15.4297 6.60671 15.6193 7.00317 15.4931 7.3502L12.7574 14.8692C12.6311 15.2162 12.2311 15.3981 11.8506 15.2816L10.9859 14.9669C10.6195 14.8118 10.4299 14.4153 10.5435 14.0419L12.3169 9.53481L4.66305 13.0157C4.28969 13.1855 3.89661 13.0425 3.71967 12.6725L3.31521 11.8267C3.1509 11.4831 3.27856 11.0711 3.65192 10.9013L11.3057 7.42039L6.63801 5.8749C6.2716 5.71976 6.05535 5.33543 6.19564 4.94985Z"
+                                                fill="#262626" />
+                                            <path
+                                                d="M6.19564 4.94985L6.50428 4.10155C6.65721 3.74239 7.05724 3.56046 7.41101 3.68918L15.0633 6.45157C15.4297 6.60671 15.6193 7.00317 15.4931 7.3502L12.7574 14.8692C12.6311 15.2162 12.2311 15.3981 11.8506 15.2816L10.9859 14.9669C10.6195 14.8118 10.4299 14.4153 10.5435 14.0419L12.3169 9.53481L4.66305 13.0157C4.28969 13.1855 3.89661 13.0425 3.71967 12.6725L3.31521 11.8267C3.1509 11.4831 3.27856 11.0711 3.65192 10.9013L11.3057 7.42039L6.63801 5.8749C6.2716 5.71976 6.05535 5.33543 6.19564 4.94985Z"
+                                                fill="#262626" fill-opacity="0.2" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Home Tabs End -->
+    </main>
+
+    <footer>
+        <div class="footer-wrapper py-5">
+            <div class="container-fluid container-xl">
+                <div class="d-flex justify-content-between mb-4">
+                    <div class="footer-widget mb-4 mb-lg-0">
+                        <span class="footer-widget-title">Kurumsal</span>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" title="Hakkımızda">Hakkımızda</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Çözüm Ortaklığı">Çözüm Ortaklığı</a>
+                            </li>
+                            <li>
+                                <a href="#" title="İş Ortaklarımız">İş Ortaklarımız</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Temsilcilik">Temsilcilik</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget mb-4 mb-lg-0">
+                        <span class="footer-widget-title">Hizmetlerimiz</span>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" title="Yurt İçi Para Transferi">Yurt İçi Para Transferi</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Yurt Dışı Para Transferi">Yurt Dışı Para Transferi</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Noktalarımız">Noktalarımız</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Kampanyalar">Kampanyalar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget mb-4 mb-lg-0">
+                        <span class="footer-widget-title">Bilgi Merkezi</span>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#" title="Ticari İleti Onayı">Ticari İleti Onayı</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Başvuru Formu">Başvuru Formu</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Kişisel Verilerin Korunması">Kişisel Verilerin Korunması</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Kullanıcı Sözleşmesi">Kullanıcı Sözleşmesi</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Gizlilik ve Güvenlik">Gizlilik ve Güvenlik</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget mb-4 mb-lg-0">
+                        <span class="footer-widget-title">Sosyal Medya</span>
+                        <div class="footer-social-media">
+                            <ul class="list-unstyled mb-0 d-flex align-items-center justify-content-lg-between">
+                                <li>
+                                    <a href="#" target="_blank" rel="noopener" title="Instagram">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="noopener" title="Facebook">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="noopener" title="Twitter - X">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="noopener" title="Youtube">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-widget mb-4 mb-lg-0">
+                        <span class="footer-widget-title">Bize Ulaşın</span>
+                        <p class="mb-0">
+                            Zümrütevler, Acarlar Sk No:16, 34852 Maltepe/İstanbul
+                            <br>
+                            Tel: 0850 321 2424
+                            <br>
+                            <a href="mailto:info@ptn.com" title="Bize Mail Gönder">info@ptn.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-logo d-flex flex-column flex-lg-row align-items-center justify-content-lg-between">
+                    <div class="footer-logo-left mb-4 mb-md-0">
+                        <ul class="list-unstyled d-flex flex-column flex-md-row align-items-center">
+                            <li class="mb-3 mb-md-0">
+                                <svg width="177" height="65" viewBox="0 0 147 54" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M139.809 53.7265H88.3973C87.7897 53.7265 87.327 53.1793 87.4276 52.5787L88.2806 47.4936C88.3601 47.0189 88.7694 46.6722 89.2502 46.6722H140.662C141.269 46.6722 141.732 47.2195 141.631 47.8201L140.778 52.9052C140.699 53.3799 140.289 53.7265 139.809 53.7265Z"
+                                        fill="#FFC700" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M23.3232 27.7103L34.9843 39.3922L23.3232 51.0751H0L11.6611 39.3922L23.3232 27.7103L34.9843 16.0253L46.6465 27.7103L34.9843 39.3922L23.3232 27.7103Z"
+                                        fill="#191F26" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M23.3232 27.7103L34.9843 16.0254L23.3232 4.34344H0L11.6631 16.0254L23.3232 27.7103Z"
+                                        fill="#FFC700" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M34.9844 39.3922L23.3232 27.7103L34.9844 16.0253L46.6465 27.7103L34.9844 39.3922Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M86.6874 22.479L85.9078 27.1661C84.048 38.3451 77.7502 42.5515 68.6319 42.5515C66.9521 42.5515 65.1526 42.3711 63.2927 42.1313L61.4328 52.5283C61.3132 53.1894 60.7137 53.7305 60.0528 53.7305H52.7944C52.1949 53.7305 51.7151 53.3093 51.7151 52.7087V52.5283L59.1535 10.399C59.3336 9.4366 59.6333 9.01637 61.3132 8.65559C64.9122 7.81411 69.7112 7.09357 74.3302 7.09357C82.3681 7.09357 86.9871 11.961 86.9871 19.233C86.9871 20.2549 86.8674 21.3372 86.6874 22.479ZM72.9501 15.1466C70.9706 15.1466 69.1711 15.2665 67.971 15.4469L64.6718 34.1982C66.3516 34.439 67.8513 34.559 69.171 34.559C72.9501 34.559 75.1701 33.1159 76.189 27.1661L76.9696 22.479C77.1497 21.2767 77.2694 20.2549 77.2694 19.3529C77.2694 16.5887 76.1901 15.1466 72.9501 15.1466Z"
+                                        fill="#191F26" />
+                                    <path
+                                        d="M113.204 7.57132H96.3619L95.0845 14.8433H111.944C112.604 14.8433 113.204 14.3011 113.323 13.6481L114.219 8.77458V8.59621C114.219 7.99458 113.805 7.57031 113.204 7.57031V7.57132Z"
+                                        fill="#191F26" />
+                                    <path
+                                        d="M89.4387 48.596H90.8208C91.5601 48.596 91.9966 49.0102 91.9966 49.6491C91.9966 50.5147 91.3629 51.1013 90.4265 51.1013H89.9708L89.841 51.9619H88.9287L89.4377 48.595L89.4387 48.596ZM90.4798 50.3656C90.8157 50.3656 91.0652 50.1066 91.0652 49.7599C91.0652 49.505 90.9022 49.3326 90.6327 49.3326H90.2394L90.0855 50.3666H90.4788L90.4798 50.3656Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M92.0049 51.0004C92.0049 50.1489 92.5712 49.519 93.2914 49.519C93.5217 49.519 93.7762 49.6007 93.911 49.8173H93.9251L93.9583 49.6057H94.7982L94.4381 51.9629H93.5982L93.6314 51.7512H93.6173C93.4161 51.9679 93.1375 52.0495 92.9072 52.0495C92.3499 52.0495 92.0049 51.6222 92.0049 51.0015V51.0004ZM93.7622 50.6548C93.7622 50.3666 93.6223 50.1791 93.397 50.1791C93.0942 50.1791 92.8548 50.4915 92.8548 50.9097C92.8548 51.1939 92.9896 51.3915 93.2099 51.3915C93.5268 51.3915 93.7622 51.0841 93.7622 50.6558V50.6548Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M95.319 49.6057H96.1589L96.1207 49.8707H96.1297C96.2544 49.645 96.4466 49.519 96.6487 49.519C96.7252 49.519 96.7976 49.5281 96.87 49.5533L96.7544 50.3424C96.6779 50.3182 96.6055 50.3081 96.5381 50.3081C96.2504 50.3081 96.0482 50.5399 95.9859 50.939L95.832 51.9629H94.9629L95.318 49.6057H95.319Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M96.8638 51.0004C96.8638 50.1489 97.4301 49.519 98.1503 49.519C98.3807 49.519 98.6351 49.6007 98.7699 49.8173H98.784L98.8172 49.6057H99.6571L99.297 51.9629H98.4571L98.4903 51.7512H98.4752C98.274 51.9679 97.9954 52.0495 97.7651 52.0495C97.2078 52.0495 96.8628 51.6222 96.8628 51.0015L96.8638 51.0004ZM98.6211 50.6548C98.6211 50.3666 98.4813 50.1791 98.2559 50.1791C97.9542 50.1791 97.7138 50.4915 97.7138 50.9097C97.7138 51.1939 97.8486 51.3915 98.0688 51.3915C98.3857 51.3915 98.6211 51.0841 98.6211 50.6558V50.6548Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M104.133 49.3508H103.154L102.76 51.9629H101.848L102.242 49.3508H101.263L101.373 48.596H104.249L104.133 49.3508Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M104.223 49.6057H105.063L105.025 49.8707H105.034C105.158 49.645 105.351 49.519 105.553 49.519C105.629 49.519 105.702 49.5281 105.774 49.5533L105.658 50.3424C105.582 50.3182 105.51 50.3081 105.442 50.3081C105.154 50.3081 104.952 50.5399 104.89 50.939L104.736 51.9629H103.867L104.222 49.6057H104.223Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M105.767 51.0004C105.767 50.1489 106.333 49.519 107.053 49.519C107.284 49.519 107.538 49.6007 107.673 49.8173H107.687L107.72 49.6057H108.56L108.2 51.9629H107.36L107.393 51.7512H107.378C107.177 51.9679 106.898 52.0495 106.668 52.0495C106.111 52.0495 105.766 51.6222 105.766 51.0015L105.767 51.0004ZM107.524 50.6548C107.524 50.3666 107.384 50.1791 107.159 50.1791C106.857 50.1791 106.617 50.4915 106.617 50.9097C106.617 51.1939 106.752 51.3915 106.972 51.3915C107.289 51.3915 107.524 51.0841 107.524 50.6558V50.6548Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M109.082 49.6057H109.927L109.894 49.8173H109.904C110.101 49.6158 110.379 49.519 110.605 49.519C111.133 49.519 111.431 49.9423 111.339 50.553L111.123 51.9618H110.254L110.441 50.7163C110.484 50.4321 110.388 50.2597 110.182 50.2597C109.975 50.2597 109.826 50.428 109.787 50.7021L109.595 51.9618H108.726L109.081 49.6047L109.082 49.6057Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M111.557 51.1839H112.301C112.315 51.3612 112.459 51.4529 112.661 51.4529C112.81 51.4529 112.916 51.3804 112.916 51.2655C112.916 50.9289 111.787 51.2846 111.787 50.4381C111.787 49.8758 112.272 49.519 112.949 49.519C113.558 49.519 113.938 49.7982 113.938 50.3373H113.184C113.175 50.1741 113.04 50.0874 112.872 50.0874C112.743 50.0874 112.627 50.1539 112.627 50.2799C112.627 50.6115 113.832 50.3081 113.832 51.1456C113.832 51.723 113.371 52.0495 112.575 52.0495C111.917 52.0495 111.533 51.7129 111.557 51.1839Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M114.55 50.3133H114.128L114.239 49.6058H114.661L114.713 49.2501C114.814 48.5719 115.266 48.1486 115.909 48.1486C116.058 48.1486 116.226 48.1637 116.375 48.2111L116.269 48.9085C116.193 48.8843 116.106 48.8702 116.029 48.8702C115.794 48.8702 115.616 49.0284 115.577 49.2743L115.529 49.6058H116.168L116.057 50.3133H115.418L115.173 51.963H114.3L114.549 50.3133H114.55Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M116.153 50.9813C116.153 50.1257 116.757 49.519 117.578 49.519C118.323 49.519 118.716 49.9947 118.591 50.7939L118.558 51.0055H116.955C116.965 51.2504 117.108 51.4136 117.329 51.4136C117.473 51.4136 117.626 51.3461 117.708 51.2363H118.505C118.342 51.722 117.823 52.0485 117.208 52.0485C116.55 52.0485 116.152 51.6212 116.152 50.9803L116.153 50.9813ZM117.857 50.5631C117.876 50.3031 117.746 50.1257 117.511 50.1257C117.29 50.1257 117.097 50.299 117.026 50.5631H117.857Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M119.199 49.6057H120.039L120 49.8707H120.009C120.134 49.645 120.326 49.519 120.528 49.519C120.605 49.519 120.677 49.5281 120.749 49.5533L120.634 50.3424C120.558 50.3182 120.485 50.3081 120.418 50.3081C120.13 50.3081 119.928 50.5399 119.866 50.939L119.712 51.9629H118.843L119.198 49.6057H119.199Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M125.48 48.596L124.971 51.9629H124.227L123.152 50.1399L122.873 51.9629H121.961L122.47 48.596H123.209L124.284 50.4573L124.567 48.596H125.479H125.48Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M125.555 50.9763C125.555 50.1207 126.178 49.519 127.033 49.519C127.714 49.519 128.133 49.9473 128.133 50.5913C128.133 51.4429 127.504 52.0485 126.654 52.0485C125.972 52.0485 125.555 51.6162 125.555 50.9763ZM127.331 50.683C127.331 50.3998 127.177 50.2164 126.928 50.2164C126.601 50.2164 126.356 50.4956 126.356 50.8856C126.356 51.1647 126.51 51.3522 126.76 51.3522C127.086 51.3522 127.331 51.073 127.331 50.683Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M128.912 48.2352H129.781L129.397 50.7838L130.29 49.6048H131.227L130.333 50.7838L130.957 51.9619H129.939L129.383 50.8987L129.22 51.9619H128.351L128.912 48.2352Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M131.561 51.0923L131.68 50.3133H131.253L131.364 49.6059H131.786L131.902 48.8561H132.771L132.66 49.6059H133.289L133.178 50.3133H132.55L132.453 50.9482C132.42 51.179 132.51 51.2938 132.741 51.2938C132.832 51.2938 132.938 51.2797 133.038 51.2656L132.928 51.9721C132.803 52.0204 132.601 52.0486 132.414 52.0486C131.814 52.0486 131.473 51.6687 131.56 51.0923H131.561Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M133.432 51.0004C133.432 50.1489 133.998 49.519 134.718 49.519C134.949 49.519 135.203 49.6007 135.338 49.8173H135.352L135.385 49.6057H136.225L135.865 51.9629H135.025L135.058 51.7512H135.044C134.843 51.9679 134.564 52.0495 134.334 52.0495C133.777 52.0495 133.432 51.6222 133.432 51.0015V51.0004ZM135.188 50.6548C135.188 50.3666 135.048 50.1791 134.823 50.1791C134.52 50.1791 134.281 50.4915 134.281 50.9097C134.281 51.1939 134.415 51.3915 134.636 51.3915C134.953 51.3915 135.188 51.0841 135.188 50.6558V50.6548Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M136.337 51.1839H137.082C137.096 51.3612 137.24 51.4529 137.442 51.4529C137.591 51.4529 137.696 51.3804 137.696 51.2655C137.696 50.9289 136.569 51.2846 136.569 50.4381C136.569 49.8758 137.054 49.519 137.731 49.519C138.34 49.519 138.719 49.7982 138.719 50.3373H137.966C137.957 50.1741 137.822 50.0874 137.654 50.0874C137.524 50.0874 137.409 50.1539 137.409 50.2799C137.409 50.6115 138.614 50.3081 138.614 51.1456C138.614 51.723 138.153 52.0495 137.356 52.0495C136.699 52.0495 136.314 51.7129 136.338 51.1839H136.337Z"
+                                        fill="#25292E" />
+                                    <path d="M139.255 49.6058H140.129L139.769 51.963H138.9L139.255 49.6058Z"
+                                        fill="#25292E" />
+                                    <path
+                                        d="M103.724 14.8453L100.544 32.6946C100.484 33.0554 100.425 33.3557 100.425 33.656C100.425 34.9188 101.265 35.1586 103.665 35.1586H108.164C108.763 35.1586 109.243 35.3995 109.243 36.0001V36.1805L108.464 40.8081C108.344 41.4692 107.804 41.8894 107.024 42.0103C105.225 42.3107 102.285 42.5515 99.7054 42.5515C94.4266 42.5515 90.5872 40.5682 90.5872 35.0992C90.5872 34.3171 90.6475 33.5361 90.8266 32.6352L96.1054 2.46497C96.2251 1.80388 96.8849 1.38365 97.5448 1.26272L105.044 0H105.224C105.764 0 106.124 0.481708 106.124 1.02187V1.20125L104.984 7.57228L103.724 14.8432V14.8453Z"
+                                        fill="#191F26" />
+                                    <path
+                                        d="M146.434 20.3143L142.835 40.7486C142.716 41.4097 142.116 42.0113 141.455 42.0113H134.077C133.478 42.0113 133.057 41.5911 133.057 40.9895C133.057 40.929 133.118 40.8091 133.118 40.7486L136.836 19.5938C136.956 18.8722 137.016 18.2716 137.016 17.67C137.016 16.108 136.357 15.0861 134.077 15.0861H131.078C127.959 15.0861 127.299 16.6481 126.759 19.5938L123.04 40.7486C122.92 41.4097 122.259 42.0113 121.6 42.0113H114.222C113.623 42.0113 113.263 41.5306 113.263 40.9895C113.263 40.929 113.323 40.8091 113.323 40.7486L117.162 18.8722C118.602 10.6389 123.821 7.09357 132.459 7.09357H135.458C142.897 7.09357 146.736 10.7598 146.736 17.0099C146.736 18.0318 146.617 19.1735 146.436 20.3143H146.434Z"
+                                        fill="#191F26" />
+                                </svg>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <span>Bir</span>
+                                <svg width="85" height="14" class="mx-2" viewBox="0 0 85 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_499_1580)">
+                                        <path
+                                            d="M18.2541 3.49378V1.60547H12.3535V12.3941H14.6909V7.94419H17.3409V6.05588H14.6909V3.49378H18.2541Z"
+                                            fill="#0033A1" />
+                                        <path
+                                            d="M24.371 7.33041C24.371 6.51718 24.3136 5.91578 24.1962 5.52885C24.0789 5.14087 23.7975 4.80025 23.3501 4.50806C22.9012 4.21321 22.3093 4.06738 21.5693 4.06738C20.6945 4.06738 19.9689 4.28772 19.3949 4.72893C18.8988 5.11 18.5068 5.76516 18.4074 6.48046L18.3623 6.83172H20.448L20.4921 6.5736C20.591 5.90779 20.8913 5.57516 21.3884 5.57516C21.6923 5.57516 21.8973 5.67894 22.0018 5.88863C22.1084 6.09886 22.1628 6.47567 22.1628 7.02332V7.48582H22.0275C20.4209 7.49806 19.5497 7.73703 18.9834 8.22028C18.4007 8.7195 18.1096 9.35337 18.1096 10.2613C18.1096 10.9899 18.3018 11.5413 18.6861 11.9213C19.071 12.2997 19.5696 12.4908 20.1836 12.4908C21.0615 12.4908 21.7379 12.271 22.2166 11.5019C22.2529 11.4434 22.3401 11.4705 22.3401 11.5397V12.3939H24.3705V7.32988L24.371 7.33041ZM22.1607 8.88449C22.1458 9.6445 22.0392 10.2528 21.8389 10.5365C21.6236 10.8446 21.3828 10.9995 21.1188 10.9995C20.6294 10.9995 20.3845 10.7281 20.3845 10.0399V10.0245C20.3881 9.42363 20.6889 8.73973 21.4453 8.73973H22.1607V8.88396V8.88449Z"
+                                            fill="#0033A1" />
+                                        <path
+                                            d="M34.9742 8.40191C34.9742 9.19917 34.9588 9.72607 34.927 9.98206C34.8968 10.2386 34.8061 10.4403 34.6606 10.5867C34.5099 10.7336 34.2947 10.8054 34.0092 10.8054C33.6966 10.8054 33.4962 10.7165 33.403 10.5366C33.3097 10.3599 33.261 10.0065 33.261 9.47805V4.23145H31.0522V9.53766C31.0522 10.3243 31.0968 10.9044 31.186 11.2764C31.2736 11.6458 31.4658 11.9529 31.7666 12.195C32.0695 12.4372 32.501 12.5601 33.0673 12.5601C33.4865 12.5601 33.8493 12.4856 34.1588 12.3339C34.4212 12.2041 34.6857 11.9289 34.9516 11.5053C34.9916 11.4414 35.0869 11.4707 35.0869 11.5468V12.3941H37.185V4.23145H34.9752V8.40191H34.9742Z"
+                                            fill="#0033A1" />
+                                        <path
+                                            d="M42.5372 4.1167C41.7541 4.1167 41.1796 4.64945 40.8142 5.71602C40.7866 5.79691 40.6718 5.77722 40.6718 5.69153V4.23272H38.7341V12.3948H40.9439V8.87739C40.9439 7.19399 41.4769 6.35095 42.5485 6.35095H42.9144V4.11723H42.5372V4.1167Z"
+                                            fill="#0033A1" />
+                                        <path
+                                            d="M60.6428 5.15368C60.5224 4.81785 60.3112 4.55228 60.0048 4.35642C59.7009 4.16376 59.2878 4.06689 58.7728 4.06689C57.9139 4.06689 57.3005 4.432 56.933 5.16433C56.9028 5.225 56.8182 5.21755 56.7977 5.15315C56.562 4.4288 56.0106 4.06689 55.1471 4.06689C54.3497 4.06689 53.7567 4.40166 53.3714 5.07225C53.3329 5.13931 53.2345 5.11217 53.2345 5.03447V4.23241H51.1365V12.3945H53.3462V7.63435C53.3462 6.92757 53.4047 6.44697 53.5225 6.1979C53.6399 5.94669 53.8741 5.82268 54.2262 5.82268C54.5142 5.82268 54.6966 5.9073 54.7781 6.08081C54.8586 6.25165 54.899 6.63006 54.899 7.2155V12.3945H57.1088V7.63435C57.1088 6.90575 57.1585 6.42409 57.2636 6.18299C57.3681 5.9435 57.5921 5.82215 57.9365 5.82215C58.2219 5.82215 58.4069 5.91263 58.4884 6.09837C58.5709 6.27933 58.6145 6.67689 58.6145 7.28681V12.3945H60.8242V7.05743C60.8242 6.12445 60.7622 5.49111 60.6418 5.15368"
+                                            fill="#0033A1" />
+                                        <path d="M76.7845 1.60547H74.5425V3.55286H76.7845V1.60547Z" fill="#0033A1" />
+                                        <path d="M76.7681 4.23145H74.5583V12.3941H76.7681V4.23145Z" fill="#0033A1" />
+                                        <path
+                                            d="M29.3677 10.6728C29.052 10.6728 28.8285 10.6174 28.6948 10.5078C28.5615 10.3966 28.4842 10.2593 28.4601 10.0959C28.436 9.93087 28.4257 9.57162 28.4257 9.01652V6.02066H29.8822V4.23188H28.4257V1.61177L26.28 1.60645V4.23241H25.251V6.0212H26.28V9.27145C26.28 10.1374 26.3302 10.7723 26.4291 11.1693C26.5281 11.5696 26.7551 11.9006 27.1087 12.1635C27.4643 12.4286 27.9768 12.5611 28.6461 12.5611H29.9944V10.6717C29.7166 10.6728 29.4204 10.6733 29.3677 10.6733"
+                                            fill="#0033A1" />
+                                        <path
+                                            d="M82.5827 8.07982L85 4.06742H82.678L80.6779 7.42199C80.6363 7.4965 80.5272 7.4667 80.5272 7.38048V1.60645H78.3169V12.395H80.5272V9.0426C80.5272 8.96383 80.6276 8.93669 80.665 9.00481L82.6811 12.3956H84.9954L82.5832 8.3885C82.5299 8.29324 82.5299 8.17562 82.5832 8.08035"
+                                            fill="#0033A1" />
+                                        <path
+                                            d="M72.9963 10.6723C72.6806 10.6723 72.4572 10.617 72.3234 10.5074C72.1902 10.3961 72.1128 10.2588 72.0887 10.0954C72.0646 9.93043 72.0544 9.57118 72.0544 9.01608V6.02022H73.3638V4.23144H72.0544V1.61133H69.9087V4.23197H68.8796V6.02076H69.9087V9.27101C69.9087 10.1369 69.9589 10.7719 70.0578 11.1689C70.1567 11.5691 70.3837 11.9002 70.7373 12.1631C71.093 12.4281 71.6055 12.5607 72.2748 12.5607H73.4755V10.6713C73.1977 10.6723 73.0491 10.6729 72.9963 10.6729"
+                                            fill="#0033A1" />
+                                        <path
+                                            d="M49.6154 7.33041C49.6154 6.51718 49.558 5.91578 49.4406 5.52885C49.3233 5.14087 49.0419 4.80025 48.5945 4.50806C48.1456 4.21321 47.5537 4.06738 46.8137 4.06738C45.9389 4.06738 45.2133 4.28772 44.6393 4.72893C44.1432 5.11 43.7512 5.76516 43.6517 6.48046L43.6067 6.83172H45.6924L45.7365 6.5736C45.8354 5.90779 46.1357 5.57516 46.6328 5.57516C46.9367 5.57516 47.1417 5.67894 47.2462 5.88863C47.3528 6.09886 47.4071 6.47567 47.4071 7.02332V7.48582H47.2718C45.6652 7.49806 44.7941 7.73703 44.2278 8.22028C43.6451 8.7195 43.354 9.35337 43.354 10.2613C43.354 10.9899 43.5462 11.5413 43.9305 11.9213C44.3154 12.2997 44.814 12.4908 45.428 12.4908C46.3058 12.4908 46.9823 12.271 47.4609 11.5019C47.4973 11.4434 47.5845 11.4705 47.5845 11.5397V12.3939H49.6149V7.32988L49.6154 7.33041ZM47.4051 8.88449C47.3902 9.6445 47.2836 10.2528 47.0833 10.5365C46.868 10.8446 46.6272 10.9995 46.3632 10.9995C45.8743 10.9995 45.6289 10.7281 45.6289 10.0399V10.0245C45.6325 9.42363 45.9333 8.73973 46.6897 8.73973H47.4051V8.88396V8.88449Z"
+                                            fill="#0033A1" />
+                                        <path
+                                            d="M68.1813 7.33041C68.1813 6.51718 68.1239 5.91578 68.0065 5.52885C67.8892 5.14087 67.6078 4.80025 67.1605 4.50806C66.7115 4.21321 66.1196 4.06738 65.3796 4.06738C64.5048 4.06738 63.7792 4.28772 63.2052 4.72893C62.7091 5.11 62.3171 5.76516 62.2177 6.48046L62.1726 6.83172H64.2583L64.3024 6.5736C64.4013 5.90779 64.7016 5.57516 65.1987 5.57516C65.5026 5.57516 65.7076 5.67894 65.8121 5.88863C65.9187 6.09886 65.9731 6.47567 65.9731 7.02332V7.48582H65.8378C64.2312 7.49806 63.36 7.73703 62.7937 8.22028C62.211 8.7195 61.9199 9.35337 61.9199 10.2613C61.9199 10.9899 62.1121 11.5413 62.4965 11.9213C62.8813 12.2997 63.38 12.4908 63.9939 12.4908C64.8718 12.4908 65.5482 12.271 66.0269 11.5019C66.0633 11.4434 66.1504 11.4705 66.1504 11.5397V12.3939H68.1808V7.32988L68.1813 7.33041ZM65.971 8.88449C65.9561 9.6445 65.8496 10.2528 65.6492 10.5365C65.4339 10.8446 65.1931 10.9995 64.9292 10.9995C64.4403 10.9995 64.1948 10.7281 64.1948 10.0399V10.0245C64.1984 9.42363 64.4992 8.73973 65.2556 8.73973H65.971V8.88396V8.88449Z"
+                                            fill="#0033A1" />
+                                        <path d="M0 0V3.5004L3.37052 6.99973L0 10.5001V14L6.74002 6.99973L0 0Z"
+                                            fill="#FF8200" />
+                                        <path
+                                            d="M3.37012 0V3.5004L6.74064 6.99973L3.37012 10.5001V14L10.1107 6.99973L3.37012 0Z"
+                                            fill="#0033A1" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_499_1580">
+                                            <rect width="85" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>Markasıdır</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-logo-right">
+                        <ul class="list-unstyled d-flex flex-column flex-md-row align-items-center">
+                            <li class="me-4 mb-4 mb-md-0">
+                                <svg width="99" height="39" viewBox="0 0 99 39" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_499_1446)">
+                                        <path
+                                            d="M53.78 25.98L57.93 24.67L57.07 22.77C56.09 23.64 54.99 24.69 53.77 25.98H53.78Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M15.5801 15.1602H14.8601V19.2802H15.5201C16.5001 19.2802 17.2401 19.1102 17.7601 18.7702C18.2801 18.4302 18.5401 17.8902 18.5401 17.1702C18.5401 15.8302 17.5501 15.1702 15.5801 15.1702V15.1602Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M35.62 27.46C34 27.46 32.55 27.27 31.27 26.9C30 26.53 28.92 26 28.04 25.32C27.16 24.63 26.49 23.8 26.03 22.82C25.57 21.84 25.34 20.75 25.34 19.54C25.34 18.33 25.59 17.27 26.08 16.29C26.57 15.31 27.26 14.47 28.15 13.77C29.04 13.07 30.1 12.53 31.34 12.15C32.57 11.77 33.93 11.58 35.41 11.58C36.55 11.58 37.61 11.61 38.54 11.81C39.47 12.01 39.49 12.04 40.23 12.31V16.44C39.64 16.11 38.99 15.84 38.27 15.63C37.55 15.41 36.78 15.31 35.95 15.31C34.63 15.31 33.55 15.67 32.72 16.4C31.89 17.13 31.47 18.17 31.47 19.52C31.47 20.22 31.6 20.83 31.86 21.36C32.12 21.89 32.47 22.33 32.91 22.68C33.35 23.03 33.87 23.29 34.46 23.47C34.64 23.52 34.82 23.56 35 23.6L41.99 19.59L42.99 21.46V11.84H48.89V20.67C50.22 18.58 51.87 16.26 53.75 14.13L47.39 0L0 2.66L13.17 38.47L40.02 30.03C38.9 29.09 37.72 28.17 36.59 27.44C36.28 27.45 35.96 27.46 35.62 27.46ZM43.4 4.55C44.09 3.96 44.94 3.67 45.94 3.67C46.94 3.67 47.8 3.97 48.48 4.55C49.17 5.14 49.51 5.96 49.51 7.02C49.51 8.08 49.17 8.87 48.48 9.46C47.79 10.05 46.95 10.34 45.94 10.34C44.93 10.34 44.08 10.04 43.4 9.46C42.71 8.87 42.37 8.06 42.37 7.02C42.37 5.98 42.71 5.14 43.4 4.55ZM23.58 19.49C23.18 20.18 22.61 20.76 21.88 21.22C21.15 21.68 20.27 22.03 19.25 22.26C18.22 22.49 17.09 22.6 15.84 22.6H14.92V27.21H9.05V11.84H15.92C18.49 11.84 20.51 12.27 21.97 13.14C23.44 14.01 24.17 15.33 24.17 17.1C24.17 18.01 23.97 18.8 23.57 19.49H23.58Z"
+                                            fill="#016B71" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M33.3601 25.2599L41.7401 20.4499L45.6601 27.7599C45.6601 27.7599 52.9701 11.8899 62.6001 8.1499C62.6001 8.1499 62.4201 10.4699 62.2401 11.5399C62.0601 12.6099 61.9901 16.7699 63.1001 18.4299C63.1001 18.4299 57.3401 19.2899 46.2001 35.0699C46.2001 35.0699 38.0901 26.2399 33.3601 25.2599Z"
+                                            fill="#7CBF42" />
+                                        <path
+                                            d="M78.3 18.7901C78.3 21.9401 76.75 23.5201 73.64 23.5201H69.79V14.0601H73.64C76.75 14.0601 78.3 15.6401 78.3 18.7901ZM72.64 21.2601H73.58C74.78 21.2601 75.37 20.5801 75.37 19.2101V18.3801C75.37 17.0101 74.77 16.3301 73.58 16.3301H72.64V21.2501V21.2601Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M86.42 14.6299C87.15 15.1199 87.53 15.8499 87.54 16.8099V16.9799H84.87V16.9199C84.87 16.6399 84.78 16.4199 84.59 16.2299C84.4 16.0499 84.11 15.9499 83.72 15.9499C83.33 15.9499 83.05 16.0099 82.85 16.1299C82.65 16.2499 82.55 16.3999 82.55 16.5699C82.55 16.8199 82.69 16.9999 82.96 17.1199C83.24 17.2399 83.68 17.3599 84.29 17.4899C85 17.6499 85.59 17.8099 86.05 17.9799C86.51 18.1499 86.91 18.4299 87.26 18.8099C87.6 19.1999 87.78 19.7199 87.79 20.3799C87.79 21.4999 87.43 22.3299 86.72 22.8699C86.01 23.4099 85.06 23.6799 83.87 23.6799C82.48 23.6799 81.41 23.4299 80.64 22.9399C79.87 22.4399 79.48 21.5699 79.48 20.3099H82.18C82.18 20.7899 82.3 21.1099 82.53 21.2699C82.76 21.4299 83.12 21.5099 83.61 21.5099C83.97 21.5099 84.27 21.4699 84.51 21.3899C84.75 21.3099 84.86 21.1399 84.86 20.8799C84.86 20.6499 84.73 20.4799 84.47 20.3599C84.21 20.2499 83.78 20.1199 83.19 19.9999C82.47 19.8299 81.87 19.6599 81.4 19.4799C80.93 19.2999 80.51 19.0099 80.16 18.5899C79.81 18.1799 79.63 17.6199 79.63 16.9099C79.63 15.8699 80.01 15.1099 80.76 14.6199C81.51 14.1299 82.47 13.8799 83.62 13.8799C84.77 13.8799 85.69 14.1299 86.42 14.6199V14.6299Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M95.7901 14.6299C96.5201 15.1199 96.9001 15.8499 96.9101 16.8099V16.9799H94.2401V16.9199C94.2401 16.6399 94.1501 16.4199 93.9601 16.2299C93.7701 16.0499 93.4801 15.9499 93.0901 15.9499C92.7001 15.9499 92.4201 16.0099 92.2201 16.1299C92.0201 16.2499 91.9201 16.3999 91.9201 16.5699C91.9201 16.8199 92.0601 16.9999 92.3301 17.1199C92.6101 17.2399 93.0501 17.3599 93.6601 17.4899C94.3701 17.6499 94.9601 17.8099 95.4201 17.9799C95.8801 18.1499 96.2801 18.4299 96.6301 18.8099C96.9701 19.1999 97.1501 19.7199 97.1601 20.3799C97.1601 21.4999 96.8001 22.3299 96.0901 22.8699C95.3801 23.4099 94.4301 23.6799 93.2401 23.6799C91.8501 23.6799 90.7801 23.4299 90.0101 22.9399C89.2401 22.4399 88.8501 21.5699 88.8501 20.3099H91.5501C91.5501 20.7899 91.6701 21.1099 91.9001 21.2699C92.1301 21.4299 92.4901 21.5099 92.9801 21.5099C93.3401 21.5099 93.6401 21.4699 93.8801 21.3899C94.1201 21.3099 94.2301 21.1399 94.2301 20.8799C94.2301 20.6499 94.1001 20.4799 93.8401 20.3599C93.5801 20.2499 93.1501 20.1199 92.5601 19.9999C91.8401 19.8299 91.2401 19.6599 90.7701 19.4799C90.3001 19.2999 89.8801 19.0099 89.5301 18.5899C89.1801 18.1799 89.0001 17.6199 89.0001 16.9099C89.0001 15.8699 89.3801 15.1099 90.1301 14.6199C90.8801 14.1299 91.8401 13.8799 92.9901 13.8799C94.1401 13.8799 95.0601 14.1299 95.7901 14.6199V14.6299Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M71.86 25.9999C71.58 25.7699 71.2 25.6499 70.72 25.6499C70.17 25.6499 69.75 25.7899 69.47 26.0599C69.19 26.3399 69.04 26.7399 69.04 27.2799C69.04 27.8199 69.18 28.2199 69.47 28.4999C69.75 28.7799 70.17 28.9099 70.72 28.9099C71.22 28.9099 71.6 28.7999 71.87 28.5699C72.06 28.4099 72.18 28.1999 72.24 27.9499L71.32 27.6399C71.31 27.7899 71.26 27.9099 71.17 27.9999C71.07 28.0999 70.91 28.1499 70.71 28.1499C70.51 28.1499 70.36 28.0899 70.26 27.9599C70.16 27.8299 70.11 27.6499 70.11 27.4299V27.1399C70.11 26.9099 70.16 26.7299 70.26 26.5999C70.36 26.4699 70.51 26.4099 70.72 26.4099C70.9 26.4099 71.04 26.4599 71.14 26.5699C71.19 26.6299 71.23 26.6999 71.26 26.7799L72.19 26.4699C72.12 26.2899 72.01 26.1299 71.86 25.9999Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M75.54 26.0699C75.24 25.7899 74.8 25.6499 74.25 25.6499C73.7 25.6499 73.26 25.7899 72.96 26.0699C72.66 26.3499 72.51 26.7499 72.51 27.2899C72.51 27.8299 72.66 28.2299 72.96 28.5099C73.26 28.7899 73.69 28.9299 74.25 28.9299C74.81 28.9299 75.24 28.7899 75.54 28.5099C75.84 28.2299 76 27.8299 76 27.2899C76 26.7499 75.85 26.3499 75.54 26.0699ZM74.93 27.4299C74.93 27.6499 74.87 27.8299 74.75 27.9599C74.63 28.0899 74.46 28.1599 74.24 28.1599C74.02 28.1599 73.85 28.0899 73.73 27.9599C73.61 27.8299 73.56 27.6499 73.56 27.4299V27.1399C73.56 26.9199 73.62 26.7399 73.73 26.6099C73.85 26.4799 74.02 26.4099 74.24 26.4099C74.46 26.4099 74.63 26.4799 74.75 26.6099C74.87 26.7399 74.93 26.9199 74.93 27.1399V27.4299Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M78.26 27.5199H78.24L77.75 25.6999H76.28V28.8599H77.23V27.7199C77.23 27.5799 77.23 27.4299 77.21 27.2899C77.2 27.1399 77.18 27.0199 77.17 26.9199C77.16 26.8199 77.15 26.7599 77.14 26.7299H77.16L77.76 28.8599H78.57L79.17 26.7199H79.19C79.19 26.7199 79.18 26.8099 79.17 26.9099C79.16 27.0099 79.15 27.1399 79.13 27.2799C79.12 27.4299 79.11 27.5699 79.11 27.7099V28.8499H80.14V25.6899H78.72L78.24 27.5099L78.26 27.5199Z"
+                                            fill="#016B71" />
+                                        <path d="M84.82 25.6997H83.78V28.8597H86.48V28.0497H84.82V25.6997Z"
+                                            fill="#016B71" />
+                                        <path d="M87.8 25.6997H86.76V28.8597H87.8V25.6997Z" fill="#016B71" />
+                                        <path
+                                            d="M82.9401 25.8397C82.7801 25.7497 82.6001 25.6997 82.4001 25.6997H80.5901V28.8597H81.6301V27.8397H82.4101C82.6101 27.8397 82.7901 27.7897 82.9501 27.6997C83.1101 27.6097 83.2301 27.4897 83.3201 27.3297C83.4101 27.1697 83.4501 26.9897 83.4501 26.7997V26.7397C83.4501 26.5397 83.4101 26.3697 83.3201 26.2097C83.2301 26.0497 83.1101 25.9297 82.9501 25.8397H82.9401ZM82.3801 26.7897C82.3801 26.8797 82.3501 26.9597 82.3001 27.0097C82.2501 27.0597 82.1601 27.0897 82.0501 27.0897H81.6201V26.4397H82.0501C82.1601 26.4397 82.2401 26.4697 82.3001 26.5197C82.3501 26.5697 82.3801 26.6497 82.3801 26.7497V26.7897Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M90.43 25.6997H89.22L88.04 28.8597H89.1L89.24 28.4197H90.37L90.51 28.8597H91.61L90.43 25.6997ZM89.45 27.7097L89.79 26.5897H89.81L90.15 27.7097H89.45Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M94.06 27.2597L92.7 25.6997H91.79V28.8597H92.75V27.3297L94.11 28.8597H95.01V25.6997H94.06V27.2597Z"
+                                            fill="#016B71" />
+                                        <path
+                                            d="M95.27 25.6997V26.5097H96.33V28.8597H97.37V26.5097H98.43V25.6997H95.27Z"
+                                            fill="#016B71" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_499_1446">
+                                            <rect width="98.43" height="38.47" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </li>
+                            <li class="me-4 mb-4 mb-md-0">
+                                <svg width="101" height="35" viewBox="0 0 101 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g clip-path="url(#clip0_499_1471)">
+                                        <path
+                                            d="M6.44993 25.9903V7.38027H0.429932V3.78027H16.4599V7.38027H10.4399V25.9903H6.45993H6.44993Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M43.2 25.9903V3.78027H51.1399C54.7999 3.78027 57.6699 4.80027 59.7099 6.87027C61.7799 8.91027 62.7999 11.5903 62.7999 14.9303C62.7999 18.2703 61.78 20.9503 59.74 22.9603C57.7 24.9703 54.83 25.9903 51.17 25.9903H43.2ZM47.18 22.3903H50.88C56.39 22.3903 58.82 19.4903 58.82 14.9303C58.82 10.3703 56.4299 7.38027 50.8499 7.38027H47.18V22.3903Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M66.5598 25.9903V3.78027H80.7098V7.38027H70.5398V12.6703H80.0698V16.2703H70.5398V22.3903H80.9298V25.9903H66.5598Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M84.98 25.9903V3.78027H93.01C94.76 3.78027 96.23 4.32027 97.41 5.41027C98.62 6.46027 99.23 7.83027 99.23 9.46027C99.23 11.6003 98.18 13.2503 96.39 13.9203C99.23 14.4303 100.85 16.6003 100.85 19.4303C100.85 21.3103 100.21 22.9003 98.91 24.1503C97.64 25.3903 96.04 26.0003 94.1 26.0003H84.99L84.98 25.9903ZM88.96 12.7403H92.47C94.16 12.7403 95.34 11.6203 95.34 10.0003C95.34 8.50027 94.16 7.39027 92.5 7.39027H88.96V12.7403ZM88.96 22.3903H93.42C95.43 22.3903 96.89 21.0203 96.89 19.2003C96.89 17.3803 95.42 16.0803 93.38 16.0803H88.95V22.3903H88.96Z"
+                                            fill="#415364" />
+                                        <rect x="17.04" y="3.76025" width="18.52" height="17.02"
+                                            fill="url(#pattern0_499_1471)" />
+                                        <rect x="17.04" y="5.58008" width="18.52" height="17.02"
+                                            fill="url(#pattern1_499_1471)" />
+                                        <path style="mix-blend-mode:screen" opacity="0.53"
+                                            d="M39.26 14.8903C39.26 20.0203 35.1 24.1903 29.96 24.1903C24.82 24.1903 20.66 20.0303 20.66 14.8903C20.66 13.4203 21.08 12.0503 21.81 10.9003C23.14 8.80033 25.48 7.40033 28.15 7.40033C32.29 7.40033 35.64 10.7503 35.64 14.8903C35.64 9.76033 31.47 5.59033 26.34 5.59033C23.03 5.59033 20.12 7.32033 18.47 9.93033C17.56 11.3603 17.04 13.0603 17.04 14.8803C17.04 21.0103 22.01 25.9903 28.15 25.9903C34.29 25.9903 39.26 21.0203 39.26 14.8803V14.8903Z"
+                                            fill="url(#paint0_linear_499_1471)" />
+                                        <path
+                                            d="M30.9899 2.5902C31.5809 2.5902 32.0599 2.11114 32.0599 1.5202C32.0599 0.929251 31.5809 0.450195 30.9899 0.450195C30.399 0.450195 29.9199 0.929251 29.9199 1.5202C29.9199 2.11114 30.399 2.5902 30.9899 2.5902Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M25.32 2.5902C25.9109 2.5902 26.39 2.11114 26.39 1.5202C26.39 0.929251 25.9109 0.450195 25.32 0.450195C24.7291 0.450195 24.25 0.929251 24.25 1.5202C24.25 2.11114 24.7291 2.5902 25.32 2.5902Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M1.39981 33.4999V30.7399H0.559814V30.4199H2.57981V30.7399H1.73981V33.4999H1.39981Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M2.75977 31.2702H3.08977V32.6002C3.08977 33.0202 3.31977 33.2402 3.68977 33.2402C4.05977 33.2402 4.29977 33.0202 4.29977 32.6002V31.2702H4.62977V32.6002C4.62977 33.2002 4.24977 33.5402 3.67977 33.5402C3.10977 33.5402 2.75977 33.2102 2.75977 32.6302V31.2702ZM3.08977 30.8502C2.99977 30.7602 2.99977 30.6202 3.08977 30.5402C3.17977 30.4502 3.30977 30.4502 3.39977 30.5402C3.48977 30.6202 3.48977 30.7702 3.39977 30.8502C3.30977 30.9302 3.17977 30.9302 3.08977 30.8502ZM3.99977 30.8502C3.90977 30.7602 3.90977 30.6202 3.99977 30.5402C4.08977 30.4502 4.21977 30.4502 4.30977 30.5402C4.39977 30.6202 4.39977 30.7702 4.30977 30.8502C4.21977 30.9302 4.08977 30.9302 3.99977 30.8502Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M5.10986 33.4997V31.2797H5.43986V31.6497C5.55986 31.3997 5.79986 31.2397 6.11986 31.2397C6.16986 31.2397 6.21986 31.2397 6.25986 31.2397V31.5897C6.19986 31.5797 6.12986 31.5697 6.03986 31.5697C5.68986 31.5697 5.43986 31.8297 5.43986 32.1997V33.4897H5.10986V33.4997Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M6.69971 33.5002V30.4302H7.02971V32.2602L7.91971 31.2902H8.29971L7.34971 32.3402L8.39971 33.5202H7.98971L7.02971 32.4402V33.5202H6.69971V33.5002Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M8.68981 30.8399C8.59981 30.7499 8.59981 30.6099 8.68981 30.5299C8.77981 30.4399 8.90981 30.4399 8.99981 30.5299C9.08981 30.6099 9.08981 30.7499 8.99981 30.8399C8.90981 30.9199 8.77981 30.9199 8.68981 30.8399ZM8.67981 33.4999V31.2799H9.00981V33.4999H8.67981Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M10.2198 33.51L9.32983 31.27H9.65983L10.3898 33.11L11.1598 31.27H11.4998L10.1898 34.34H9.85983L10.2198 33.5V33.51Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M11.5798 32.39C11.5798 32.04 11.6898 31.75 11.8898 31.54C12.0998 31.32 12.3698 31.21 12.6898 31.21C12.9898 31.21 13.2398 31.32 13.4298 31.53C13.6198 31.74 13.7198 32 13.7198 32.31C13.7198 32.36 13.7198 32.41 13.7198 32.45H11.9198C11.9398 32.94 12.2398 33.26 12.7198 33.26C13.1198 33.26 13.3898 33.11 13.5398 32.94V33.31C13.3198 33.48 13.0498 33.56 12.7198 33.56C12.3898 33.56 12.1098 33.45 11.8998 33.25C11.6898 33.04 11.5898 32.76 11.5898 32.41V32.39H11.5798ZM13.3698 32.17C13.3698 31.99 13.2998 31.84 13.1698 31.72C13.0398 31.59 12.8798 31.53 12.6898 31.53C12.4898 31.53 12.3098 31.59 12.1698 31.72C12.0298 31.85 11.9398 32 11.9298 32.18H13.3698V32.17Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M15.7598 31.96C15.7598 31.51 15.9098 31.13 16.2198 30.82C16.5298 30.52 16.9098 30.36 17.3598 30.36C17.8098 30.36 18.1798 30.51 18.4898 30.82C18.7998 31.12 18.9598 31.5 18.9598 31.96C18.9598 32.42 18.8098 32.8 18.4898 33.1C18.1798 33.4 17.7998 33.55 17.3598 33.55C16.9198 33.55 16.5398 33.4 16.2198 33.1C15.9098 32.8 15.7598 32.41 15.7598 31.96ZM16.0998 31.96C16.0998 32.33 16.2198 32.63 16.4598 32.88C16.6998 33.12 16.9998 33.24 17.3598 33.24C17.7198 33.24 18.0198 33.12 18.2598 32.88C18.4998 32.64 18.6198 32.33 18.6198 31.96C18.6198 31.59 18.4998 31.29 18.2598 31.05C18.0198 30.81 17.7198 30.68 17.3598 30.68C16.9998 30.68 16.6998 30.8 16.4598 31.05C16.2198 31.29 16.0998 31.6 16.0998 31.96ZM16.7598 30.15C16.6698 30.06 16.6698 29.92 16.7598 29.84C16.8498 29.75 16.9798 29.75 17.0698 29.84C17.1598 29.92 17.1598 30.07 17.0698 30.15C16.9798 30.23 16.8498 30.23 16.7598 30.15ZM17.6598 30.15C17.5698 30.06 17.5698 29.92 17.6598 29.84C17.7498 29.75 17.8798 29.75 17.9698 29.84C18.0598 29.92 18.0598 30.07 17.9698 30.15C17.8798 30.23 17.7498 30.23 17.6598 30.15Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M21.2398 31.5999V30.4199H21.5698V33.4899H21.2398V33.1599C21.1098 33.3899 20.8498 33.5599 20.4498 33.5599C20.1398 33.5599 19.8698 33.4499 19.6498 33.2199C19.4298 32.9999 19.3198 32.7099 19.3198 32.3799C19.3198 32.0499 19.4298 31.7699 19.6498 31.5399C19.8698 31.3099 20.1398 31.1999 20.4498 31.1999C20.8498 31.1999 21.1098 31.3699 21.2398 31.5999ZM21.0398 33.0099C21.1998 32.8399 21.2798 32.6399 21.2798 32.3799C21.2798 32.1199 21.1998 31.9199 21.0398 31.7599C20.8898 31.5899 20.6898 31.5099 20.4498 31.5099C20.2098 31.5099 20.0298 31.5899 19.8798 31.7599C19.7298 31.9199 19.6498 32.1299 19.6498 32.3799C19.6498 32.6299 19.7298 32.8399 19.8798 33.0099C20.0298 33.1699 20.2198 33.2599 20.4498 33.2599C20.6798 33.2599 20.8898 33.1799 21.0398 33.0099Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M21.9797 32.39C21.9797 32.04 22.0897 31.75 22.2897 31.54C22.4997 31.32 22.7697 31.21 23.0897 31.21C23.3897 31.21 23.6397 31.32 23.8297 31.53C24.0197 31.74 24.1197 32 24.1197 32.31C24.1197 32.36 24.1197 32.41 24.1197 32.45H22.3197C22.3397 32.94 22.6397 33.26 23.1197 33.26C23.5197 33.26 23.7897 33.11 23.9397 32.94V33.31C23.7197 33.48 23.4497 33.56 23.1197 33.56C22.7897 33.56 22.5097 33.45 22.2997 33.25C22.0897 33.04 21.9897 32.76 21.9897 32.41V32.39H21.9797ZM23.7597 32.17C23.7597 31.99 23.6897 31.84 23.5597 31.72C23.4297 31.59 23.2697 31.53 23.0797 31.53C22.8797 31.53 22.6997 31.59 22.5597 31.72C22.4197 31.85 22.3297 32 22.3197 32.18H23.7597V32.17Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M24.5198 33.4997V31.2797H24.8498V31.6497C24.9598 31.3997 25.1798 31.2397 25.4798 31.2397C25.7998 31.2397 26.0098 31.3897 26.1298 31.6797C26.2698 31.3797 26.5098 31.2397 26.8398 31.2397C27.2898 31.2397 27.5798 31.5697 27.5798 32.0797V33.4997H27.2498V32.1497C27.2498 31.7797 27.0598 31.5497 26.7498 31.5497C26.4398 31.5497 26.1998 31.8097 26.1998 32.1797V33.5097H25.8698V32.1597C25.8698 31.7897 25.6898 31.5597 25.3798 31.5597C25.0698 31.5597 24.8498 31.8197 24.8498 32.1897V33.5197H24.5198V33.4997Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M27.9597 32.39C27.9597 32.04 28.0697 31.75 28.2697 31.54C28.4797 31.32 28.7497 31.21 29.0697 31.21C29.3697 31.21 29.6197 31.32 29.8097 31.53C29.9997 31.74 30.0997 32 30.0997 32.31C30.0997 32.36 30.0997 32.41 30.0997 32.45H28.2997C28.3197 32.94 28.6197 33.26 29.0997 33.26C29.4997 33.26 29.7697 33.11 29.9197 32.94V33.31C29.6997 33.48 29.4297 33.56 29.0997 33.56C28.7697 33.56 28.4897 33.45 28.2797 33.25C28.0697 33.04 27.9697 32.76 27.9697 32.41V32.39H27.9597ZM29.7397 32.17C29.7397 31.99 29.6697 31.84 29.5397 31.72C29.4097 31.59 29.2497 31.53 29.0597 31.53C28.8597 31.53 28.6797 31.59 28.5397 31.72C28.3997 31.85 28.3097 32 28.2997 32.18H29.7397V32.17Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M33.0598 33.65L31.9998 31.27H32.3398L33.0598 32.9L33.7898 31.27H34.1298L33.0698 33.65H33.0598Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M34.2097 32.39C34.2097 32.04 34.3197 31.75 34.5197 31.54C34.7297 31.32 34.9997 31.21 35.3197 31.21C35.6197 31.21 35.8697 31.32 36.0597 31.53C36.2497 31.74 36.3497 32 36.3497 32.31C36.3497 32.36 36.3497 32.41 36.3497 32.45H34.5497C34.5697 32.94 34.8697 33.26 35.3497 33.26C35.7497 33.26 36.0197 33.11 36.1697 32.94V33.31C35.9497 33.48 35.6797 33.56 35.3497 33.56C35.0197 33.56 34.7397 33.45 34.5297 33.25C34.3197 33.04 34.2197 32.76 34.2197 32.41V32.39H34.2097ZM35.9997 32.17C35.9997 31.99 35.9297 31.84 35.7997 31.72C35.6697 31.59 35.5097 31.53 35.3197 31.53C35.1197 31.53 34.9397 31.59 34.7997 31.72C34.6597 31.85 34.5697 32 34.5597 32.18H35.9997V32.17Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M38.7297 33.5002V30.4302H40.4697V30.7502H39.0797V31.7202H40.3897V32.0402H39.0797V33.1902H40.4997V33.5102H38.7297V33.5002Z"
+                                            fill="#415364" />
+                                        <path d="M40.9998 33.5002V30.4302H41.3298V33.5002H40.9998Z" fill="#415364" />
+                                        <path
+                                            d="M41.7297 32.39C41.7297 32.04 41.8397 31.75 42.0397 31.54C42.2497 31.32 42.5197 31.21 42.8397 31.21C43.1397 31.21 43.3897 31.32 43.5797 31.53C43.7697 31.74 43.8697 32 43.8697 32.31C43.8697 32.36 43.8697 32.41 43.8697 32.45H42.0697C42.0897 32.94 42.3897 33.26 42.8697 33.26C43.2697 33.26 43.5397 33.11 43.6897 32.94V33.31C43.4697 33.48 43.1997 33.56 42.8697 33.56C42.5397 33.56 42.2597 33.45 42.0497 33.25C41.8397 33.04 41.7397 32.76 41.7397 32.41V32.39H41.7297ZM43.5197 32.17C43.5197 31.99 43.4497 31.84 43.3197 31.72C43.1897 31.59 43.0297 31.53 42.8397 31.53C42.6397 31.53 42.4597 31.59 42.3197 31.72C42.1797 31.85 42.0897 32 42.0797 32.18H43.5197V32.17Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M44.2798 33.5002V30.4302H44.6098V32.2602L45.4998 31.2902H45.8798L44.9298 32.3402L45.9798 33.5202H45.5698L44.6098 32.4402V33.5202H44.2798V33.5002Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M46.4199 33.5002V31.5802H46.1399V31.2802H46.4199V30.4302H46.7499V31.2802H47.2399V31.5802H46.7499V33.5002H46.4199Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M47.6199 33.4997V31.2797H47.9499V31.6497C48.0699 31.3997 48.3099 31.2397 48.6299 31.2397C48.6799 31.2397 48.7299 31.2397 48.7699 31.2397V31.5897C48.7099 31.5797 48.6399 31.5697 48.5499 31.5697C48.1999 31.5697 47.9499 31.8297 47.9499 32.1997V33.4897H47.6199V33.4997Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M48.9099 32.3802C48.9099 32.0402 49.0199 31.7702 49.2499 31.5402C49.4799 31.3102 49.7599 31.2002 50.0899 31.2002C50.4199 31.2002 50.6999 31.3102 50.9299 31.5402C51.1599 31.7602 51.2699 32.0402 51.2699 32.3802C51.2699 32.7202 51.1599 33.0002 50.9299 33.2202C50.6999 33.4502 50.4199 33.5602 50.0899 33.5602C49.7599 33.5602 49.4799 33.4502 49.2499 33.2202C49.0199 33.0002 48.9099 32.7102 48.9099 32.3802ZM49.2399 32.3802C49.2399 32.6302 49.3199 32.8402 49.4799 33.0102C49.6399 33.1702 49.8499 33.2602 50.0899 33.2602C50.3299 33.2602 50.5399 33.1802 50.6999 33.0102C50.8599 32.8402 50.9399 32.6402 50.9399 32.3802C50.9399 32.1202 50.8599 31.9202 50.6999 31.7602C50.5399 31.5902 50.3299 31.5102 50.0899 31.5102C49.8499 31.5102 49.6399 31.5902 49.4799 31.7602C49.3199 31.9202 49.2399 32.1302 49.2399 32.3802Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M51.6799 33.4997V31.2797H52.0099V31.6497C52.1299 31.3997 52.3899 31.2397 52.7199 31.2397C53.2299 31.2397 53.5399 31.5697 53.5399 32.0797V33.4997H53.2099V32.1497C53.2099 31.7797 52.9799 31.5497 52.6299 31.5497C52.2799 31.5497 51.9999 31.8097 51.9999 32.1797V33.5097H51.6699L51.6799 33.4997Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M54.0399 30.8399C53.9499 30.7499 53.9499 30.6099 54.0399 30.5299C54.1299 30.4399 54.2599 30.4399 54.3499 30.5299C54.4399 30.6099 54.4399 30.7499 54.3499 30.8399C54.2599 30.9199 54.1299 30.9199 54.0399 30.8399ZM54.0299 33.4999V31.2799H54.3599V33.4999H54.0299Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M54.8699 33.5002V30.4302H55.1999V32.2602L56.0899 31.2902H56.4699L55.5199 32.3402L56.5699 33.5202H56.1599L55.1999 32.4402V33.5202H54.8699V33.5002Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M58.6897 33.5002V30.4302H59.6697C59.9297 30.4302 60.1597 30.5202 60.3397 30.7002C60.5197 30.8802 60.6097 31.1002 60.6097 31.3702C60.6097 31.6402 60.5197 31.8602 60.3397 32.0402C60.1597 32.2202 59.9297 32.3002 59.6697 32.3002H59.0297V33.5002H58.6897ZM59.0297 31.9702H59.6597C59.8297 31.9702 59.9797 31.9102 60.0897 31.7902C60.2097 31.6702 60.2697 31.5302 60.2697 31.3502C60.2697 31.1702 60.2097 31.0302 60.0897 30.9102C59.9797 30.7902 59.8297 30.7302 59.6597 30.7302H59.0297V31.9602V31.9702Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M62.7498 31.6002V31.2702H63.0798V33.4902H62.7498V33.1602C62.6198 33.3902 62.3598 33.5602 61.9598 33.5602C61.6498 33.5602 61.3798 33.4502 61.1598 33.2202C60.9398 33.0002 60.8298 32.7102 60.8298 32.3802C60.8298 32.0502 60.9398 31.7702 61.1598 31.5402C61.3798 31.3102 61.6498 31.2002 61.9598 31.2002C62.3598 31.2002 62.6198 31.3702 62.7498 31.6002ZM62.5498 33.0102C62.7098 32.8402 62.7898 32.6402 62.7898 32.3802C62.7898 32.1202 62.7098 31.9202 62.5498 31.7602C62.3998 31.5902 62.1998 31.5102 61.9598 31.5102C61.7198 31.5102 61.5398 31.5902 61.3898 31.7602C61.2398 31.9202 61.1698 32.1302 61.1698 32.3802C61.1698 32.6302 61.2398 32.8402 61.3898 33.0102C61.5398 33.1702 61.7298 33.2602 61.9598 33.2602C62.1898 33.2602 62.3998 33.1802 62.5498 33.0102Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M63.5698 33.4997V31.2797H63.8998V31.6497C64.0198 31.3997 64.2598 31.2397 64.5798 31.2397C64.6298 31.2397 64.6798 31.2397 64.7198 31.2397V31.5897C64.6598 31.5797 64.5898 31.5697 64.4998 31.5697C64.1498 31.5697 63.8998 31.8297 63.8998 32.1997V33.4897H63.5698V33.4997Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M66.7799 31.6002V31.2702H67.1099V33.4902H66.7799V33.1602C66.6499 33.3902 66.3899 33.5602 65.9899 33.5602C65.6799 33.5602 65.4099 33.4502 65.1899 33.2202C64.9699 33.0002 64.8599 32.7102 64.8599 32.3802C64.8599 32.0502 64.9699 31.7702 65.1899 31.5402C65.4099 31.3102 65.6799 31.2002 65.9899 31.2002C66.3899 31.2002 66.6499 31.3702 66.7799 31.6002ZM66.5899 33.0102C66.7499 32.8402 66.8299 32.6402 66.8299 32.3802C66.8299 32.1202 66.7499 31.9202 66.5899 31.7602C66.4399 31.5902 66.2399 31.5102 65.9999 31.5102C65.7599 31.5102 65.5799 31.5902 65.4299 31.7602C65.2799 31.9202 65.2099 32.1302 65.2099 32.3802C65.2099 32.6302 65.2799 32.8402 65.4299 33.0102C65.5799 33.1702 65.7699 33.2602 65.9999 33.2602C66.2299 33.2602 66.4399 33.1802 66.5899 33.0102Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M69.5798 33.5002V30.4302H69.9198V31.8502L71.2798 30.4302H71.7098L70.2798 31.9202L71.7598 33.5102H71.3098L69.9198 32.0202V33.5102H69.5798V33.5002Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M71.9299 31.27H72.2599V32.6C72.2599 33.02 72.4899 33.24 72.8599 33.24C73.2299 33.24 73.4699 33.02 73.4699 32.6V31.27H73.7999V32.6C73.7999 33.2 73.4199 33.54 72.8499 33.54C72.2799 33.54 71.9299 33.21 71.9299 32.63V31.27Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M74.2698 33.4997V31.2797H74.5998V31.6497C74.7198 31.3997 74.9598 31.2397 75.2798 31.2397C75.3298 31.2397 75.3798 31.2397 75.4198 31.2397V31.5897C75.3598 31.5797 75.2898 31.5697 75.1998 31.5697C74.8498 31.5697 74.5998 31.8297 74.5998 32.1997V33.4897H74.2698V33.4997Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M75.8398 31.27H76.1698V32.6C76.1698 33.02 76.3998 33.24 76.7698 33.24C77.1398 33.24 77.3798 33.02 77.3798 32.6V31.27H77.7098V32.6C77.7098 33.2 77.3298 33.54 76.7598 33.54C76.1898 33.54 75.8398 33.21 75.8398 32.63V31.27Z"
+                                            fill="#415364" />
+                                        <path d="M78.1899 33.5002V30.4302H78.5199V33.5002H78.1899Z" fill="#415364" />
+                                        <path
+                                            d="M78.9897 31.27H79.3197V32.6C79.3197 33.02 79.5497 33.24 79.9197 33.24C80.2897 33.24 80.5297 33.02 80.5297 32.6V31.27H80.8597V32.6C80.8597 33.2 80.4798 33.54 79.9098 33.54C79.3398 33.54 78.9897 33.21 78.9897 32.63V31.27Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M81.2097 32.9C81.4097 33.13 81.6697 33.24 81.9797 33.24C82.2697 33.24 82.4297 33.11 82.4297 32.93C82.4297 32.81 82.3997 32.73 82.2897 32.65C82.2397 32.61 82.1897 32.58 82.1397 32.55L81.9197 32.44C81.6997 32.33 81.6097 32.28 81.4897 32.18C81.3697 32.07 81.3197 31.95 81.3197 31.78C81.3197 31.61 81.3797 31.47 81.5097 31.37C81.6297 31.26 81.7997 31.21 82.0097 31.21C82.2197 31.21 82.3897 31.26 82.5197 31.35V31.69C82.3697 31.58 82.2197 31.52 82.0397 31.52C81.7797 31.52 81.6497 31.61 81.6497 31.79C81.6497 31.94 81.7197 32 81.9197 32.1L82.1197 32.21C82.2197 32.26 82.2797 32.3 82.3197 32.32C82.3597 32.34 82.4197 32.38 82.4797 32.43C82.5497 32.48 82.5997 32.53 82.6297 32.57C82.6897 32.65 82.7497 32.79 82.7497 32.94C82.7497 33.07 82.6997 33.2 82.5897 33.33C82.4797 33.46 82.3097 33.53 82.0697 33.55L81.9897 33.7C82.1697 33.7 82.3097 33.82 82.3097 34.01C82.3097 34.25 82.1497 34.37 81.8297 34.37C81.6997 34.37 81.5897 34.33 81.4897 34.27L81.5697 34.1C81.6497 34.15 81.7397 34.17 81.8297 34.17C81.9497 34.17 82.0397 34.1 82.0397 34.01C82.0397 33.87 81.9297 33.83 81.6897 33.83L81.8297 33.54C81.5797 33.51 81.3697 33.43 81.2097 33.28V32.9Z"
+                                            fill="#415364" />
+                                        <path d="M83.1099 33.5002V30.4302H83.4399V33.5002H83.1099Z" fill="#415364" />
+                                        <path
+                                            d="M85.7598 31.6002V31.2702H86.0898V33.4902H85.7598V33.1602C85.6298 33.3902 85.3698 33.5602 84.9698 33.5602C84.6598 33.5602 84.3898 33.4502 84.1698 33.2202C83.9498 33.0002 83.8398 32.7102 83.8398 32.3802C83.8398 32.0502 83.9498 31.7702 84.1698 31.5402C84.3898 31.3102 84.6598 31.2002 84.9698 31.2002C85.3698 31.2002 85.6298 31.3702 85.7598 31.6002ZM85.5598 33.0102C85.7198 32.8402 85.7998 32.6402 85.7998 32.3802C85.7998 32.1202 85.7198 31.9202 85.5598 31.7602C85.4098 31.5902 85.2098 31.5102 84.9698 31.5102C84.7298 31.5102 84.5498 31.5902 84.3998 31.7602C84.2498 31.9202 84.1798 32.1302 84.1798 32.3802C84.1798 32.6302 84.2498 32.8402 84.3998 33.0102C84.5498 33.1702 84.7398 33.2602 84.9698 33.2602C85.1998 33.2602 85.4098 33.1802 85.5598 33.0102Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M86.5798 33.4997V31.2797H86.9098V31.6497C87.0298 31.3997 87.2698 31.2397 87.5898 31.2397C87.6398 31.2397 87.6898 31.2397 87.7298 31.2397V31.5897C87.6698 31.5797 87.5998 31.5697 87.5098 31.5697C87.1598 31.5697 86.9098 31.8297 86.9098 32.1997V33.4897H86.5798V33.4997Z"
+                                            fill="#415364" />
+                                        <path d="M88.1799 33.4998V31.2798H88.5099V33.4998H88.1799Z" fill="#415364" />
+                                        <path
+                                            d="M90.9897 33.5002V30.4302H91.9297C92.1597 30.4302 92.3597 30.5002 92.5197 30.6502C92.6797 30.8002 92.7598 30.9902 92.7598 31.2102C92.7598 31.5102 92.6098 31.7302 92.3698 31.8302C92.7698 31.9102 92.9897 32.2002 92.9897 32.5902C92.9897 32.8502 92.8997 33.0702 92.7197 33.2402C92.5397 33.4102 92.3198 33.5002 92.0498 33.5002H90.9997H90.9897ZM91.3298 31.7002H91.8997C92.1897 31.7002 92.3997 31.4902 92.3997 31.2102C92.3997 30.9302 92.1897 30.7302 91.8997 30.7302H91.3197V31.7002H91.3298ZM91.3298 33.1802H92.0197C92.3697 33.1802 92.6297 32.9302 92.6297 32.5902C92.6297 32.4302 92.5697 32.2902 92.4497 32.1802C92.3397 32.0702 92.1898 32.0202 92.0098 32.0202H91.3298V33.1802Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M93.4598 30.8399C93.3698 30.7499 93.3698 30.6099 93.4598 30.5299C93.5498 30.4399 93.6798 30.4399 93.7698 30.5299C93.8598 30.6099 93.8598 30.7499 93.7698 30.8399C93.6798 30.9199 93.5498 30.9199 93.4598 30.8399ZM93.4498 33.4999V31.2799H93.7798V33.4999H93.4498Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M94.2798 33.4997V31.2797H94.6098V31.6497C94.7298 31.3997 94.9698 31.2397 95.2898 31.2397C95.3398 31.2397 95.3898 31.2397 95.4298 31.2397V31.5897C95.3698 31.5797 95.2998 31.5697 95.2098 31.5697C94.8598 31.5697 94.6098 31.8297 94.6098 32.1997V33.4897H94.2798V33.4997Z"
+                                            fill="#415364" />
+                                        <path d="M95.8799 33.5002V30.4302H96.2099V33.5002H95.8799Z" fill="#415364" />
+                                        <path
+                                            d="M96.7198 30.8399C96.6298 30.7499 96.6298 30.6099 96.7198 30.5299C96.8098 30.4399 96.9398 30.4399 97.0298 30.5299C97.1198 30.6099 97.1198 30.7499 97.0298 30.8399C96.9398 30.9199 96.8098 30.9199 96.7198 30.8399ZM96.7198 33.4999V31.2799H97.0498V33.4999H96.7198Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M97.6197 33.8199C97.8097 34.0499 98.1197 34.1599 98.5597 34.1599C98.7997 34.1599 98.9897 34.1099 99.1297 33.9999C99.2897 33.8699 99.3697 33.6399 99.3697 33.3099V33.1199C99.2397 33.3499 98.9797 33.5199 98.5797 33.5199C98.2697 33.5199 97.9997 33.4099 97.7797 33.1899C97.5597 32.9699 97.4497 32.6899 97.4497 32.3599C97.4497 32.0299 97.5597 31.7499 97.7797 31.5299C97.9997 31.3099 98.2697 31.1999 98.5797 31.1999C98.9797 31.1999 99.2397 31.3699 99.3697 31.5999V31.2699H99.6997V33.1199C99.6997 33.4099 99.6797 33.6399 99.6297 33.7999C99.5897 33.9699 99.4897 34.1099 99.3297 34.2299C99.1297 34.3799 98.8697 34.4599 98.5597 34.4599C98.1497 34.4599 97.8297 34.3699 97.6197 34.1899V33.8199ZM99.1697 32.9699C99.3297 32.8099 99.4097 32.5999 99.4097 32.3599C99.4097 32.1199 99.3297 31.9099 99.1697 31.7499C99.0197 31.5899 98.8197 31.4999 98.5797 31.4999C98.3397 31.4999 98.1597 31.5799 98.0097 31.7499C97.8597 31.9099 97.7897 32.1199 97.7897 32.3599C97.7897 32.5999 97.8597 32.8099 98.0097 32.9699C98.1597 33.1299 98.3497 33.2099 98.5797 33.2099C98.8097 33.2099 99.0197 33.1299 99.1697 32.9699ZM98.2097 30.4199C98.2797 30.6399 98.3997 30.7399 98.5897 30.7399C98.7797 30.7399 98.9097 30.6299 98.9697 30.4199H99.2697C99.2197 30.7899 98.9297 31.0299 98.5797 31.0299C98.2297 31.0299 97.9397 30.7899 97.8897 30.4199H98.1897H98.2097Z"
+                                            fill="#415364" />
+                                        <path
+                                            d="M100.21 30.8399C100.12 30.7499 100.12 30.6099 100.21 30.5299C100.3 30.4399 100.43 30.4399 100.52 30.5299C100.61 30.6099 100.61 30.7499 100.52 30.8399C100.43 30.9199 100.3 30.9199 100.21 30.8399ZM100.2 33.4999V31.2799H100.53V33.4999H100.2Z"
+                                            fill="#415364" />
+                                    </g>
+                                    <defs>
+                                        <pattern id="pattern0_499_1471" patternContentUnits="objectBoundingBox"
+                                            width="1" height="1">
+                                            <use xlink:href="#image0_499_1471" transform="scale(0.0107527 0.0117647)" />
+                                        </pattern>
+                                        <pattern id="pattern1_499_1471" patternContentUnits="objectBoundingBox"
+                                            width="1" height="1">
+                                            <use xlink:href="#image1_499_1471" transform="scale(0.0107527 0.0117647)" />
+                                        </pattern>
+                                        <linearGradient id="paint0_linear_499_1471" x1="28.95" y1="4.40033" x2="27.48"
+                                            y2="23.9203" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="white" />
+                                            <stop offset="1" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_499_1471">
+                                            <rect width="100.42" height="34.02" fill="white"
+                                                transform="translate(0.429932 0.450195)" />
+                                        </clipPath>
+                                        <image id="image0_499_1471" width="93" height="85"
+                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAABVCAYAAAArIuiuAAAACXBIWXMAAC4jAAAuIwF4pT92AAATbElEQVR4nO1de3BUVZr/nXPuvd0JeYEBBF1FxipdXDf4wlgqRHxNzYONuz5WthCs1dF56GTK+WedqRpmtmardtwdmKqZ3QVry2BNDVqzVTisW0UcFWZrlHJEBXEFBEkwSUN4pJ+3+77OOfvHOff27RCEpPMgmF9V00mnOffe3/3ud77zvQ7BeYJt27ate+eddzoIoUgkEpg5swkzZ87E3LkXI5lMgDEG0zRBKQUACCHAuYDnueCcI5vNIpvN4sSJk7BtG67rAgDuvfeejtbW1l9M5rUNBZnMg3/wwe7VW7du7WSM4dJLL8Vll/0ZmpubwRiLvkPI8KcopTzj71JK2LaN48ePo7u7B/l8HpxztLS0dLa3/9Wj43M1544JJ339+l9053O5BVdffTUWLlwIK2FVEEsIgZRyWFKH+174Wfj9M71zznHq5Cl8vG8fcrkcrrrqqlceeujB+8bvSs+MCSN9U+em7b19fW3XX38dLrnkkkhNhOBBAC4EfN9HEAQQnAOEQAoBISWEEGCMgTEWEW0YBhhjoJSCUgpCCAiA8HZJKQEpEb99Ughkczl8/PE+pNNptLT8ZeeKFSsmVPrHnfSf/OQf5fx583DTkpsisjjncBwHruvCtm04jgPf8xAEARzXVUQLAUDpbkIpDMZANLGMUpimCWYYMPTLNE2YpomEZYFq/U8IiV4VT070FACf9X6Gzz7rhW3bWLVqVduCBZf/Ybw5GTfSN216cfvx4wNty5cvh2EYAJQ05/J52IUC8oUCPNdFwbbBg0BJtxDgnAOo1NFx8kKpDqXcNE0YhgErkVDvlgXLsmAaJkzLjCbf8MkaqrbC89p/4ACOHj2GZUtvX3v70qU/Hi9egHEg/eWXX97S29vbvnz5chBCEPg+8vk8BgcHUbBt5LJZ+L4P3/fVCWgi42oj/CzU7XH9HD4B4Wfxm0AZQ8KylMQnEjBME0n9bprmaeppKBFCSnzyyUGkUkfx5Xvv6bhpyU3jYvWMKekvbnpx+6xZM9vmzZ8PSAm7WMTAsWPI5/PIZrPwPA8AlHqwLCxatKizZfHi9XPmzNlzLuOfOHGiZe+HH3bs379/TfhUCClCbQFKiCbWgJWwYOonwDQMJBJJGKYBy7RAKInmgIiI8GcpMTg4iP/7eB8IgGd/8OyYC+aYDJhOpy/f+rutPddcsyiymY8eO4ZcNotisQhKKW5funRta2vruDy2O3fuXPfhnj0dnHNwzpVVQykooTAtpX4SMfXDGINlWRUTMKDIIIREE3h/fwo9PUdwx/K2tbfddtuYnXvVpHd1da07fPhwx4033gjf99Hf34/04CAymQwYpVi1evXic5XkanHq5MmWLVu27I6TTylVE6thwDBMWJalJl5LqRvDMMpzBirnDwDo7u5B6ugxrF69qu2yyy4bk0m2KtKfe+5f0ktvv61JSIm+vj4MnjqFbDaLJUuWrG+7447vjcUJjhZv/fGPLxw8eHCNH/gQQoKAgFICwzBhGAymqSSeGQwGM0AZHZZ8Silc18XHH++D7wd49gf/ULWgjnqAn/70n+SypbeDc47jx4+jt7cXUko88/3vT+oqdyh+/etfy9A6CtUOowyGaZTf9QRLCQWh6vQppSDhOyHIZDI48lkv5jQ371796JrrqjmnURH03M+ek7fedivS6TS6Dx+GlDLz1NNPz6zmRMYbmzdvjsgHAEJiVk9oPcUm2EjS9TujFFwIHPjkIIrFIn74wx+MWrhG/B/Xr1svlyy5CQMDAxgYGMBdd9/dfuWVV/5utCcwkfjkk0++u2vXrvWcB5BCAjG7n1G1+GKscmINb0L4vWKxiN6+fhiMZZ56+qlRCdqISP/ZP/9M3tx6M46mUsjncj2PP/HEFaM56GRj69at6aJtN3EhlM+AVJJLQCqYobG1BKUUQRDg4KFP4fs+nn125Dqenv0rCut+vi7deksr+vv6kEqlMFUJB4AVK1bMtBIJWJYJSkmFvS6lhIgtyoQQCDhXL+0TYoxh7pw5YIyha1vXCyM9/jndpddee22dYRgdfX19ePCBB5qSNTXZkR7ofEQmk2l58803dnMuILha6cYZUf4yCUDdAEqIcj9oM7RUKuFwdw8SloVnvv/MOUv8WSU9nU5fLoToSPX3Y/bs2Z0XCuEA0NTUtKe5uXm3cp6xSLUQEO2qLBMuhAAXAkEQIOAcgnMkEwk0NjTAcZwRHfesd+f13/9enjhxAg+vXHlemYJjCc/zGru6ujKcB+BcQAqp3Av6XQgJIXjk74m8nJRCCIETJ08hl8uh43sdTclk8qxC+bmS3vlC5wfpdBqc891jdH3nJSzLys6aNWu3aahVKmVU2+wUgPbRa1UjYvo94ByUUjQ1NkAC+NUvf5U5l+MZZ/rDS5tf2t7QUL/4hhtvXDx37twJWcZPJm699dbrcrlcy1tv/XE3DzgCwsG1R5MDIEJACOWJlHqhxYQApIRpmrho1iycGhxEX1/fsksvvfRz3QVnlPTGxoa2VH8/vgiEh2hoaNhjGAaYYYAZrCIqRWP+GCklgiBQcQDOIYTAjNoa1NbU4KXNL+0423GGJf2/fvvb7T3d3XjsG9+4YPX4mXD33feQhGXBMk1YlgnTNCJfPWPlQAgPAng6LuAHARhjaGpqhB8EWPevPz89UhLDaaSXSqXGZDLZ9s1vf/sLR3iI5XfeSQzDgKF98wYrSz0hSs8LqUKJQSzqZRoGapJJODr940w4jfSubdsyhJBXxuuCpgqaZzfvMK1Q2k0dFjQj8gEV6w2jYL7vQwiB+ro6GKaJjRs2pM809mmkZ7NZfPVrX5uU1ITzCS0ti+9gjMHQPvcwJsvCwIf+HtcrVq6D6aZpIJmwkMlkmxzHaRxu7ArSN/9mc/fqNWu+sGplKJYuXUZMqxzgtiwLhg6EEy3tQRBEkh4EAQiA2ppaCCnxH//278OakBUmIyFYMO5XMsVAKQNjgGEwSClhMIYgll0AILLdQ68kY8pl7OiY8Gljhj9s/s1v0u3t7U3jfhVTDDfccMMCU8dWTdOAqVM8lB9epf8FnMP3PHhBoFJIpERNMgECYNe77/5o6JgR6bZtXzCOrLFEMpk8QhnV8dTKVA7GWJSJwIWA0LFZISVMPQfs3Llz7dAxI9Ife/zxaV1+Btx8cysxDAZLWzOWzq0Jo04AKlzAYQpgwrJQKjk4sP/A6vh4FBj+EZhGJaIIEzNOy6EESJSdFr4IITBMA0JIvPnG650VYwHAkSNH2ifjQqYSksmaHpXGZ0SSXpZ2UnaGhYslzmHom2IXSxVjUQC46667pkk/C770pYXtlJKYPq+U9jDiJHSWsZTlGGyYChiC7ti+/YXGpqYjk3QtUwa1tTP2hHFSZc3EJV1ZMZGK0W4BADBNZWqmUqll4Vh0uCzWaQyPxsamV8KMMcbYaXpdSgmuI0xCCEghoiyD93ftWhuOQ+9YvnzSy0GmChYuXHifWviUU7TVi0U58KHZGGjTkTEKRgm6e3rawnHOORtgGgphmkbZ88hASDlXRgLl9O5IixDwgEdjTJM+QqjMMAKqF0uMhfkwBACJqkjCyZQAYIwh4BynTp5sAaZJHzGUQIcZX0PT8ColPbJg9LIzNM2nSR8xiCabgDFDO8TKaiZM1wilPXSCSSnx3rtqMp0mfYRIJpO747mNjFUWFsiwmq+iLFP9LTQjp0kfIRoaGl4ByupEhe8Q/Q6UU/PK5ZThv7pOauJPe2pDV8eUk01jxANDKrfVBzpzZlrSR43a2hk7hpZYDi3Wi0+kFZIupyV91AjJi5dgVpRJxm302HeFmCZ91FA8hj0MYouhEKEOgu5hEH2sS2sm9GwvABSLdpv6KepAAAzjvlIFYzHyMQak9/f3Lzv7ty48OI6zGMAQe1xEUg8gTLYGoeEUGlZ2VKleBo4da6vm5Kcq4qQr4tVL6mRSEpmTNCoEDhGG9kZNel19fU+V5z8l4Xn+AkARzbnyn8u4r0XzTCvSNNTNmD9//g6gCtLrv6Ckq8oMaNXCIQQHFzxSMyBEtUihlVJOCDD/kkt2AFWQPm/evHHvi3I+IrRWVB5jAB5w8ECRDqmbQugSyXgnD0Ioblqy5MdAldbLoUOHVp/9WxceVH46B+cBAh5Eki4ho6Jgoqv2VNVShdBXR3r34cNrqjr7KYa+vr4XlJSrtlee58P3dMYu50rSdRw1DOVJPckmk8kor7Eq0q+99tq1VV/JFEImk1kDqBTpIPARBL4ORPOoiZuaQFnkeZTanFxy881rw3GqIv3iL5BeT6cHV4dlL57nw3U9uK4Hz3Ph+37U5iSMmVbqc4Lrrr8+6pJU9Yr07bff2lLtGFMBqf5UJ6BUSxAECHxfS7uyYAC14gzDd8rXIk7LeQHGgPTez3q/EIlKUpuKKhfdg+d7Oidd6fOoFxktV2pIIYZt1FY16e333df06qv/fcZSjwsBcdXiui6ckgOn5MB1HPier1MtdFqGaURZXVwIEAJ89etfrxDMqklPJBLZYsG+oPPa+/v7O4XQ+tz14Go97vu+WhABOr+FRitRoVeqAMHQ1ixj4mVc0d7etPPtt7aPxVjnGz76aK+UUsLzfJRKDorFIkrFIkqlIlzXVWnRlKrcdd0XLMz0EkJg9aOPLhg65piQnkwmswMDA22e5w1b2DSVoZb8UqkV3TXV9Tz4ngfOueoFwxgMo9zzUeqUOkIIGhsbT8sTHTN/evNFzZ1dXdvOqTZ+quCjj/ZKIUTUntYuFGDbNkrFIjzPU1KuU+zCCo0wiVRKiUu0r2Uoxoz025YufbRYsNHf13dBuAYOHTr0gbJWAriOC9dx4bguXNeBp9VK2P8lXiQQNxP/+v777xhu7DGNHD308MPkvffe63xv17tTWr+XSsWWUqm0OAgC2LaNXD6PfD4HO1+IpJxowi3TgmWVpVxoKX/8iSfOaFycsQvGaFHI5XAiYbWN9bgThSAIGvfv37ebcw7XdVEqleA4jnp3nagyOpJwLeWICgKUlH9e35cxj5GuXLWKnDx+Am+88bpMp9NTLqS3b9++TBBwFAo2ctkcctksctks7IKS8rCIy7Is1c9X2+VcdzsiIPjO009/btHcuASmv/yVryzOZ3PYs2fPjvEYf7zw0Ud7ZSjhRdtGsVhE0bZRKpXgel7UVCfs1x5W14V6XEqJ5XfeueZsxxkX0pubm/c4jtNz/Ngx/O8f/iAPHjgw4o5uE4lSqdiyd+9eGQQBCvkCMukMMhn1yuVzsAsFBIEPSgishIVEIhE1To4TnrCszJ8vWrTpbMcbtxSMv1258opcLodsJoOjA8fWFAqFlvE6VjU4mkqt+/TTT3f7vo9i0UE+n4dt20rCi0W4josgCKIWsfGlPoDIJgeAx5544pyaY457we5/btwo6+rrMGfuxaiprUFr6y3nRZGwnjAzyg73kM/lUSqVkM1kUCqVkC/k4bme0tOU6mYMRtQCHEBkrUBKfPM73xm7FoHV4u8eeaQpny9g8NQp5HM5/OlP78hjR1PfHe/jfh5c1708JLxYLCGfyyOXyyGXy8IuFmHbtiJccL2/hhF1woi7bUMJv//BBxeP5PgTJnXPb9ggDcYwe+4c1Dc0oG7GDMy66KLOK65YOGGFZunBwdX9qf5OIQRKxZKS6HwepZKDQj4PxymhWCyBB4Fy1TKmyDYMGHpvjdBdK3Sey5Oj6AA1YaQ7jtP44qZNGcswUN9Qj+bZs1FTWwvTMHDFFQvbm2bOHLcmyaEqCR1XruuikC/AcUrI5XJwHQe2rRY9nAcgpLzRiWVZURO1ULrDiNDfPPDA4tmzZ4+4sdyE69eNGzZIotvq1dXXYebMWZhRNwPJmhoQAPPmz++YM2du1RuAHE2l1g0OnupQvba48n97HgqFApySg4LW2bZtI/BVrJPEKqJNvY1DuLtYKNkh4U9+61sT18p7LNDV1bXlSHd3O6RAXV09amfMQGNTI5I1NaipqQHV+Qr1DQ2vzJ178dra2tqzSlOhUFiWz+XaBwdPdQCqf2Joc7uOG+1nVywWNdkFFckP/CiKT5myUAzGwLQNHi9PlFLCsszMo3//WFW94ifNkgjVDfTjyhhFIpFEQ2MDLCuB2hm12h62VPKO3itpuO1yIs+ekGqp7vnwPA+e56Fo2/A8HUR2XbiuC84DlSuuY5pU+8Op7khUsTVbjPT77r9/VOpkKCbdfHt+40YppYTkHFIKEKLMs2RNEpaVQDKZrNg4RFWxlfeuCwIOCQnf88v9tDwPrutG4TWVo+JFOYeVhVq65FyTPZx0A8A3nnxyzLiadNJDPL9xoyrRidXVhy5SovcvUplTtGKjEB5bEQohVDMEXS4epS/HaoTCMcJt2Sr2O4pXxgEgUuLxMSQ7xHlDOgCkUqll//PqqzsAVJhmcYvh9F0YgahuLWJYjaf2tCinuMVJp0PSmKOovX5fumzZmquuvvqsS/rR4LwiPY6XN2/uzhcKCwCc9rgP3Xs0wpCqh6gWaMjeReVSw/LPBIBlWZlH1qwZ9w1VzlvSQ7z+2mtbemKdl6IdF0NJj30eh6omr/ysMgelXLZSX1fX89DKlRO23cR5T/pQfPD++z/64P33146sS02ZYEKARdf8xfrWW26Z1M2vpjHB+H/dav0dXfb4fwAAAABJRU5ErkJggg==" />
+                                        <image id="image1_499_1471" width="93" height="85"
+                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAABVCAYAAAArIuiuAAAACXBIWXMAAC4jAAAuIwF4pT92AAASKUlEQVR4nO1d6XdcxZX/Vb2199eyLQnH1mJiGSsEC51ZbAJYBCYkkDNjIBuQHJuZDHwYOOP5C9B8y3wiTOYD4GGQjUOCQwZwWExOADknsc3B4NhiZMAGy5LxApbVWJLV/Zaq+VCvqhe1bcnq1mLrd06rX3er36v6vdu3bt269xZBlTF89mzjjtdf7x4dHW0ihIAQIj7gAJcH8i/Pf6/gEJQAHOJ7JPxDQCBPBc6xeMmSl2697ba7qtiVioFc/F8uDcNnzzZuf/nlv3ie5yiiQxQSzEP2Jcmcc/Usj1VjC84jbyAh4pgSAoAgErH7bv/OdzqSyeTR6vRs6qg46a+9+urbp06e7KCEFEmrJLroPc7BGANjDJwzMMYLnjkADsbEM+fIS3bYbEoJKKUghELXNVCqQdMoKKGglKC5eVnXTWtvfqDSfZwqKkb62bNnG1/Ytq2PCtEDUCrR4TMXxAYBU8+MMXDGwMLPOOfgjI2T/rIdIFRIOiWgVIOu69A0DYZhiPdA8MP77nVs2/6yUn2dKqZMejabTT23dWumrAqRxxxKooPAB2McjAUlks5BCIFhGDAMA7ZtwzRNWJYFXddhGDo0TYdhGAiCQH0vl8shl8vh3Llz6plzDk3ToGla+H0DGiX40X33zQry9al8WRFe8F6pTObJDsAYD0nPEw0Auq4jFo3CjkQQjUZh2zZisRhM00QkEgklmYoTqoGYK73PGIPruvA8D0NDQxgZHsGZoTPIZrPwgwCGrsO2bfz6uecyqOI4NlFccgOe3rSJF0s3KXqSaiPwBckBC8AZR8ACEAC2bSMaiyGRSCAWiyGZTCrp5pyDUJpZuHDhz+vr6/99om0aHBxc39/f30UAsIBhLJvFqVMnMTQ0hEwmA03TEIvFoWsaHvinf5wx8i/pws9u3jzkua6TH9nyp+EQ0u37Pjhj8EskW0qv4ziIx+OoqamBZVmgGgXnQHNzc0cikdg51Y4Nnj69/mh/fxc4kB0bw8DAAAbPDMJ1XZimhVQykbn/Jz9JT/U6l4JJk/7fmzZxZTGH9jKQJ1uokQC+H4CHEg4A0WgEsVhckJ2II+2koes6QEhm+fLlbZZlVdXEe2/vXs4ChpMnT+L4iePIZrOIRKJ48KEHp13iJ3zBbDab2rplS8GASfIzFeQJDwIfLBBkM8agaRoikQhSqRSSySQWLlwI27bBASxatKjzqquumrD6mCqy2Wxjz/4DfcMjwzh8+DBGR0eRSCTx03/+6bQSP6GLScIBOUHJEy4HMt/3wYJAkU0IgWVZSKfTSCYTguxIBADQ3LysIipkKtizew/PDA3ho48/gqbpePiRh6eN+AldaNNTT3El34p08Y4vB0r5HPgghCAWjyMej2PRokVIppKIRqJgnOG661bNuPUgsXvXbv7556dw7NgxGIaBBx96aFradtGLbHrySQ6EZBMidDgREp5XJ4GynU3TRDQWQ21tLZLJJJy0AwBYubLV0XV9xm3kUpw6dWr9xx9+1PV/B3vhex4efuSRqhNPL/ThGzt2vJh/VWwSMjlBCU1Dqb8TyQQcx4GTdpBMJcE5UFdXv3E2Eg4AdXV1m1ffsMZZ1tQM0zSxs7v7mWpf87x3teuZZ4bcXM5RnsFQyoWVIqwTxgKhVjiHbVlCndTWwkkLc5Cx2aVOLoad3d28p6cHNTUL+u67/77mal3nvJLu5nJCL0DocKlWpFSzcMAUU26KWDyGZCqFdDqNWDQGxhi++tXlbdVqeDWwtqODNDY04vTpL5qqeZ2yUvjkE0+IgVO5TwkIoWrADFiow4MAhmEgFo+jrq4WKcdBMpmccxJeit/veIMfOnwI//JwdSyacZL+7rvvPiqP8zKeNw0ZZ+BMeAEJIbAjEcTjcSQSScRiMTDG4Tjprmo0drrQ8c1bHNu2sbeAi0piHOnvv/deJ0HeWpEPpVYCoVoIIbBtGzU1aSxYUINkKglKKZqbmzsaGhpmnQ97MjBN88v29vaXenp6Oqtx/iLSP/vss7VQvmsp4wgXFkI9Hh7rhoFoNIpYTNjjlFIwxjHTk55K4fr29rtqa+sEJxVGEemv/O533XkJB0DC1Z0gnPyE9jghBPF4DCnHQTrtIBKNIggYVq2au3q8HO787p3k9dde6670eRXpO3bseFFKudTlKNHljHGAcxiGgWgkimg0AtOywDngOE5XpRs3G7B48Vcyb775h4ra7or0o0eOrFNSLo2acNbpFzixdF1HNBZFIpVEIpkEpRoYY2hsbJzTevx8uOPOO9Knvzi9oZLnHDeQKsehVC2cgzMermMKf7htRxCxI7AsC1xIfl8lGzXbsHrNmg2VPB8FgBe2bds3bo0zJDoI/NBzGIBSml/ticegaTo452htba3a7G02oLGxcfO2bdv2Vep8FAAGBwfDmWNetXDwAptchEDohlhrlIvFAL9sdXkpPNet2Oyafvjhh+vLfcAZL1qMoJSKdc1oFNFYFJRq4Jxftrq8FPf/+Mfk4MGDZbmaLOh7e/d2qlcqTA3KHpeWi6aLWBLTMmEYRrgSX4kmzB0cOHCgsxLnoSPDw02lbyrbXDq1GIdpWohEIrBtG4ZhArj8B9BSrFmzZmMlzkOB4hhBEcJWoM85B4iITdHDQCBCCDgHFi9eXJFGzBU0NDS8XInzjDMZOcLQNyajrzgIobAsE5ZpKdIBwHGcijTiSkNxhFcYfKgslzCIkxIiwtR0DZRccLFpHhNACYO8QMol8RCDqCkGUBKGt8Vise7pb+7MoxIOsPLqBVzFCgIiMpYSAi0knHN+xZKeX1G7dNDSmSjCMGWpXggBKKXQNB2arit9XlNT0zXVi89FmKaZmeo5zhu1y4WwAwAIzS/bSVQ7DG62ohJTk/HqhctHAescRXGLVzIulKAwUZQxRTiKU7AE5gkXWLp06ZRXxsapFxXjQoonTYzLGSpH6TAwj8mhjE4nBStHAtKMVDPUeamfEsYvYhCoCIByki4nTMPDwxVfsL1SQPPBRAWPwsRYQDm9ZMoh5xwjIyMdM9bqOYqB/v61QLmBNEwPLDQRgyCA7/thWLRQMZlMZt30NnnuY2RkpAk4zxqpzM2UpMuIAJkZxznH2NjYnIpTnA3Iua4DSNJLzBFKico6BsLErTLSPo/Joa2t7XFA+tOB8Xq94CEWNQKxsBEEKn/T87zUjPZijqKsn5YQEk79hZrh4Eqv57OVOU6cONE5ze2ds/jkk0/+QR5TzhiA8ZKuyeIGlIKAwPM9uJ4Hz/NUntHJk6euqJWjqeDTTz7ZII/p8paWrtIZZr7AAc1bML7IuvA9T0k752w62z2n0d7e3imP6S233vqAKOtRbCbKggbiQeH7Pjzfh+sKaQ8CUcFiHhPDgoUL98tjCkBVoCh8UCrrpoh6KpxzBL4Pzxeky/CMvr6+x2auK3MDhfocCEn/29WrNxZJulq40KBrGiil0lqB67rI5XJqUD1+/Pi8Xr8I9uze/VLhawoA161a9TgHL8haFL4XGg6kWqjbAxba6p4fki6kfWBgoCppIpcDBvr71950001Fs3dlMvKAFauX8KHpYRQApQAHPNeF6+bgujl4ngfP89HX19c57b2ZI9i168/dDY2NRaEqivRINNqHkgGVhBaMRqVul36YIBxMhYoJ/GD6ezNH0HZ9+zj1q0i/9/77m2UhhUJbXddEXSxdF5YMYwye58LNiYfneXA9H3/cuXPeL1CCLZs38xUrVjxe+n7RjHTRokXdZa2Y0HSUJZ1YWDzH872wPoCQ/mPHjv3rNPVn1mOgv39tPBYr+9m4JaBnt2zhGqUF9RLFipEXWisi0YvCsqywSlEUWljYzNB13PZ3t80vKwF48be/5Xfdc09ZLsb5XgLfVxnSYkClIKFe16iofQjki+r4oV6Xk6cjn356xVsyAwMDa2PxeN/5Pi97J7Zu2cJ1Qy+qEipCp5ly7RICUE2DbdnQdQO6oYNSCss00dKyvHPZ1VdPW8Wi2YSB/v61+95/v/vv16077y++rJexrq7upWLdnrfXC3U7OBCoMlLi2fU8fPzxoc6q9GgOYM/u3d2EXljDnvfT57Zu5YZh5CNgOMDCFEeZMMB53kej6yK4VMxkKaIRG7d/+9tXlH7/n6efHqqvr3PuuPO7F+z3eeOelyxZ0gUAtMiSEUGkcqZKCwJKRRIBC01KH9mciz92dx+pZKdmM7a//PKL9fX1zuo1N1x0GfO8pN/c0fFAOp1+SZCrhepFzE4NXVgquq7l11GL6sAEGBvL4vPTg00H9u+veqWgmcYHPT3rDcNYRwhQU1Oz/2L/f9Gf/wvbtnFN08aZkIEiWcTBSGtHFTcOB+FIxMKy5uauVW1tl2UW3gcffLD+YG9vVyqVxLdun5g6veg/ZbPZ1Cvbt2ekNcOVfmeKfK7KRxcWxuRqkcPQdaxoWd7V1t5+WRHf09Oz/uSJ412cA9+6/fYJj18XzWWxbfvLa1au3Cjs9bzdTqmmZqrSN6PiZZC/m0HAkHNdfHzo8Ibut9+uWNbxTOOtN9967MD+/V0AQCmZVMz6hO/OK9u37+PgYpCQaobn4xtZQV6pipNhTBVY45yL6tGRCO7+XvmZ2lzBfz7++NC1117rcMbQ0NS4cfnylnH+lQthUp3/zfPPD0WjUUdoEx4SL4rwcAb1Wlb4DxgTvvdwxso5h2nosC0LP/jRD+ck8f/xs5/x1tZWxMKs8Y5bbpl0Pyb9hW2//hWPJ5JA4cCqapnLoHmiBlzfF6R7riecZJ4PSghs20IiHsusu/vuGansPFk8u3nzvpHR0bbW1lYwxmBZ5l9u+MaN11/KuS5J2n7z/PM8kUwIqVYSH94EzouSCdRM1XXh+T5yuRyCQPjfDV2Hk0pm7vn+92c18U898eSRaCza1NDQAM4ZKNVw0803X/Iv9ZK/+L8vvDAUT8QdqU4U6SW7uQDCfPTCmJlczoXrucjlXFWX19B1RCMRrLtrXVM8kZg1uUz/9YtfDFFNc65etgyRSAQgQDKR7Gq7/vopWWFT0qs7Xnt1n6YbbaWkjw9zJOBcxEPmcjl4roexbBau68J1XTXIGrqOr32ttesbN944o6blnt27H/3Dm2911tXWYuXKa4TUEOFZvXltx5THoimf4PChQ+s/PfJpl0Y1oEC/j7+EiHlnjMHzfYydG4PruRgby6rNRIIgUBEItmXimmtWTtuWOTu7ux975513NjLOUVtbixUtLaq9VNPw9a9f15So0K+wIhZENptN7frznzIy2FTqelFfEGqWKsuAc87h+x5yrouxsTG4ORej4e4tUvIppdA1DRHLQjrt9P3g3nurUj3puV/+cl9//0Cb5/twUim0tCxHKpVSZq6maViyZOm6JUuXVqwOQkXNtt27dj3jee6GvBVTmHUdZjKpG0AB8NCyERKfzWYxNjaGbLh1joytAaAmYJZlghKChoaG7sWLv9L9V3/z1xPy2/f29q4/2Nu74ejRox2u68L1PBAQLFiwAOmaNJoaG6FpGoJAmLaarmN0ZCTzzVtvq/ggX3FbuWf//kcHzwx2apqGokE2vJza+gzFeU0ikMkT+xW5OYyOjsL3fIyeO6cGYVYQ7CrjLPVwAxOqZssELGD57XjCDaxkiDehBKZpIe04qKmpweLFV8E0TbWXh/SeLm1o7Kivr69KYc+qTVA+6Ol59MzQmU69LPnjsz1EAkK+DmQ2l4PveTgXqp9sLocg8DE2lhWqKZsDK9icijEGiK16CqIZKOyIDdO0EI1EkEjEUbNgASK2DV3XVWVVqc4IpVi6dGlHXV11yFZ9r+bJAeD3b7zBk8nkuCIP8vIyX7VwlQqASkYQ2R/CzvcDX2wY5YWL5GHlpcAPwDhXIYAgELuBhdWYTFOUqNU0qrJIWLgrjSR7ZHg4s3r1miZrGnb8mrap+N53333G9dwNhq5DuRF4sc4vVDlS8knBIFy080xJlr68SRL53R7lXnhiEgdAqRBCCBwnvaGpuXlzFbs+DtPu/3hnz54XgyBYZ1pmOIPNh1sX3YASi0eOBbLJ+WNJbuE5Cl0TeaJB8tuxaZT+/LpVbf9W3d6Wx4w6nU6eOLG2t7e3O+WkIGJtoNgr/DVMBqW/DFkU6IvPP0dDQ8PGlhXXTMojWA3MGk/fkSNH1g/093cmEvEmTdPUDjMo8OUUVDAs3/CS3NcvMxmsXNnaUVclK2Qe85jHhfD/okzmljPHs78AAAAASUVORK5CYII=" />
+                                    </defs>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg width="172" height="35" viewBox="0 0 172 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_499_1532)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.3302 8.32041V6.42041C7.86015 8.19041 2.32015 11.4904 0.990152 18.1504C-0.979848 32.8804 18.6002 38.4404 29.5002 31.5104L29.4602 29.2604C20.5002 36.6004 8.18015 32.5804 6.03015 22.5704C5.97015 22.2704 5.92015 21.9804 5.91015 21.6704C5.72015 14.8004 9.24015 10.6304 15.3202 8.30041L15.3302 8.32041Z"
+                                            fill="#DA1E34" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.88 6.40039C23.9 6.71039 26.75 7.71039 29.5 9.29039V11.8704C27.29 9.53039 24.36 8.13039 20.88 7.78039C20.86 7.31039 20.9 6.88039 20.88 6.40039Z"
+                                            fill="#DA1E34" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.51025 2.9202V0.450195H26.5503V2.9202H20.1903V17.7302H15.9303V2.9202H9.51025Z"
+                                            fill="#DA1E34" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.8601 28.1303H10.3901V12.5503H12.8901C14.6201 15.5603 16.4601 18.6203 18.1901 21.6303C19.8001 18.6203 21.3201 15.5603 22.9301 12.5503H24.7201V28.1303H21.1701V20.9203C19.7901 23.3203 18.4001 25.7203 17.0201 28.1303C15.6301 25.7203 14.2501 23.3103 12.8601 20.9003C12.8601 23.3403 12.8601 25.6903 12.8601 28.1303Z"
+                                            fill="#DA1E34" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M26.1101 12.56V28.14H32.1601C36.7201 28.14 38.8301 22.84 34.6701 20.18C38.6401 17 36.0001 12.73 32.2701 12.56C29.9501 12.49 28.5001 12.54 26.1101 12.56ZM29.5001 14.01V19.74C31.5501 19.79 33.1201 19.39 33.3101 17.26C33.3301 17.08 33.3201 16.92 33.3101 16.74C33.0701 14.67 31.7401 14.03 29.5101 14.02L29.5001 14.01ZM29.5001 21.22V26.77C31.5501 26.82 33.4701 26.42 33.6601 24.29C33.6801 24.11 33.6701 23.95 33.6601 23.77C33.4201 21.7 31.7401 21.24 29.5101 21.22H29.5001Z"
+                                            fill="#DA1E34" />
+                                        <path
+                                            d="M48.7201 7.16029V14.9803H46.9801V7.16029H44.8101V6.30029H50.9001V7.16029H48.7201Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M55.25 14.98C53.33 14.98 51.78 13.42 51.78 11.51V6.29996H53.52V11.51C53.52 12.7 54.49 13.68 55.69 13.68C56.89 13.68 57.86 12.71 57.86 11.51V6.29996H58.74V11.51C58.74 13.43 57.18 14.98 55.27 14.98H55.25ZM54.04 5.58996C53.65 5.58996 53.35 5.29996 53.35 4.89996C53.35 4.51996 53.66 4.20996 54.04 4.20996C54.42 4.20996 54.75 4.52996 54.75 4.89996C54.75 5.29996 54.44 5.58996 54.04 5.58996ZM56.4 5.58996C56.01 5.58996 55.69 5.29996 55.69 4.89996C55.69 4.51996 56.01 4.20996 56.4 4.20996C56.79 4.20996 57.09 4.52996 57.09 4.89996C57.09 5.29996 56.78 5.58996 56.4 5.58996Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M64.9901 14.9803L62.4801 10.6303H62.9201C63.8801 10.6303 64.6601 9.85029 64.6601 8.89029C64.6601 7.93029 63.8801 7.15029 62.9201 7.15029H62.0601V14.9703H60.3201V6.30029H63.7901C65.2301 6.30029 66.3901 7.47029 66.3901 8.90029C66.3901 9.97029 65.7601 10.8703 64.8601 11.2903L67.0001 14.9903H64.9901V14.9803Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M72.8601 14.9803L69.8301 10.9803V14.9803H68.0901V6.30029H69.8301V10.2503L73.6201 6.30029H74.8101L71.2701 10.0003L75.0301 14.9903H72.8501L72.8601 14.9803Z"
+                                            fill="#414141" />
+                                        <path d="M75.95 14.9803V6.30029H77.6899V14.9803H75.95Z" fill="#414141" />
+                                        <path
+                                            d="M76.8202 5.21018C76.3402 5.21018 75.9302 4.81018 75.9302 4.32018C75.9302 3.83018 76.3302 3.43018 76.8202 3.43018C77.3102 3.43018 77.7102 3.83018 77.7102 4.32018C77.7102 4.81018 77.3102 5.21018 76.8202 5.21018Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M150.04 5.21018C149.56 5.21018 149.15 4.81018 149.15 4.32018C149.15 3.83018 149.55 3.43018 150.04 3.43018C150.53 3.43018 150.93 3.83018 150.93 4.32018C150.93 4.81018 150.53 5.21018 150.04 5.21018Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M83.2001 11.2903V14.9903H81.2801V11.2903L78.5801 6.30029H80.5701L82.7201 10.3203L84.8901 6.30029H85.8801L83.2001 11.2903Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M86.8 14.9803V6.30029H91.5801V7.16029H88.5401V10.2003H91.5801V11.0803H88.5401V14.1103H91.5801V14.9903H86.8V14.9803Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M100.97 14.9803C98.5701 14.9803 96.6201 13.0403 96.6201 10.6303C96.6201 8.22029 98.5701 6.30029 100.97 6.30029C102.22 6.30029 103.08 6.68029 103.85 7.24029L103.34 8.55029C103.01 7.86029 102.19 7.16029 100.98 7.16029C99.3801 7.16029 98.5501 8.85029 98.5501 10.6303C98.5501 12.4103 99.3801 14.1003 100.98 14.1003C102.23 14.1003 103.01 13.4203 103.34 12.7103L103.85 14.0303C103.09 14.6003 102.22 14.9703 100.97 14.9703V14.9803Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M108.33 14.9803C106.41 14.9803 104.86 13.4203 104.86 11.5103V6.30029H106.6V11.5103C106.6 12.7003 107.57 13.6803 108.77 13.6803C109.97 13.6803 110.94 12.7103 110.94 11.5103V6.30029H111.82V11.5103C111.82 13.4303 110.26 14.9803 108.35 14.9803H108.33Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M120.94 14.9803V9.14029L118.06 14.9803H117.21L114.26 9.24029V14.9803H113.4V6.30029H114.71L118.1 12.9303L121.35 6.30029H122.67V14.9803H120.93H120.94Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M129.53 14.9803V11.0803H126.06V14.9803H124.32V6.30029H126.06V10.2003H129.53V6.30029H131.27V14.9803H129.53Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M136.34 14.9803C134.42 14.9803 132.87 13.4203 132.87 11.5103V6.30029H134.61V11.5103C134.61 12.7003 135.58 13.6803 136.78 13.6803C137.98 13.6803 138.95 12.7103 138.95 11.5103V6.30029H139.83V11.5103C139.83 13.4303 138.27 14.9803 136.36 14.9803H136.34Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M146.09 14.9803L143.58 10.6303H144.02C144.98 10.6303 145.76 9.85029 145.76 8.89029C145.76 7.93029 144.98 7.15029 144.02 7.15029H143.16V14.9703H141.42V6.30029H144.89C146.33 6.30029 147.49 7.47029 147.49 8.90029C147.49 9.97029 146.86 10.8703 145.96 11.2903L148.1 14.9903H146.09V14.9803Z"
+                                            fill="#414141" />
+                                        <path d="M149.18 14.9803V6.30029H150.92V14.9803H149.18Z" fill="#414141" />
+                                        <path
+                                            d="M156.43 11.2903V14.9903H154.51V11.2903L151.81 6.30029H153.8L155.95 10.3203L158.12 6.30029H159.11L156.43 11.2903Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M160.03 14.9803V6.30029H164.81V7.16029H161.77V10.2003H164.81V11.0803H161.77V14.1103H164.81V14.9903H160.03V14.9803Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M169.46 7.16029V14.9803H167.72V7.16029H165.55V6.30029H171.64V7.16029H169.46Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M54.6802 28.69V22.7L51.7302 28.69H50.8602L47.8402 22.8V28.69H46.9602V19.77H48.3002L51.7802 26.58L55.1202 19.77H56.4802V28.69H54.7002H54.6802Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M59.6702 28.69V19.77H64.5802V20.65H61.4602V23.77H64.5802V24.67H61.4602V27.78H64.5802V28.68H59.6702V28.69Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M72.1902 28.69L69.6102 24.22H70.0702C71.0502 24.22 71.8502 23.42 71.8502 22.44C71.8502 21.46 71.0502 20.66 70.0702 20.66H69.1902V28.69H67.4102V19.77H70.9802C72.4602 19.77 73.6502 20.97 73.6502 22.44C73.6502 23.54 73.0102 24.47 72.0802 24.89L74.2802 28.69H72.2102H72.1902Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M81.7701 28.69L78.6601 24.58V28.69H76.8801V19.77H78.6601V23.82L82.5501 19.77H83.7801L80.1401 23.57L84.0101 28.69H81.7701Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M86.4702 28.69V19.77H91.3802V20.65H88.2602V23.77H91.3802V24.67H88.2602V27.78H91.3802V28.68H86.4702V28.69Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M93.7402 28.6898V27.7898L98.2102 20.6598H93.7402V19.7798H100.3V20.6598L95.8202 27.7898H100.3V28.6898H93.7402Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M113 28.69H108.88V19.77H112.55C113.85 19.77 114.9 20.81 114.9 22.11C114.9 22.97 114.43 23.71 113.74 24.12C114.67 24.43 115.35 25.3 115.35 26.35C115.35 27.63 114.28 28.69 113 28.69ZM111.55 20.66H110.67V23.78H111.55C112.41 23.78 113.12 23.08 113.12 22.22C113.12 21.36 112.41 20.65 111.55 20.65V20.66ZM112.01 24.68H110.67V27.79H112.01C112.87 27.79 113.58 27.09 113.58 26.23C113.58 25.37 112.87 24.67 112.01 24.67V24.68Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M123.94 28.69L122.93 26.19H119.33L118.33 28.69H117.36L120.96 19.77H122.29L125.87 28.69H123.94ZM121.13 21.71L119.69 25.29H122.57L121.13 21.71Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M134.7 28.69L129.22 22.16V28.69H128.34V19.77H129.57L135.03 26.28V19.77H135.91V28.69H134.7Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M144.01 28.69L140.9 24.58V28.69H139.12V19.77H140.9V23.82L144.8 19.77H146.03L142.39 23.57L146.26 28.69H144.02H144.01Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M155.19 28.69L154.18 26.19H150.58L149.58 28.69H148.61L152.21 19.77H153.54L157.12 28.69H155.19ZM152.38 21.71L150.94 25.29H153.82L152.38 21.71Z"
+                                            fill="#414141" />
+                                        <path
+                                            d="M162.48 28.6898C161.12 28.6898 160.14 28.2998 159.34 27.7098L159.85 26.6298C160.35 27.3598 161.11 27.7998 162.02 27.7998C162.76 27.7998 163.26 27.2598 163.26 26.5698C163.26 26.1598 163.05 25.7598 162.69 25.5398L160.61 24.2798C159.94 23.8798 159.48 23.0498 159.48 22.2298C159.48 20.9998 160.41 19.7798 161.93 19.7798C163.07 19.7798 164 20.1098 164.6 20.6198L164.21 21.5898C163.87 21.0798 163.25 20.6598 162.44 20.6598C161.76 20.6598 161.23 21.1998 161.23 21.8598C161.23 22.3298 161.43 22.6998 161.83 22.9398L163.77 24.1498C164.44 24.5598 164.93 25.3198 164.93 26.2298C164.93 27.5698 163.79 28.6798 162.48 28.6798V28.6898Z"
+                                            fill="#414141" />
+                                        <path d="M167.75 28.69V19.77H169.53V28.69H167.75Z" fill="#414141" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_499_1532">
+                                            <rect width="170.8" height="34.02" fill="white"
+                                                transform="translate(0.850098 0.450195)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom d-flex flex-column flex-lg-row align-items-center justify-content-between">
+                    <span class="mb-3 mb-lg-0">&copy;2024. Tüm hakları yasal ve saklıdır.</span>
+                    <ul class="list-unstyled d-flex flex-column flex-lg-row align-items-center mb-0">
+                        <li>
+                            <a href="#" title="Gizlilik Politikası">Gizlilik Politikası</a>
+                        </li>
+                        <li>
+                            <a href="#" title="KVKK Aydınlatma Metni">KVKK Aydınlatma Metni</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Sıkça Sorulan Sorular">Sıkça Sorulan Sorular</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Start -->
+    <div class="back-to-top">
+        <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M6.5 18C6.89887 18 7.22222 17.7122 7.22222 17.3571V2.19485L11.7671 6.24028C12.0491 6.49134 12.5064 6.49134 12.7885 6.24028C13.0705 5.98923 13.0705 5.5822 12.7885 5.33115L7.01069 0.188288C6.72864 -0.0627633 6.27136 -0.0627633 5.98931 0.188288L0.211534 5.33115C-0.0705113 5.5822 -0.0705113 5.98923 0.211534 6.24028C0.493579 6.49134 0.950866 6.49134 1.23291 6.24028L5.77778 2.19485V17.3571C5.77778 17.7122 6.10113 18 6.5 18Z"
+                fill="#192833" />
+        </svg>
+    </div>
+    <!-- Back To Top End -->
+
+    <!-- Whatsapp Start -->
+    <div class="whatsapp">
+        <a href="https://web.whatsapp.com/send?phone=905498051392&text=Bilgi%20Almak%20%C4%B0stiyorum" target="_blank"
+            rel="noopener" class="d-block" title="Bize Ulaşın">
+            <picture>
+                <source srcset="dist/images/whatsapp.webp" type="image/webp">
+                <source srcset="dist/images/whatsapp.png" type="image/png">
+                <img src="dist/images/whatsapp.png" class="img-fluid" width="103" height="103" alt="Whatsapp"
+                    loading="lazy" />
+            </picture>
+        </a>
+    </div>
+    <!-- Whatsapp End -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Başvuru Formu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Adınız</label>
+                                    <input type="text" class="form-control form-control-lg" id="name"
+                                        aria-describedby="userName">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="surname" class="form-label">Soyadınız</label>
+                                    <input type="text" class="form-control form-control-lg" id="surname"
+                                        aria-describedby="userSurname">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Cep Telefonunuz</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone"
+                                        aria-describedby="GsmPhone">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="surname" class="form-label">E-Postanız<small>(Opsiyonel)</small></label>
+                                    <input type="email" class="form-control form-control-lg" id="surname"
+                                        aria-describedby="userSurname">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="selectCity" class="form-label">İl</label>
+                                    <select class="form-select form-select-lg" aria-label="Select City">
+                                        <option selected>Seçiniz</option>
+                                        <option value="1">İstanbul</option>
+                                        <option value="2">Ankara</option>
+                                        <option value="3">İzmir</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="selectDistrict" class="form-label">İlçe</label>
+                                    <select class="form-select form-select-lg" aria-label="Select District">
+                                        <option selected>Seçiniz</option>
+                                        <option value="1">Maltep</option>
+                                        <option value="2">Sultangazi</option>
+                                        <option value="3">Sultanbeyli</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Açıklama</label>
+                                <textarea class="form-control" id="description" class="no-resize" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-primary w-100">Başvur</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <script src="dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/plugins/swiper/js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>

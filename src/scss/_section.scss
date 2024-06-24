@@ -1,17 +1,14 @@
 .section-text {
     .section-title {
-        font-size: 2rem;
+        font-size: $display-medium;
         color: var(--highlight-color);
         font-weight: 700;
         line-height: 120%;
     }
-    p {
-        font-weight: 500;
-        font-size: 18px;
+    p,
+    ul {
+        font-size: $body-large;
         color: var(--highlight-color);
-    }
-    a {
-        width: max-content;
     }
 }
 .about-image {
@@ -21,7 +18,8 @@
 }
 
 .representative-application-form {
-    background: url("../images/para-transfer-noktasi.jpg") no-repeat center;
+    background: url("../images/para-transfer-noktasi.jpg") #fcc43c no-repeat
+        center;
     height: 253px;
 }
 
