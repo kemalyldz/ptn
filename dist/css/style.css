@@ -176,11 +176,14 @@ textarea {
 .main-menu {
   width: 100%;
 }
-.main-menu ul li {
+.main-menu > ul > li {
   margin-right: 0;
   position: relative;
 }
-.main-menu ul li a {
+.main-menu > ul > li .menu-item {
+  cursor: pointer;
+}
+.main-menu > ul > li a {
   color: var(--highlight-color);
   font-weight: 500;
   font-size: 18px;
@@ -188,10 +191,54 @@ textarea {
   padding: 1rem 1.5rem;
   display: inline-block;
 }
-.main-menu ul li a:hover {
+.main-menu > ul > li a:hover {
   text-decoration: underline;
 }
+.main-menu .sub-menu-wrapper {
+  top: 60px;
+  filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
+  -moz-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+}
+.main-menu .sub-menu-wrapper.open {
+  visibility: visible;
+  opacity: 1;
+}
+.main-menu .sub-menu-wrapper .sub-menu-content ul::before {
+  border-bottom: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  content: "";
+  height: 0;
+  margin-left: 20px;
+  margin-top: -14px;
+  position: absolute;
+  width: 0;
+  z-index: 0;
+}
+.main-menu .sub-menu-wrapper .sub-menu-content ul li {
+  border-bottom: 1px solid #bedae3;
+  margin-right: 0;
+}
+.main-menu .sub-menu-wrapper .sub-menu-content ul li:last-of-type {
+  border-bottom: 0;
+}
+.main-menu .sub-menu-wrapper .sub-menu-content ul li a {
+  width: max-content;
+  padding: 1rem;
+}
 
+.action-menu ul li.phone a {
+  border: 0;
+  background: none !important;
+}
+.action-menu ul li.phone a svg {
+  width: 30px;
+  height: 30px;
+}
 .action-menu ul li a {
   text-decoration: none;
   color: var(--highlight-color);
@@ -898,14 +945,15 @@ img.aspect-ratio-item {
 }
 
 .wrapper {
-  width: min(100% - 3rem, 1400px);
-  margin-inline: auto;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid #bedae3;
 }
 
 .topnav {
   display: flex;
   align-items: center;
-  padding-block: 1.5rem;
+  width: min(100% - 3rem, 1400px);
+  margin-inline: auto;
 }
 .topnav button {
   background: none;

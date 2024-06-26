@@ -134,3 +134,27 @@ $(".counter .form-control").on("change keypress keydown keyup", function () {
     inputWrapper.attr("data-maxlength", diff);
 });
 // Counter End
+
+// Header Custom dropdowns
+$("header .menu-item").on("click", function () {
+    $(this).toggleClass("open").next(".menu-inner").toggleClass("open");
+    $(this)
+        .parents()
+        .siblings()
+        .find(".menu-inner, .menu-item")
+        .removeClass("open");
+    return false;
+});
+
+// Closing the dropdown by clicking in the menu button or anywhere in the screen
+$("body").on("click", function (e) {
+    var target = e.target;
+    if (!$(target).is(".menu-item") && !$(target).parents().is(".menu-item")) {
+        $(".menu-item, .menu-inner").removeClass("open");
+    }
+});
+
+// Prevent closing dropdown upon clicking inside the dropdown
+$("header .menu-inner").on("click", function (e) {
+    e.stopPropagation();
+});

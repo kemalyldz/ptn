@@ -1,13 +1,12 @@
 .wrapper {
-    width: min(100% - 3rem, 1400px);
-    margin-inline: auto;
+    padding-block: 1.5rem;
+    border-bottom: 1px solid #bedae3;
 }
 .topnav {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
-    padding-block: 1.5rem;
-
+    width: min(100% - 3rem, 1400px);
+    margin-inline: auto;
     button {
         background: none;
         border: none;
@@ -21,8 +20,8 @@
         }
     }
 
-    &__open[aria-expanded='true'] {
-        +.topnav__menu {
+    &__open[aria-expanded="true"] {
+        + .topnav__menu {
             translate: 0;
 
             @media (prefers-reduced-motion) {
@@ -35,7 +34,6 @@
         display: block;
         margin-inline-start: auto;
         margin-block-end: 4rem;
-
         img {
             width: 2.5rem;
         }
