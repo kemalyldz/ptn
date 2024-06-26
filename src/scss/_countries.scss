@@ -19,7 +19,7 @@
     .countries-list {
         ul {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
             grid-column-gap: 16px;
             grid-row-gap: 32px;
@@ -48,6 +48,13 @@
                 fill: var(--primary-color);
             }
             color: var(--primary-color);
+        }
+    }
+}
+@media (min-width: 992px) {
+    .countries-list {
+        ul {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }

@@ -19,8 +19,8 @@
 
 .representative-application-form {
     background: url("../images/para-transfer-noktasi.jpg") #fcc43c no-repeat
-        center;
-    height: 253px;
+        right;
+    height: auto;
 }
 
 .application-form {
@@ -102,5 +102,11 @@
                 }
             }
         }
+    }
+}
+@media (min-width: 992px) {
+    .representative-application-form {
+        background-position: 50%;
+        height: 253px;
     }
 }

@@ -1,13 +1,7 @@
 .statistics-wrapper {
     background: url("../images/statistics.png") #fff5c6 no-repeat center;
-    height: 190px;
+    height: auto;
     .statistics-item {
-        &:nth-child(1) {
-            margin-left: 100px;
-        }
-        &:nth-child(n + 2) {
-            margin-left: 40px;
-        }
         span {
             color: var(--highlight-color);
             &:nth-child(1) {
@@ -40,6 +34,19 @@
             }
             &:nth-child(2) {
                 font-size: $body-large;
+            }
+        }
+    }
+}
+@media (min-width: 992) {
+    .statistics-wrapper {
+        height: 190px;
+        .statistics-item {
+            &:nth-child(1) {
+                margin-left: 100px;
+            }
+            &:nth-child(n + 2) {
+                margin-left: 40px;
             }
         }
     }

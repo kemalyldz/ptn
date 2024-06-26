@@ -299,17 +299,12 @@ textarea {
 .faq-content__item .faq-title {
   color: var(--highlight-color);
   font-size: 1.375rem;
+  padding-right: 1rem;
 }
 
 .statistics-wrapper {
   background: url("../images/statistics.png") #fff5c6 no-repeat center;
-  height: 190px;
-}
-.statistics-wrapper .statistics-item:nth-child(1) {
-  margin-left: 100px;
-}
-.statistics-wrapper .statistics-item:nth-child(n+2) {
-  margin-left: 40px;
+  height: auto;
 }
 .statistics-wrapper .statistics-item span {
   color: var(--highlight-color);
@@ -345,6 +340,17 @@ textarea {
   font-size: 1.125rem;
 }
 
+@media (min-width: 992) {
+  .statistics-wrapper {
+    height: 190px;
+  }
+  .statistics-wrapper .statistics-item:nth-child(1) {
+    margin-left: 100px;
+  }
+  .statistics-wrapper .statistics-item:nth-child(n+2) {
+    margin-left: 40px;
+  }
+}
 .back-to-top {
   cursor: pointer;
   background: var(--primary-color);
@@ -746,27 +752,6 @@ img.aspect-ratio-item {
   position: relative;
   overflow: hidden;
 }
-.three-step .three-step-list:nth-child(2) {
-  position: relative;
-}
-.three-step .three-step-list:nth-child(2)::before {
-  content: "";
-  border-bottom: 1px dashed #d1d1d1;
-  width: 150px;
-  position: absolute;
-  top: 35%;
-  right: 65%;
-  transform: translateX(-50%);
-}
-.three-step .three-step-list:nth-child(2)::after {
-  content: "";
-  border-bottom: 1px dashed #d1d1d1;
-  width: 150px;
-  position: absolute;
-  top: 35%;
-  left: 65%;
-  transform: translateX(45%);
-}
 .three-step .three-step-list .three-step-box {
   background: #f6f6f6;
   width: 100px;
@@ -776,6 +761,29 @@ img.aspect-ratio-item {
   font-weight: 500;
 }
 
+@media (min-width: 992px) {
+  .three-step .three-step-list:nth-child(2) {
+    position: relative;
+  }
+  .three-step .three-step-list:nth-child(2)::before {
+    content: "";
+    border-bottom: 1px dashed #d1d1d1;
+    width: 150px;
+    position: absolute;
+    top: 35%;
+    right: 65%;
+    transform: translateX(-50%);
+  }
+  .three-step .three-step-list:nth-child(2)::after {
+    content: "";
+    border-bottom: 1px dashed #d1d1d1;
+    width: 150px;
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    transform: translateX(45%);
+  }
+}
 .section-text .section-title {
   font-size: 2.875rem;
   color: var(--highlight-color);
@@ -795,8 +803,8 @@ img.aspect-ratio-item {
 }
 
 .representative-application-form {
-  background: url("../images/para-transfer-noktasi.jpg") #fcc43c no-repeat center;
-  height: 253px;
+  background: url("../images/para-transfer-noktasi.jpg") #fcc43c no-repeat right;
+  height: auto;
 }
 
 .application-form {
@@ -874,6 +882,12 @@ img.aspect-ratio-item {
   font-weight: 500;
 }
 
+@media (min-width: 992px) {
+  .representative-application-form {
+    background-position: 50%;
+    height: 253px;
+  }
+}
 .service-fee-wrapper {
   max-width: 600px;
 }
@@ -1038,7 +1052,7 @@ img.aspect-ratio-item {
 }
 .countries-wrapper .countries-list ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 16px;
   grid-row-gap: 32px;
@@ -1069,6 +1083,11 @@ img.aspect-ratio-item {
   fill: var(--primary-color);
 }
 
+@media (min-width: 992px) {
+  .countries-list ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .business-partners-title {
   color: var(--highlight-color);
   font-size: 1.75rem;

@@ -41,28 +41,6 @@
     position: relative;
     overflow: hidden;
     .three-step-list {
-        // position: relative;
-        &:nth-child(2) {
-            position: relative;
-            &::before {
-                content: "";
-                border-bottom: 1px dashed #d1d1d1;
-                width: 150px;
-                position: absolute;
-                top: 35%;
-                right: 65%;
-                transform: translateX(-50%);
-            }
-            &::after {
-                content: "";
-                border-bottom: 1px dashed #d1d1d1;
-                width: 150px;
-                position: absolute;
-                top: 35%;
-                left: 65%;
-                transform: translateX(45%);
-            }
-        }
         .three-step-box {
             background: #f6f6f6;
             width: 100px;
@@ -70,6 +48,33 @@
         }
         span {
             font-weight: 500;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .three-step {
+        .three-step-list {
+            &:nth-child(2) {
+                position: relative;
+                &::before {
+                    content: "";
+                    border-bottom: 1px dashed #d1d1d1;
+                    width: 150px;
+                    position: absolute;
+                    top: 35%;
+                    right: 65%;
+                    transform: translateX(-50%);
+                }
+                &::after {
+                    content: "";
+                    border-bottom: 1px dashed #d1d1d1;
+                    width: 150px;
+                    position: absolute;
+                    top: 35%;
+                    left: 65%;
+                    transform: translateX(45%);
+                }
+            }
         }
     }
 }
