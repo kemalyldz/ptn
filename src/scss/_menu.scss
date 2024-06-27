@@ -21,10 +21,6 @@
         }
     }
     .sub-menu-wrapper {
-        //top: 60px;
-        //filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
-        //-webkit-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
-        //-moz-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
         background: white;
         opacity: 0;
         visibility: hidden;
@@ -37,18 +33,6 @@
         }
         .sub-menu-content {
             ul {
-                // &::before {
-                //     border-bottom: 15px solid #fff;
-                //     border-left: 15px solid transparent;
-                //     border-right: 15px solid transparent;
-                //     content: "";
-                //     height: 0;
-                //     margin-left: 20px;
-                //     margin-top: -14px;
-                //     position: absolute;
-                //     width: 0;
-                //     z-index: 0;
-                // }
                 li {
                     border-bottom: 1px solid #bedae3;
                     margin-right: 0;
@@ -117,13 +101,6 @@
             -webkit-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
             -moz-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
             position: absolute;
-            //background: white;
-            //opacity: 0;
-            //visibility: hidden;
-            // &.open {
-            //     visibility: visible;
-            //     opacity: 1;
-            // }
             .sub-menu-content {
                 ul {
                     &::before {
@@ -137,17 +114,6 @@
                         position: absolute;
                         width: 0;
                         z-index: 0;
-                    }
-                    li {
-                        //border-bottom: 1px solid #bedae3;
-                        //margin-right: 0;
-                        // &:last-of-type {
-                        //     border-bottom: 0;
-                        // }
-                        // a {
-                        //     width: max-content;
-                        //     padding: 1rem;
-                        // }
                     }
                 }
             }
