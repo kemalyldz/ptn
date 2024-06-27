@@ -195,29 +195,16 @@ textarea {
   text-decoration: underline;
 }
 .main-menu .sub-menu-wrapper {
-  top: 60px;
-  filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
-  -webkit-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
-  -moz-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
   background: white;
   opacity: 0;
   visibility: hidden;
+  position: relative;
+  height: 0;
 }
 .main-menu .sub-menu-wrapper.open {
   visibility: visible;
   opacity: 1;
-}
-.main-menu .sub-menu-wrapper .sub-menu-content ul::before {
-  border-bottom: 15px solid #fff;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  content: "";
-  height: 0;
-  margin-left: 20px;
-  margin-top: -14px;
-  position: absolute;
-  width: 0;
-  z-index: 0;
+  height: auto;
 }
 .main-menu .sub-menu-wrapper .sub-menu-content ul li {
   border-bottom: 1px solid #bedae3;
@@ -267,6 +254,25 @@ textarea {
   }
   .main-menu ul li a {
     padding: 0.5rem 0.75rem;
+  }
+  .main-menu .sub-menu-wrapper {
+    top: 60px;
+    filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
+    -webkit-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
+    -moz-filter: drop-shadow(0 -1px 6px rgba(0, 0, 0, 0.15));
+    position: absolute;
+  }
+  .main-menu .sub-menu-wrapper .sub-menu-content ul::before {
+    border-bottom: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    content: "";
+    height: 0;
+    margin-left: 20px;
+    margin-top: -14px;
+    position: absolute;
+    width: 0;
+    z-index: 0;
   }
 }
 .faq-content {
