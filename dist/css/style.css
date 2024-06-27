@@ -340,7 +340,7 @@ textarea {
   font-size: 1.125rem;
 }
 
-@media (min-width: 992) {
+@media (min-width: 992px) {
   .statistics-wrapper {
     height: 190px;
   }
@@ -1153,8 +1153,7 @@ footer .footer-bottom ul li a:hover {
   text-decoration: underline;
 }
 .footer-widget ul li {
-  font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
 .footer-widget ul li a {
@@ -1163,6 +1162,9 @@ footer .footer-bottom ul li a:hover {
 }
 .footer-widget ul li a:hover {
   text-decoration: underline;
+}
+.footer-widget p {
+  font-size: 1.125rem;
 }
 
 @media (min-width: 768px) {

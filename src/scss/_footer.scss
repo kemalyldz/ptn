@@ -18,13 +18,6 @@ footer {
         }
     }
 }
-// .footer-social-media {
-//     span {
-//         color: var(--highlight-color);
-//         font-weight: 600;
-//         font-size: 18px;
-//     }
-// }
 .footer-social-media {
     ul {
         li {
@@ -69,8 +62,7 @@ footer {
     }
     ul {
         li {
-            font-weight: 500;
-            font-size: 18px;
+            font-size: $body-large;
             margin-bottom: 0.5rem;
             a {
                 color: var(--highlight-alt-color);
@@ -80,6 +72,9 @@ footer {
                 }
             }
         }
+    }
+    p {
+        font-size: $body-large;
     }
 }
 
