@@ -13,16 +13,19 @@
     }
 }
 .page-header {
-    background-image: url("../images/page-header.png");
-    background-color: var(--primary-color);
-    height: 313px;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../images/page-header.png") var(--primary-color) no-repeat
+        center;
+    height: auto;
     background-size: cover;
     h1 {
         color: var(--highlight-color);
         font-size: $display-small;
         font-weight: 500;
+    }
+}
+@media (min-width: 992px) {
+    .page-header {
+        height: 313px;
     }
 }
 .page-content {
@@ -67,5 +70,22 @@
     h2 {
         font-size: $headline-medium;
         font-weight: 500;
+    }
+}
+.other-services-title {
+    font-size: $headline-medium;
+    font-weight: 500;
+    color: var(--highlight-color);
+}
+.other-services {
+    width: 300px;
+    &__title {
+        font-size: $headline-small;
+        font-weight: 500;
+        color: var(--highlight-color);
+    }
+    &__desc {
+        font-size: $body-small;
+        color: var(--highlight-color);
     }
 }

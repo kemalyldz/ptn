@@ -326,13 +326,7 @@ textarea {
 
 .statistics-blue-wrapper {
   background: url("../images/statistics-blue.png") #f1f8fa no-repeat center;
-  height: 190px;
-}
-.statistics-blue-wrapper .statistics-item:nth-child(1) {
-  margin-left: 100px;
-}
-.statistics-blue-wrapper .statistics-item:nth-child(n+2) {
-  margin-left: 40px;
+  height: auto;
 }
 .statistics-blue-wrapper .statistics-item span {
   color: var(--highlight-color);
@@ -347,6 +341,15 @@ textarea {
 }
 
 @media (min-width: 992px) {
+  .statistics-blue-wrapper {
+    height: 190px;
+  }
+  .statistics-blue-wrapper .statistics-item:nth-child(1) {
+    margin-left: 100px;
+  }
+  .statistics-blue-wrapper .statistics-item:nth-child(n+2) {
+    margin-left: 40px;
+  }
   .statistics-wrapper {
     height: 190px;
   }
@@ -660,11 +663,8 @@ img.aspect-ratio-item {
 }
 
 .page-header {
-  background-image: url("../images/page-header.png");
-  background-color: var(--primary-color);
-  height: 313px;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../images/page-header.png") var(--primary-color) no-repeat center;
+  height: auto;
   background-size: cover;
 }
 .page-header h1 {
@@ -673,6 +673,11 @@ img.aspect-ratio-item {
   font-weight: 500;
 }
 
+@media (min-width: 992px) {
+  .page-header {
+    height: 313px;
+  }
+}
 .page-content {
   color: var(--highlight-color);
 }
@@ -715,6 +720,25 @@ img.aspect-ratio-item {
 .money-transfer-countries h2 {
   font-size: 1.75rem;
   font-weight: 500;
+}
+
+.other-services-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--highlight-color);
+}
+
+.other-services {
+  width: 300px;
+}
+.other-services__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--highlight-color);
+}
+.other-services__desc {
+  font-size: 0.75rem;
+  color: var(--highlight-color);
 }
 
 .calculate-fee-wrapper {
@@ -1060,8 +1084,8 @@ img.aspect-ratio-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-column-gap: 16px;
-  grid-row-gap: 32px;
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
 }
 .countries-wrapper .countries-list ul li {
   display: flex;
@@ -1091,7 +1115,7 @@ img.aspect-ratio-item {
 
 @media (min-width: 992px) {
   .countries-list ul {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 .business-partners-title {
