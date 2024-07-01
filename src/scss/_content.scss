@@ -89,3 +89,22 @@
         color: var(--highlight-color);
     }
 }
+
+.link-list {
+    max-width: 600px;
+    ul {
+        li {
+            margin-bottom: 1rem;
+            a {
+                color: var(--highlight-color);
+                font-weight: 500;
+                background: #f1f8fa;
+                text-decoration: none;
+                transition: all 0.25s;
+                &:hover {
+                    background: #dff3ff;
+                }
+            }
+        }
+    }
+}
